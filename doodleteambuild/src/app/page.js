@@ -15,7 +15,6 @@ export default function Home() {
         </div>
       </section>
       <section className="flex">
-
       </section>
     </main>
   );
