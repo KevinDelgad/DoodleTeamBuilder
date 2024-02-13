@@ -25,7 +25,7 @@ const doodleTypes = [
   ["mythic", "bg-mythic"],
 ];
 
-const traitList = doodleTypes.map(doodle => <li className={`${fredoka.className} text-white badge-lg badge text-xl basis-1/5 outline-4 ${doodle[1]}`} >{doodle[0]}</li>);
+const traitList = doodleTypes.map(doodle => <li className={`${fredoka.className} text-black badge-lg badge badge-neutraltext-xl basis-1/5 outline-4 ${doodle[1]}`} >{doodle[0]}</li>);
 
 export default function Home() {
   return (
