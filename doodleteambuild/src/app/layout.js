@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Fredoka } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const fredoka = Fredoka({ weight: "700", subsets: ["latin"] });
 
 export const metadata = {
   title: "Doodle Team",
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} h-full`}>{children}</body>
+      <body className={`${fredoka.className} h-full`}>{children}</body>
     </html>
   );
 }
