@@ -32,7 +32,8 @@ module.exports = {
         "ice": "#d1e6f0",
         "dark": "#4f4e50",
         "poison": "#9585ab",
-        "mythic": "#4b589a"
+        "mythic": "#4b589a",
+        "textGray": " #c4c4c4"
       },
     },
   },
