@@ -10,39 +10,51 @@ const fredoka = Fredoka({ weight: "700", subsets: ["latin"] });
 export default function Home() {
   const [selectedDoodle, setSelectedDoodle] = React.useState("");
   const [selectedDoodleInfo, setSelectedDoodleInfo] = React.useState();
-  const [firstLoad, setFirstLoad] = React.useState(true);
+
   const [matchingDoodle, setMatchingDoodle] = React.useState([]);
-  const [allDoodleName, setAllDoodleName] = React.useState([]);  
+  const [matchingDoodleIndex, setmatchingDoodleIndex] = React.useState(3);
+
+  const [allDoodleName, setAllDoodleName] = React.useState([]);
+
+  const hasPageBeenRendered = React.useRef({ effect1: false, effect2: false });
 
   useEffect(() => {
-    setAllDoodleName(Object.keys(Doodles["DoodleData"])); 
+    setAllDoodleName(Object.keys(Doodles["DoodleData"]));
     setMatchingDoodle(Object.keys(Doodles["DoodleData"]));
   }, []);
 
-  useEffect(() =>{
-    if(!firstLoad){
-      updateMatchingDoodle()
-    }else{
-      setFirstLoad(false)
+  useEffect(() => {
+    if (hasPageBeenRendered.current["effect1"]) {
+      updateMatchingDoodle();
     }
-  }, [selectedDoodle])
+    hasPageBeenRendered.current["effect1"] = true;
+  }, [selectedDoodle]);
 
   useEffect(() => {
-    if(!firstLoad){
-      if(matchingDoodle.length === 0 ){
-        if(selectedDoodle === "" || selectedDoodle === null){
+    if (hasPageBeenRendered.current["effect2"] && matchingDoodle.length === 0) {
+      if (matchingDoodle.length === 0) {
+        if (selectedDoodle === "") {
           setMatchingDoodle(allDoodleName);
-        }else{
-          const tempDoodleList = allDoodleName
-          for(let i = 0; i < tempDoodleList.length; i++){
-            if(tempDoodleList[i].substring(0, selectedDoodle.length) === selectedDoodle){
-              setMatchingDoodle([...matchingDoodle,tempDoodleList[i]])
+        } else {
+          let tempDoodleList = [];
+          for (let i = 0; i < allDoodleName.length; i++) {
+            if (
+              allDoodleName[i]
+                .substring(0, selectedDoodle.length)
+                .toLowerCase() === selectedDoodle.toLowerCase()
+            ) {
+              tempDoodleList.push(allDoodleName[i]);
             }
           }
+          if (tempDoodleList.length > 0) {
+            setMatchingDoodle(tempDoodleList);
+          }
+          setmatchingDoodleIndex(3);
         }
       }
     }
-  }, [matchingDoodle])
+    hasPageBeenRendered.current["effect2"] = true;
+  }, [matchingDoodle]);
 
   const doodleTypes = [
     ["basic", "bg-basic"],
@@ -67,6 +79,10 @@ export default function Home() {
     ["mythic", "bg-mythic"],
   ];
 
+  const retrieveDoodleInfo = (doodleName) =>{
+    console.log(doodleName)
+  }
+
   const traitList = doodleTypes.map((doodle) => (
     <li
       key={doodle}
@@ -76,15 +92,41 @@ export default function Home() {
     </li>
   ));
 
-  const doodleDrop = matchingDoodle.map((doodle) =>(
-    <li key={doodle} className="w-full text-2xl">
-      {doodle}
-    </li>
-  ));
+  const doodleDrop = matchingDoodle
+    .slice(matchingDoodleIndex - 3, matchingDoodleIndex)
+    .map((doodle) => (
+      <li key={doodle} className="w-full text-2xl">
+        <button className="btn" onClick={() => retrieveDoodleInfo(doodle)}>{doodle}</button>
+      </li>
+    ));
 
-  const updateMatchingDoodle = () =>{
+  const updateMatchingDoodleIndexForward = () => {
+    let indexToAdd = 0;
+    for (let i = 0; i < 3; i++) {
+      if (matchingDoodleIndex + i <= matchingDoodle.length) {
+        indexToAdd++;
+      }
+    }
+    setmatchingDoodleIndex(matchingDoodleIndex + indexToAdd);
+  };
+
+  const updateMatchingDoodleIndexBackward = () => {
+    let indexToSub = 3;
+    for (let i = 0; i < 3; i++) {
+      if ((matchingDoodleIndex - i > 3)) {
+        console.log(matchingDoodleIndex - i)
+        continue;
+      }
+      indexToSub--;
+    }
+
+    setmatchingDoodleIndex(matchingDoodleIndex - indexToSub);
+  };
+
+  const updateMatchingDoodle = () => {
     setMatchingDoodle([]);
-  }
+  };
+
 
   const getDoodleData = (doodleName) => {
     setSelectedDoodleInfo([Doodles["DoodleData"][doodleName]]);
@@ -97,9 +139,7 @@ export default function Home() {
   return (
     <main className="flex h-screen flex-col items-center justify-between bg-neutral-500">
       <header className="flex w-full justify-center items-center bg-neutral-700 h-28 shrink-0">
-        <h1
-          className={`${fredoka.className} text-white lg:text-5xl sm:text-xl`}
-        >
+        <h1 className={`text-white lg:text-5xl sm:text-xl`}>
           Doodle World Teambuilder
         </h1>
       </header>
@@ -112,9 +152,7 @@ export default function Home() {
         <section className="flex basis-2/5 flex-col items-center">
           <section className="flex flex-col basis-2/3 justify-around">
             <div className="flex grow flex-col bg-stone-600 border-4 border-black rounded-2xl">
-              <p
-                className={`${fredoka.className} text-white text-3xl flex justify-center`}
-              >
+              <p className={` text-white text-3xl flex justify-center`}>
                 Team Defense
               </p>
               <div className="flex grow">
@@ -122,9 +160,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex grow flex-col bg-stone-600 border-4 border-black rounded-2xl">
-              <p
-                className={`${fredoka.className} text-white text-3xl flex justify-center`}
-              >
+              <p className={` text-white text-3xl flex justify-center`}>
                 Team Coverage
               </p>
               <div className="flex grow">
@@ -173,8 +209,12 @@ export default function Home() {
                     <h1>PlaceHolder</h1>
                     <details className="dropdown">
                       <summary className="m-1 btn">open or close</summary>
-                      <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 h-52 overflow-auto">
+                      <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 h-52">
                         {doodleDrop}
+                        <div className="flex justify-between">
+                          <button className="btn" onClick={() => {updateMatchingDoodleIndexBackward()}}> {"<"} </button>
+                          <button className="btn" onClick={() => {updateMatchingDoodleIndexForward()}}> {">"} </button>
+                        </div>
                       </ul>
                     </details>
                   </section>
