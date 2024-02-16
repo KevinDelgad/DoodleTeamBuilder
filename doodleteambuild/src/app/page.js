@@ -1,11 +1,9 @@
 "use client";
 import Image from "next/image";
-import { Fredoka } from "next/font/google";
 import Doodles from "../../public/data/doodles.json";
+
 import magnifyGlass from "../../public/images/magnifying-glass.svg";
 import React, { useEffect } from "react";
-
-const fredoka = Fredoka({ weight: "700", subsets: ["latin"] });
 
 export default function Home() {
   const [selectedDoodle, setSelectedDoodle] = React.useState("");
@@ -17,6 +15,9 @@ export default function Home() {
   const [allDoodleName, setAllDoodleName] = React.useState([]);
 
   const hasPageBeenRendered = React.useRef({ effect1: false, effect2: false });
+
+  const doodleImgPath = "/doodleImages/";
+  const doodleTypePath = "/typeImages/";
 
   useEffect(() => {
     setAllDoodleName(Object.keys(Doodles["DoodleData"]));
@@ -79,10 +80,17 @@ export default function Home() {
     ["mythic", "bg-mythic"],
   ];
 
-  const retrieveDoodleInfo = (doodleName) =>{
-    console.log(doodleName)
-  }
+  //Doodle QuickSearch doodle info retriever
+  const retrieveDoodleInfo = (doodleName) => {
+    let foundDoodleData = {};
+    foundDoodleData["Name"] = doodleName;
+    foundDoodleData["Types"] = Doodles["DoodleData"][doodleName]["Type"];
+    foundDoodleData["DoodleImgPath"] = doodleImgPath + doodleName + ".webp"
+    setSelectedDoodleInfo(foundDoodleData);
+    console.log(foundDoodleData)
+  };
 
+  // Trait list Creator
   const traitList = doodleTypes.map((doodle) => (
     <li
       key={doodle}
@@ -92,11 +100,25 @@ export default function Home() {
     </li>
   ));
 
+  //Doodle QuickSearch list Creator
   const doodleDrop = matchingDoodle
     .slice(matchingDoodleIndex - 3, matchingDoodleIndex)
     .map((doodle) => (
       <li key={doodle} className="w-full text-2xl">
-        <button className="btn" onClick={() => retrieveDoodleInfo(doodle)}>{doodle}</button>
+        <button className="btn" onClick={() => retrieveDoodleInfo(doodle)}>
+          {doodle}
+        </button>
+      </li>
+    ));
+
+    const typeImgs = selectedDoodleInfo && selectedDoodleInfo["Types"].map((type) => (
+      <li key={type}>
+        <Image
+          src={doodleTypePath + type.toLowerCase() + '.webp'}
+          width={50}
+          height={50}
+          alt= 'Type Img'
+        />
       </li>
     ));
 
@@ -113,8 +135,7 @@ export default function Home() {
   const updateMatchingDoodleIndexBackward = () => {
     let indexToSub = 3;
     for (let i = 0; i < 3; i++) {
-      if ((matchingDoodleIndex - i > 3)) {
-        console.log(matchingDoodleIndex - i)
+      if (matchingDoodleIndex - i > 3) {
         continue;
       }
       indexToSub--;
@@ -125,11 +146,6 @@ export default function Home() {
 
   const updateMatchingDoodle = () => {
     setMatchingDoodle([]);
-  };
-
-
-  const getDoodleData = (doodleName) => {
-    setSelectedDoodleInfo([Doodles["DoodleData"][doodleName]]);
   };
 
   const handleTextChange = (e) => {
@@ -182,41 +198,79 @@ export default function Home() {
               <dialog id="quickLookMod" className="modal">
                 <div className="w-2/5 h-3/5 bg-neutral-500 flex flex-col items-center p-5 text-textGray rounded-3xl">
                   <label className="input input-bordered border-4 flex bg-neutral-500 w-1/2">
-                    <input
-                      type="text"
-                      className="bg-neutral-500 w-full text-2xl"
-                      placeholder="Search Doodle..."
-                      onChange={handleTextChange}
-                      value={selectedDoodle}
-                    />
-                    <button onClick={() => getDoodleData(selectedDoodle)}>
-                      <svg
-                        xmlns={magnifyGlass}
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        className="w-8 h-8 opacity-70"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </label>
-
-                  <section className="" id="searchedDoodle">
-                    <h1>PlaceHolder</h1>
                     <details className="dropdown">
-                      <summary className="m-1 btn">open or close</summary>
+                      <summary className="flex">
+                        <input
+                          type="text"
+                          className="bg-neutral-500 w-full text-2xl"
+                          placeholder="Search Doodle..."
+                          onChange={handleTextChange}
+                          value={selectedDoodle}
+                        />
+
+                        <svg
+                          xmlns={magnifyGlass}
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          className="w-8 h-8 opacity-70"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </summary>
                       <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 h-52">
                         {doodleDrop}
                         <div className="flex justify-between">
-                          <button className="btn" onClick={() => {updateMatchingDoodleIndexBackward()}}> {"<"} </button>
-                          <button className="btn" onClick={() => {updateMatchingDoodleIndexForward()}}> {">"} </button>
+                          <button
+                            className="btn"
+                            onClick={() => {
+                              updateMatchingDoodleIndexBackward();
+                            }}
+                          >
+                            {" "}
+                            {"<"}{" "}
+                          </button>
+                          <button
+                            className="btn"
+                            onClick={() => {
+                              updateMatchingDoodleIndexForward();
+                            }}
+                          >
+                            {" "}
+                            {">"}{" "}
+                          </button>
                         </div>
                       </ul>
                     </details>
+                  </label>
+
+                  <section className="" id="searchedDoodle">
+                    {
+                      (selectedDoodleInfo)
+                      ?
+                      <>
+                        <h1>{selectedDoodleInfo["Name"]}</h1>
+                        <div className="flex">
+                          <div>
+                            <ul>
+                              {typeImgs}
+                            </ul>
+                          </div>
+                        <Image
+                          src={selectedDoodleInfo["DoodleImgPath"]}
+                          height={100}
+                          width={100}
+                          alt="Selected Doodle Img"
+                        />
+                        </div>
+
+                      </>
+                      :
+                      null
+                    }
                   </section>
                 </div>
               </dialog>
