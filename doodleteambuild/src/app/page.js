@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Doodles from "../../public/data/doodles.json";
+import TypeChart from "../../public/data/typechart.json";
 
 import magnifyGlass from "../../public/images/magnifying-glass.svg";
 import React, { useEffect } from "react";
@@ -80,21 +81,54 @@ export default function Home() {
     ["mythic", "bg-mythic"],
   ];
 
+
+
+  //Doodle Quicksearch type lister
+  const doodleTypeAt = (effective) => {
+    let effectiveTypes = []
+    const numProp = Object.keys(TypeChart["defense"]["fire"]).length
+    for (let i = 0; i < selectedDoodleInfo["Types"].length; i++) {
+      //Continue from here
+      var keys = Object.keys(TypeChart["defense"][selectedDoodleInfo["Types"][i].toLowerCase()]);
+      keys.forEach(key => {
+        var value = TypeChart["defense"][selectedDoodleInfo["Types"][i].toLowerCase()][key];
+        console.log(1-value)
+        if(value === effective){
+          effectiveTypes.push(key)
+        }
+    });
+    }
+
+    const typeList = effectiveTypes.map((type) =>(
+      <li key={type} className="badge badge-neutral text-xl basis-1/5">
+          {type}
+      </li>
+    ));
+    
+    return(
+      <>
+        {typeList}
+      </>
+    )
+
+  };
+
+
+
   //Doodle QuickSearch doodle info retriever
   const retrieveDoodleInfo = (doodleName) => {
     let foundDoodleData = {};
     foundDoodleData["Name"] = doodleName;
     foundDoodleData["Types"] = Doodles["DoodleData"][doodleName]["Type"];
-    foundDoodleData["DoodleImgPath"] = doodleImgPath + doodleName + ".webp"
+    foundDoodleData["DoodleImgPath"] = doodleImgPath + doodleName + ".webp";
     setSelectedDoodleInfo(foundDoodleData);
-    console.log(foundDoodleData)
   };
 
   // Trait list Creator
   const traitList = doodleTypes.map((doodle) => (
     <li
       key={doodle}
-      className={`text-black badge-lg badge badge-neutraltext-xl basis-1/5 outline-4 ${doodle[1]}`}
+      className={`text-black badge-lg badge badge-neutral text-xl basis-1/4 outline-4 ${doodle[1]}`}
     >
       {doodle[0]}
     </li>
@@ -111,13 +145,15 @@ export default function Home() {
       </li>
     ));
 
-    const typeImgs = selectedDoodleInfo && selectedDoodleInfo["Types"].map((type) => (
+  const typeImgs =
+    selectedDoodleInfo &&
+    selectedDoodleInfo["Types"].map((type) => (
       <li key={type}>
         <Image
-          src={doodleTypePath + type.toLowerCase() + '.webp'}
+          src={doodleTypePath + type.toLowerCase() + ".webp"}
           width={50}
           height={50}
-          alt= 'Type Img'
+          alt="Type Img"
         />
       </li>
     ));
@@ -248,29 +284,48 @@ export default function Home() {
                   </label>
 
                   <section className="" id="searchedDoodle">
-                    {
-                      (selectedDoodleInfo)
-                      ?
+                    {selectedDoodleInfo ? (
                       <>
-                        <h1>{selectedDoodleInfo["Name"]}</h1>
-                        <div className="flex">
-                          <div>
-                            <ul>
-                              {typeImgs}
-                            </ul>
-                          </div>
-                        <Image
-                          src={selectedDoodleInfo["DoodleImgPath"]}
-                          height={100}
-                          width={100}
-                          alt="Selected Doodle Img"
-                        />
+                        <h1 className="flex justify-center">{selectedDoodleInfo["Name"]}</h1>
+                        <div className="flex justify-center">
+                          <ul>{typeImgs}</ul>
+                          <Image
+                            src={selectedDoodleInfo["DoodleImgPath"]}
+                            height={100}
+                            width={100}
+                            alt="Selected Doodle Img"
+                          />
                         </div>
-
+                        <div>
+                          <h2>super,super effective from (4x)</h2>
+                          <ul></ul>
+                        </div>
+                        <div>
+                          <h2>super effective from (2x)</h2>
+                          <ul className="flex flex-wrap">
+                            {doodleTypeAt(-1)}
+                          </ul>
+                        </div>
+                        <div>
+                          <h2>moderately effective from (1x)</h2>
+                          <ul className="flex flex-wrap">
+                            {doodleTypeAt(0)}
+                          </ul>
+                        </div>
+                        <div>
+                          <h2>not so effective from (1/2x)</h2>
+                          <ul className="flex flex-wrap">
+                            {doodleTypeAt(1)}
+                          </ul>
+                        </div>
+                        <div>
+                          <h2>no effect from (0x)</h2>
+                          <ul className="flex flex-wrap">
+                            {doodleTypeAt(1.5)}
+                          </ul>
+                        </div>
                       </>
-                      :
-                      null
-                    }
+                    ) : null}
                   </section>
                 </div>
               </dialog>
