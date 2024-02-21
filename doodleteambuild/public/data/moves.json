@@ -1,1 +1,3646 @@
- {}
+{
+  "Moves": {
+    "Bite": {
+      "Type": "Beast",
+      "Desc": "User bites the target. Has 20% a chance to flinch.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Biting": true,
+      "Power": 50
+    },
+    "GenericHeal": {
+      "Type": "Basic",
+      "Desc": "U shouldn't see this.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20
+    },
+    "Swipe": {
+      "Type": "Basic",
+      "Desc": "Swipes target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 35
+    },
+    "Swipes": {
+      "Type": "Basic",
+      "Desc": "Swipes target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 35
+    },
+    "Bonk": {
+      "Type": "Metal",
+      "Desc": "Bonks the target with its head or an object. Has a 20% chance to cause the target to flinch.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 80
+    },
+    "Stab": {
+      "Type": "Metal",
+      "Desc": "Stabs target with a pointy object or weapon.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Hop": {
+      "Type": "Basic",
+      "Desc": "The user hops into the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 40
+    },
+    "Spicy Tackle": {
+      "Type": "Food",
+      "Desc": "User charges at target while smelling delicious. This move can't miss.",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 30,
+      "Power": 40
+    },
+    "Precision Dart": {
+      "Type": "Metal",
+      "Desc": "The user launches a piercing metal dart at the target. This move ignores any stat changes the target has.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 75
+    },
+    "Piercing Ice": {
+      "Type": "Ice",
+      "Desc": "User pierces the target's defense with icicles. This move ignores any stat changes the target has.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 75
+    },
+    "Horn Pierce": {
+      "Type": "Beast",
+      "Desc": "User attacks using its horn.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 50
+    },
+    "Create Jelly": {
+      "Type": "Food",
+      "Desc": "Creates a random Jelly for the user to hold.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil",
+      "local Jelly": [
+        "Power Jelly",
+        "Determination Jelly",
+        "Speed Jelly",
+        "Heal Jelly",
+        "Strength Jelly",
+        "Magical Jelly",
+        "Defensive Jelly",
+        "Weird Jelly",
+        "Wake-up Jelly",
+        "Cure Jelly"
+      ]
+    },
+
+    "Cake Walk": {
+      "Type": "Food",
+      "Desc": "Greatly boosts the user's highest stat.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Food Fight": {
+      "Type": "Food",
+      "Desc": "Summons food to throw. Has a 20% chance to lower the target's accuracy.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 65
+    },
+    "Sharp Claws": {
+      "Type": "Beast",
+      "Desc": "User attacks using its claws.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 60
+    },
+    "Tail Smack": {
+      "Type": "Basic",
+      "Desc": "Smacks target with its tail.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 60
+    },
+    "Smack": {
+      "Type": "Basic",
+      "Desc": "Smacks target with its body or hands.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 40
+    },
+    "Charge": {
+      "Type": "Basic",
+      "Desc": "The user charges target, doing damage.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 40
+    },
+    "Roundhouse Kick": {
+      "Type": "Melee",
+      "Desc": "The user spins around and kicks, aiming to lower the opponent's speed.",
+      "Category": "Physical",
+      "Accuracy": 80,
+      "Uses": 5,
+      "Power": 100
+    },
+    "Pummel": {
+      "Type": "Melee",
+      "Desc": "The user pummels the target. Has a 20% chance to lower the attack of the opponent.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 60
+    },
+    "Helicopter Kick": {
+      "Type": "Melee",
+      "Desc": "A spinning kick. This attack hits 2-5 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 25
+    },
+    "Flurry": {
+      "Type": "Melee",
+      "Desc": "Jabs the target repeatedly. This attack hits 2-4 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 25
+    },
+    "Multi-Smack": {
+      "Type": "Basic",
+      "Desc": "Smacks the target repeatedly. This attack hits 2-5 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 20
+    },
+    "Claw Swipes": {
+      "Type": "Basic",
+      "Desc": "Swipes target. This attack hits 2-5 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 25
+    },
+    "Ram": {
+      "Type": "Basic",
+      "Desc": "User rams into the target.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 40,
+      "Power": 40
+    },
+    "Psychic Ram": {
+      "Type": "Mind",
+      "Desc": "The user covers itself with psychic energy and attacks. Has a 20% chance to flinch.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 80
+    },
+    "Needle Spike": {
+      "Type": "Plant",
+      "Desc": "The user shoots spikes at the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 50
+    },
+    "Seed Assault": {
+      "Type": "Plant",
+      "Desc": "The user assaults the target with seeds. Has a 20% chance to flinch.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 90
+    },
+    "Headbutt": {
+      "Type": "Basic",
+      "Desc": "User headbutts the target. Has a 20% chance to flinch.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 60
+    },
+    "Chocolate Rain": {
+      "Type": "Food",
+      "Desc": "The user performs a ritual, summoning chocolate rain to the battlefield. This replaces any other current weather effects.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Sandstorm": {
+      "Type": "Earth",
+      "Desc": "The user performs a ritual, summoning a sandstorm to the battlefield. This replaces any other current weather effects.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Acid Rain": {
+      "Type": "Poison",
+      "Desc": "The user performs a ritual, summoning acid rain to the battlefield. This replaces any other current weather effects.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Armillaria": {
+      "Type": "Plant",
+      "Desc": "The user creates a huge mushroom that spreads throughout the entire field. Moves and items that causes Doodles to switch will fail.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Study": {
+      "Type": "Basic",
+      "Desc": "The user studies the target's last used move, and replaces this move with it permanently.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 3,
+      "Power": "nil"
+    },
+    "Swamp": {
+      "Type": "Water",
+      "Desc": "The user turns the field into a swamp, causing grounded Doodles to lose speed every turn for 5 turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Icy Floor": {
+      "Type": "Ice",
+      "Desc": "The user turns the field into ice, sometimes causing attackers to miss their attacks.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Darkness Expansion": {
+      "Type": "Dark",
+      "Desc": "The user darkens the field, making Dark-type attacks do more damage and Light-type attacks do less damage.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Rainmaker": {
+      "Type": "Water",
+      "Desc": "The user performs a ritual, summoning rain to the battlefield. This replaces any other weather effects.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Crystal Armor": {
+      "Type": "Crystal",
+      "Desc": "The user surrounds its body with crystals, boosting its defense. The next attack it uses, if its Crystal-type, does more damage.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Snow Fort": {
+      "Type": "Ice",
+      "Desc": "User makes a snowfort, greatly boosting its defense.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Sedimentary Defense": {
+      "Type": "Earth",
+      "Desc": "User gathers sediments to surround its body, greatly boosting its defense but greatly lowering its magical defense. If there's a sandstorm, magical defense isn't lowered.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Rapid Current": {
+      "Type": "Water",
+      "Desc": "The user summons a current to gains speed. If it's raining, drastically increase its speed instead.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Heal": {
+      "Type": "Basic",
+      "Desc": "Using magic, the user restores half their health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Feast": {
+      "Type": "Food",
+      "Desc": "The user hosts a grand feast, healing them by half their health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Combo Support": {
+      "Type": "Basic",
+      "Desc": "The user gets ready to combo with its ally. The ally does 50% more damage on its next attack.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Drill Sergeant": {
+      "Type": "Melee",
+      "Desc": "The user becomes enraged and yells at their ally to do better. The ally's attack and defense are boosted.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Hype Up": {
+      "Type": "Basic",
+      "Desc": "The user hypes up their ally. The ally's attack and magic attack are boosted.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Swift Shield": {
+      "Type": "Melee",
+      "Desc": "The user shields itself and its allies from priority moves.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Wide Shield": {
+      "Type": "Mind",
+      "Desc": "The user shields itself and its allies from multi-target moves.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Relief": {
+      "Type": "Basic",
+      "Desc": "The user patches up the target, healing them by half their health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Mend": {
+      "Type": "Earth",
+      "Desc": "The user mends itself, resetting any negative stat changes the user has.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Consume Treasure": {
+      "Type": "Spirit",
+      "Desc": "The user consumes its held item to replenish its moves and all of its health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Hope Beacon": {
+      "Type": "Light",
+      "Desc": "The user emits a beacon of light to replenish its other moves and a third of its maximum health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Storm Heal": {
+      "Type": "Water",
+      "Desc": "The user uses the power of the ocean to heal itself by a third of their health. If it is raining, heals them by half instead.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Aero Storm": {
+      "Type": "Air",
+      "Desc": "The user whips up a massive hurricane, doing massive damage. This greatly lowers the attacker's magic attack.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 5,
+      "Power": 140
+    },
+    "Aqua Cannon": {
+      "Type": "Water",
+      "Desc": "The user shoots water from its palms with a massive force. This greatly lowers the attacker's magic attack.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 5,
+      "Power": 140
+    },
+    "Leaf Tornado": {
+      "Type": "Plant",
+      "Desc": "The user summons a tornado with leaves, doing massive damage. This greatly lowers the attacker's magic attack.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 5,
+      "Power": 140
+    },
+    "Daze": {
+      "Type": "Melee",
+      "Desc": "The user wallops the target with a strong punch or kick with intent to daze them. This attack may cause confusion (20% chance).",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 75
+    },
+    "Entomophobia": {
+      "Type": "Insect",
+      "Desc": "The user causes the target to fear insects, doing damage to their psyche. This attack may cause confusion (20% chance).",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Mandible Wound": {
+      "Type": "Insect",
+      "Desc": "The ultimate insect move. The user, with its mandible or jaws, does massive damage.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 100
+    },
+    "Sword Sweep": {
+      "Type": "Metal",
+      "Desc": "Slashing their sword, this attack does massive damage to all opposing doodles. Has a 20% chance to lower the target's defense.",
+      "Category": "Physical",
+      "Accuracy": 85,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Challenge": {
+      "Type": "Melee",
+      "Desc": "The user challenges the opponents to a duel, boosting the user's attack and magical attack. The user can't switch out or flee for three turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Armor Break": {
+      "Type": "Basic",
+      "Desc": "The user breaks their armor, lowering their defense and magical defense stats, but greatly boosting its attack, magical attack, and speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Frenzied Darkness": {
+      "Type": "Dark",
+      "Desc": "The user frenzies under the guise of darkness, having a 30% chance of inflicting Vulnerable.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 85
+    },
+    "Mallet Crush": {
+      "Type": "Dark",
+      "Desc": "The user crushes the target with its mallet. If this attack causes the target to faint, greatly boost the user's attack.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 50
+    },
+    "Thorny Thwack": {
+      "Type": "Plant",
+      "Desc": "Thwacks the target with thorns. Has a 20% chance to flinch.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Thorns of Wrath": {
+      "Type": "Plant",
+      "Desc": "Attacks furiously with thorns.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 100
+    },
+    "Mud Wave": {
+      "Type": "Earth",
+      "Desc": "The user summons mud from the earth to damage the opposing Doodles.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Earth Surge": {
+      "Type": "Earth",
+      "Desc": "The user makes the ground underneath shoot up, damaging the opposing Doodles. This may lower their magical attack (10% chance).",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Rupture": {
+      "Type": "Crystal",
+      "Desc": "The user summons precious gems to burst from the ground underneath a target, dealing large amounts of damage. This greatly lowers the user's magical attack.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 140
+    },
+    "Mercury Puddle": {
+      "Type": "Metal",
+      "Desc": "The user summons a pool of mercury underneath the target, having a chance to poison. (20% chance to poison)",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 65
+    },
+    "Opal Pulse": {
+      "Type": "Crystal",
+      "Desc": "The user harnesses the power of crystals to release a wave of energy, doing damage to all other Doodles.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 75
+    },
+    "Earthquake": {
+      "Type": "Earth",
+      "Desc": "The user causes a powerful earthquake, doing massive damage.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 100
+    },
+    "Shock Wave": {
+      "Type": "Spark",
+      "Desc": "The user creates a shock wave, doing damage to all other Doodles.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Body Slam": {
+      "Type": "Basic",
+      "Desc": "The user crashes into the opponent with a full body slam.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 85
+    },
+    "Double Bite": {
+      "Type": "Beast",
+      "Desc": "The user chomps on the target twice in quick succession. This move hits 2 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Biting": true,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Just Desserts": {
+      "Type": "Food",
+      "Desc": "This attack does double damage if the user has less than half health.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 80
+    },
+    "Sugar Kiss": {
+      "Type": "Food",
+      "Desc": "The user kisses the target with a sweet, sugary kiss. Has a 20% chance to confuse the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 50
+    },
+    "Sakura Blast": {
+      "Type": "Plant",
+      "Desc": "A spiral of cherry blossoms strikes. Has a 20% chance to confuse the target.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 75
+    },
+    "Shatter": {
+      "Type": "Earth",
+      "Desc": "The user shatters the earth beneath the target, breaking any Magical Shields, Crystal Walls, or Shales.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Multi-Hit": {
+      "Type": "Basic",
+      "Desc": "The user hits the enemy multiple times. This move hits 2-5 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 15
+    },
+    "Bullet Corn": {
+      "Type": "Food",
+      "Desc": "The user shoots corn at the target. This move hits 2-5 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 15
+    },
+    "Stalactites": {
+      "Type": "Earth",
+      "Desc": "The user causes stalacities to fall from the ceiling. This move hits 2-5 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 25
+    },
+    "Purl Stitch": {
+      "Type": "Basic",
+      "Desc": "The user attempts to stitch the opponent together. This move hits 2-4 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 30
+    },
+    "Landslide": {
+      "Type": "Earth",
+      "Desc": "The user causes a giant landslide, doing massive damage to all opposing doodles. Has a 20% chance to flinch.",
+      "Category": "Physical",
+      "Accuracy": 85,
+      "Uses": 10,
+      "Power": 95
+    },
+    "Pebble": {
+      "Type": "Earth",
+      "Desc": "User throws a pebble at the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Earth Lance": {
+      "Type": "Earth",
+      "Desc": "Pointed blades shoot up from the ground. Has a 20% chance to lower the target's defense.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Rumbling Charge": {
+      "Type": "Earth",
+      "Desc": "The user charges at the target while causing the earth to rumble. This attack boosts the user's speed stat.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 50
+    },
+    "Rusty Roots": {
+      "Type": "Earth",
+      "Desc": "User attacks using old roots. Has a 20% chance to lower the target's speed.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 70
+    },
+    "1,000 Needles": {
+      "Type": "Plant",
+      "Desc": "The user sprays a barrage of needles at the target. Lowers the user's defense and magical defense.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Mud Spit": {
+      "Type": "Earth",
+      "Desc": "The user spits mud at the target, doing magical damage. Lowers the target's accuracy.",
+      "Category": "Magical",
+      "Accuracy": 80,
+      "Uses": 25,
+      "Power": 20
+    },
+    "Dirt Lump": {
+      "Type": "Earth",
+      "Desc": "The user casts a dirt ball at the target, doing magical damage. Has a 20% chance to lower the target's accuracy.",
+      "Category": "Magical",
+      "Accuracy": 80,
+      "Uses": 25,
+      "Power": 40
+    },
+    "Bestial Roar": {
+      "Type": "Beast",
+      "Desc": "User roars at the top of its lungs. This lowers the attack of the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Feral Fury": {
+      "Type": "Beast",
+      "Desc": "The user screeches at the top of their lungs. Has a 10% chance to lower the target's magical defense.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 75
+    },
+    "Bestial Wrath": {
+      "Type": "Beast",
+      "Desc": "User activates its inner beast to devastatingly unleash its most savage attack. Has a 20% chance to flinch the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 100
+    },
+    "Crunch": {
+      "Type": "Beast",
+      "Desc": "User crunches the target. Has a 20% chance to lower the target's defense.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Biting": true,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Scapegoat": {
+      "Type": "Basic",
+      "Desc": "Sacrificing some health, the user creates a training dummy. The dummy serves as the user's scapegoat, taking attacks for them.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Revitalize": {
+      "Type": "Dark",
+      "Desc": "If the user would faint, restore their health by half. This attack only works once per battle.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Shadowstep": {
+      "Type": "Dark",
+      "Desc": "The user steps through the shadows, boosting its speed and crit chance.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": "nil"
+    },
+    "Smokescreen": {
+      "Type": "Basic",
+      "Desc": "Covers the user in a smokescreen, boosting its evasion.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": "nil"
+    },
+    "Hide": {
+      "Type": "Basic",
+      "Desc": "The user hides, boosting its evasion but lowering its accuracy.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": "nil"
+    },
+    "Sonata of Darkness": {
+      "Type": "Dark",
+      "Desc": "A melody that is banned in many countries. It causes any Doodle to hear this song to faint in 3 turns, unless it switches out of battle.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Entertain": {
+      "Type": "Basic",
+      "Desc": "The user entertains the target with various means. This greatly lowers their attack.",
+      "Category": "Passive",
+      "Accuracy": 90,
+      "Uses": 30,
+      "Power": "nil"
+    },
+    "Screech": {
+      "Type": "Basic",
+      "Desc": "The user makes an extremely annoying sound at the target. This greatly lowers their defense.",
+      "Category": "Passive",
+      "Accuracy": 90,
+      "Uses": 30,
+      "Power": "nil"
+    },
+    "Bad Odor": {
+      "Type": "Poison",
+      "Desc": "The user uses their bad odor to lower the opposing Doodles' accuracy and evasion.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": "nil"
+    },
+    "Hiss": {
+      "Type": "Dark",
+      "Desc": "The user hisses at the opponent Doodles, making them afraid to attack. This lowers their attack and magic attack.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": "nil"
+    },
+    "Call of the Wild": {
+      "Type": "Beast",
+      "Desc": "The user calls to the wilds. For the next 5 turns, any allied Doodle that is sent out gets their lowest offensive stat boosted.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Crit Up": {
+      "Type": "Basic",
+      "Desc": "The user boost all allies' crit chance for 5 turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Sylphid": {
+      "Type": "Air",
+      "Desc": "The user creates a wind barrier, speeding up all allies for 5 turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Purge": {
+      "Type": "Light",
+      "Desc": "The user purges all stat changes, resetting them.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Shale": {
+      "Type": "Earth",
+      "Desc": "If there's a sandstorm, the user summons a wall made of shale, making the opponent's super-effective attacks do half damage for five turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Crystal Wall": {
+      "Type": "Crystal",
+      "Desc": "The user summons a crystal wall, making the opponent's physical attacks do half damage for five turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Icy Veil": {
+      "Type": "Ice",
+      "Desc": "The user summons an icy veil, preventing your side from being inflicted with status conditions for five turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Magical Shield": {
+      "Type": "Mind",
+      "Desc": "The user summons a magical shield, making the opponent's magical attacks do half damage for five turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Yarn Snare": {
+      "Type": "Basic",
+      "Desc": "The user sets up a yarn snare on the opponent's side. If any Doodle gets sent out onto the yarn snare, the snare lowers its attack.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Pylons": {
+      "Type": "Spark",
+      "Desc": "The user summons electrical pylons on the opponent's side. If any Doodle gets sent out, they get shocked by the pylons, losing some health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Bee Summon": {
+      "Type": "Insect",
+      "Desc": "The user summons bees on the opponent's side. If any Doodle gets sent out, they get stung by bees, losing some health. These bees can never cause a Doodle to faint.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Lingering Poison": {
+      "Type": "Poison",
+      "Desc": "The user sets up poison on the opponent's side. If any Doodle gets sent out into the poison, they get poisoned.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Entangling Vines": {
+      "Type": "Plant",
+      "Desc": "The user sets up entangling vines on the opponent's side. If any Doodle gets sent out onto the vines, lower their speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Nature's Guardian": {
+      "Type": "Plant",
+      "Desc": "The user is protected by a nature's guardian. If a Doodle hits them with a contact move, has a 50% chance to boost all of their stats.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Flame Shield": {
+      "Type": "Fire",
+      "Desc": "The user summons fire shields around them, protecting them from attacks. If a Doodle hits them with a magic attack, the shields react by shooting a Firebolt back.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Bubble Shield": {
+      "Type": "Water",
+      "Desc": "The user summons bubble shields around them, protecting them from attacks. If a Doodle hits them with a physical attack, the shields react by shooting a Waterbolt back.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Trait Exchange": {
+      "Type": "Mind",
+      "Desc": "The user trades traits with the target.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Fatten Up": {
+      "Type": "Food",
+      "Desc": "The user greatly increases its Defense. The user changes its trait to Adipose, taking less damage from Fire and Ice-type attacks.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Relinquish the Dark": {
+      "Type": "Light",
+      "Desc": "The user beats the target with the intent to rid them of evil. If the target is Dark-type, the user boosts their attack. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Inflame": {
+      "Type": "Fire",
+      "Desc": "The user internally heats up, boosting its magic attack. If the user has a status effect, greatly boost the user's magic attack instead.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Insect Instinct": {
+      "Type": "Insect",
+      "Desc": "If the target is going to switch out, the user sharpens its mandibles/stinger and adopts a battle-ready stance, boosting the user's attack, speed, and accuracy.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Panhandle": {
+      "Type": "Basic",
+      "Desc": "The user begs for money. Only works one time per battle.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Diamond Dash": {
+      "Type": "Crystal",
+      "Desc": "The user unexpectedly uses diamonds to attack the target.  It only works on the first turn each time the user enters battle.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Subterfuge": {
+      "Type": "Basic",
+      "Desc": "The user launches a surprise attack and makes the target flinch. It only works on the first turn each time the user enters battle.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 30
+    },
+    "Flashbang": {
+      "Type": "Light",
+      "Desc": "The user surprises the target with sudden light and makes the target flinch. It only works on the first turn each time the user enters battle.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 30
+    },
+    "Cutesy Glare": {
+      "Type": "Basic",
+      "Desc": "The user glares at the target with a cute look. It greatly lowers the target's attack.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Cold Glance": {
+      "Type": "Dark",
+      "Desc": "The user glares at the target with an arrogant look. It lowers the target's attack and defense.",
+      "Category": "Passive",
+      "Accuracy": 90,
+      "Uses": 35,
+      "Power": "nil"
+    },
+    "Sad Zone": {
+      "Type": "Basic",
+      "Desc": "The user makes the target sad. It lowers the target's defense and magical defense.",
+      "Category": "Passive",
+      "Accuracy": 90,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Scrutinize": {
+      "Type": "Dark",
+      "Desc": "The user scrutinizes the opposing team with a scary look that lowers the Defense stat. ",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Croak": {
+      "Type": "Water",
+      "Desc": "The user croaks, boosting its magical attack.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Allure": {
+      "Type": "Basic",
+      "Desc": "The user allures the target into following them around. This greatly lowers the target's speed.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Squeak": {
+      "Type": "Basic",
+      "Desc": "The user squeaks, trying to gain sympathy points. The opposing team's attack are lowered.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Gleeful Ruse": {
+      "Type": "Spirit",
+      "Desc": "The user damages the target, and then tries to trades items.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 75
+    },
+    "Trade": {
+      "Type": "Mind",
+      "Desc": "The user convinces the target to trade held items.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Seasoning": {
+      "Type": "Food",
+      "Desc": "The user sprinkles seasoning on the opposing team. Food-types do 30% more damage to targets that have seasoning on the target.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Primal Rage": {
+      "Type": "Beast",
+      "Desc": "The user activates its primal rage. Beast-type attacks do 50% more damage.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Swaddle": {
+      "Type": "Insect",
+      "Desc": "The user swaddles the target in a bunch of bandages, lowering their attack and speed.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": "nil"
+    },
+    "Web": {
+      "Type": "Insect",
+      "Desc": "The user covers the target in a web, lowering their speed.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Crocodile Tears": {
+      "Type": "Basic",
+      "Desc": "The user cries up a storm. This lowers the target's magic defense.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Energized": {
+      "Type": "Spark",
+      "Desc": "The user charges up with electricity, increasing its speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Haste": {
+      "Type": "Basic",
+      "Desc": "The user adopts a more agile-stance, greatly increasing its speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Balloon Boost": {
+      "Type": "Air",
+      "Desc": "The user floats into the sky, boosting its evasion but lowering its speed.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Flare": {
+      "Type": "Light",
+      "Desc": "A bright flare that greatly lowers the target's evasiveness. It may also leave the target with a burn (20% chance).",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Pure Fear": {
+      "Type": "Dark",
+      "Desc": "Projects raw terror into the enemy, forcing them to flinch on their next move. This move always attacks last.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 3,
+      "Power": "nil"
+    },
+    "Blinding Lights": {
+      "Type": "Light",
+      "Desc": "Blinding lights cuts the target's accuracy.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Bark": {
+      "Type": "Basic",
+      "Desc": "Barks aggressively, annoying the target and lowering their defense and magic defense.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Sharpen": {
+      "Type": "Metal",
+      "Desc": "The user sharpens its claws or weapons, greatly boosting their attack.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Climate Shot": {
+      "Type": "Basic",
+      "Desc": "The user gathers particles from the weather to form a projectile, and then blasts it at the target. The typing of this move depends on the current weather.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 80
+    },
+    "Tri-Elemental Slash": {
+      "Type": "Basic",
+      "Desc": "Once this move is used, this move's type turns into a Fire, Ice, or Spark-type move, cycling through them.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Misery Dance": {
+      "Type": "Spirit",
+      "Desc": "The user does a strange, sad dance, greatly increasing its defense.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Ready to Fight": {
+      "Type": "Melee",
+      "Desc": "The user adopts a combative stance in order to make the battle easier. This boosts the user's attack and accuracy.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Jealousy": {
+      "Type": "Spirit",
+      "Desc": "If the user doesn't have an item, boost its attack and speed. Otherwise, no effect.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "War Cry": {
+      "Type": "Beast",
+      "Desc": "The user shouts out an almighty war cry, boosting their attack and speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Quick Thinking": {
+      "Type": "Mind",
+      "Desc": "This Doodle is quick to react in times of duress, boosting their magical attack and speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Swagger Dance": {
+      "Type": "Basic",
+      "Desc": "The user does a strange dance, increasing its defense, magic defense, and speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Jolly Dance": {
+      "Type": "Basic",
+      "Desc": "The user does a happy jig, increasing its defense and magic defense.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Enlightenment": {
+      "Type": "Mind",
+      "Desc": "The user realizes the secrets of the universe, increasing its magical attack and magical defense.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Barkskin": {
+      "Type": "Plant",
+      "Desc": "The user fortifies its skin, greatly increasing its defense.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Adrenaline": {
+      "Type": "Melee",
+      "Desc": "Drastically boosts the user's attacking power at the cost of health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Trap": {
+      "Type": "Basic",
+      "Desc": "The user traps the target and prevents them from escaping for 3-5 turns.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Ice Prison": {
+      "Type": "Ice",
+      "Desc": "Lowers the target's speed and prevents them from switching out for 3-5 turns.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Chain Imprisonment": {
+      "Type": "Metal",
+      "Desc": "Using chains, prevents the target from escaping for 5 turns.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Coil": {
+      "Type": "Basic",
+      "Desc": "The user coils up. This boosts its Attack and Speed stats as well as its accuracy. ",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Harden": {
+      "Type": "Basic",
+      "Category": "Passive",
+      "Desc": "The user hardens its body, boosting its defense.",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Armor Up": {
+      "Type": "Basic",
+      "Category": "Passive",
+      "Desc": "The user conceals its weakspots, boosting its defense.",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Skitter": {
+      "Type": "Insect",
+      "Desc": "The user skitters on its many legs to boost its speed and accuracy.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": "nil"
+    },
+    "Howl": {
+      "Type": "Basic",
+      "Desc": "The user howls, boosting its attack.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Sweet Aroma": {
+      "Type": "Food",
+      "Desc": "The user sends out a sweet aroma, lowering the opposing team's evasiveness.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": "nil"
+    },
+    "Misery": {
+      "Type": "Spirit",
+      "Desc": "User wallows in its own misery, greatly boosting its magic attack.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Glow Up": {
+      "Type": "Light",
+      "Desc": "The user glows up, greatly boosting its magic attack.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Sob": {
+      "Type": "Spirit",
+      "Desc": "The user reminiscences how it became a spirit and starts sobbing. This move lowers all the stats of the target.",
+      "Category": "Passive",
+      "Accuracy": 60,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Patchwork": {
+      "Type": "Basic",
+      "Desc": "The user uses thread to tie up the foe and trip them, drastically lowering their speed.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Meditation": {
+      "Type": "Mind",
+      "Desc": "The user enters in a state of deep focus, greatly boosting its magic defense.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Mind Empowerment": {
+      "Type": "Mind",
+      "Desc": "The user empowers its mind, greatly boosting its magical attack.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Itchy Bite": {
+      "Type": "Insect",
+      "Desc": "It may also make the target flinch (10%) or leave it with paralysis (10%). ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Biting": true,
+      "Power": 60
+    },
+    "Nibble": {
+      "Type": "Insect",
+      "Desc": "The user chews at the opponent with its mandibles or teeth.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Biting": true,
+      "Power": 40
+    },
+    "Shellshock": {
+      "Type": "Basic",
+      "Desc": "The user attacks using its shell. Has a 10% chance to paralyze.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 60
+    },
+    "Waterbolt": {
+      "Type": "Water",
+      "Desc": "Shoots a weak water bolt at the enemy.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Geode Smash": {
+      "Type": "Crystal",
+      "Desc": "The user conjures geodes to send at the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Sparkling Finish": {
+      "Type": "Crystal",
+      "Desc": "The user takes time to polish away any dirt and feel good, boosting speed and accuracy.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Tsunami": {
+      "Type": "Water",
+      "Desc": "Summons a tsunami, sending it at all other doodles.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Energy Wave": {
+      "Type": "Melee",
+      "Desc": "The user charges up their chi and sends a condensed wave, dealing damage to all other Doodles.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Vine Grasp": {
+      "Type": "Plant",
+      "Desc": "The user tries to grasp the user with vines. This move does physical damage.",
+      "DamageType": "Physical",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Psychokinetic Launch": {
+      "Type": "Mind",
+      "Desc": "The user, using its mind, launches objects at the target. This move does physical damage.",
+      "DamageType": "Physical",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Shield Bash": {
+      "Type": "Basic",
+      "Desc": "User bashes the target with its shield or armor. This attack uses the user's defense stat to calculate damage.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 75
+    },
+    "Hydraulic Crash": {
+      "Type": "Water",
+      "Desc": "The user surrounds themselves with water and slams into the target with overwhelming force. This hurts the user a little bit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 120
+    },
+    "Solid Charge": {
+      "Type": "Melee",
+      "Desc": "User assumes a defensive stance and then charges at the opponent. This attack uses the user's defense stat to calculate damage.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Psychoforce": {
+      "Type": "Mind",
+      "Desc": "The user releases a shockwave of psychic power. This move has a 15% chance to lower the target's magic defense.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Sugar Rush": {
+      "Type": "Food",
+      "Desc": "The user charges, amped up on sugar, intending to take the target down. This may make the target flinch (20% chance).",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Tidal Slam": {
+      "Type": "Water",
+      "Desc": "Rides a tidal wave to slam into the target. Has a 15% chance to flinch.",
+      "Category": "Physical",
+      "Accuracy": 85,
+      "Uses": 10,
+      "Power": 100
+    },
+    "Starbreaker": {
+      "Type": "Basic",
+      "Desc": "This move does more damage the less stars the user has.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "Varies"
+    },
+    "Tsunami Drop": {
+      "Type": "Water",
+      "Desc": "The user picks up the target with a tsunami and then slams them into the ground. This attack does more damage the heavier the opponent.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "Varies"
+    },
+    "Body Throw": {
+      "Type": "Melee",
+      "Desc": "The user picks up the target and throws them. This attack does more damage the heavier the opponent.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "Varies"
+    },
+    "Equality": {
+      "Type": "Basic",
+      "Desc": "This attack move cuts down the target's health to equal the user's health.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 5
+    },
+    "Boo!": {
+      "Type": "Spirit",
+      "Desc": "The user attempts to scare the target. This attack does more damage the faster the user is than the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15
+    },
+    "Pirouette": {
+      "Type": "Basic",
+      "Desc": "The user spins and attacks. This attack always does 40 damage.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": true
+    },
+    "Haunt": {
+      "Type": "Spirit",
+      "Desc": "The user disappears using its spiritual form, and then reappears near the target, scaring them. Has a 20% chance to curse the target.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 15,
+      "Power": 75
+    },
+    "Tourniquet": {
+      "Type": "Basic",
+      "Desc": "Cures all your party's status effects.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Mock Charge": {
+      "Desc": "The user fakes a charges at full speed at the target, scaring them back to their party and sending out a random party member. This move always attacks last.",
+      "Type": "Basic",
+      "Uses": 10,
+      "Category": "Passive",
+      "Power": "nil",
+      "Accuracy": true
+    },
+    "Foxfire": {
+      "Type": "Fire",
+      "Desc": "After damaging the opponent, cures all party's status effects.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 75
+    },
+    "Compost": {
+      "Type": "Plant",
+      "Desc": "Cures all your party's status effects.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Shock Therapy": {
+      "Type": "Spark",
+      "Desc": "The user shocks themselves into healing by a third of their health. If they have a status, heals them by half instead.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Retribution": {
+      "Type": "Dark",
+      "Desc": "The power of this attack move is doubled if the user has been hurt by the target in the same turn. This move tends to go last.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 45
+    },
+    "Piercing Poke": {
+      "Type": "Melee",
+      "Desc": "This move bypasses moves such as Protect. If the target is using a move such as Protect, this move does double damage and also lifts the effect of Protect. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 50
+    },
+    "Counter Punch": {
+      "Type": "Melee",
+      "Desc": "The power of this attack move is doubled if the user has been hurt by the target in the same turn. This move tends to go last.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Festive Fervor": {
+      "Type": "Air",
+      "Desc": "The user attacks with festive winds. This move has a 50% chance to do half damage.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 120
+    },
+    "Tempest": {
+      "Type": "Air",
+      "Desc": "The user whips up a storm intended to clear the skies of all weather.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 40
+    },
+    "Wind Shear": {
+      "Type": "Air",
+      "Desc": "The user beats its wings at a blinding winds, creating a damaging surge of wind. The power of this attack move is doubled if the target hasn't made an action yet this turn.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 60
+    },
+    "Necromancy": {
+      "Type": "Spirit",
+      "Desc": "Does more damage the more fainted Doodles in your party. Hits all opposing doodles.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 55
+    },
+    "Cone Cannon": {
+      "Type": "Ice",
+      "Desc": "The user uses its weapon to rapidly shoot bursts of ice at the target. This move hits 3 times, and has a small chance to freeze per hit.",
+      "Category": "Magical",
+      "Accuracy": 85,
+      "Uses": 10,
+      "Power": 40
+    },
+    "Gatling Gifts": {
+      "Type": "Metal",
+      "Desc": "The user uses its present cannon to rapidly shoot gifts at the target. This move hits 5 times.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 25
+    },
+    "Lightning Kicks": {
+      "Type": "Spark",
+      "Desc": "The user rapidly kicks the target while infused with lighting. This move hits 2-5 times.",
+      "Category": "Physical",
+      "Accuracy": 95,
+      "Uses": 10,
+      "Power": 25
+    },
+    "Thunder Raid": {
+      "Type": "Spark",
+      "Desc": "OLDMOVE",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 25
+    },
+    "Swarm": {
+      "Type": "Insect",
+      "Desc": "Does more damage the more non-fainted insect Doodles in your party. Hits all opposing doodles.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 60
+    },
+    "Gem Blast": {
+      "Type": "Crystal",
+      "Desc": "The user blasts the target with an assortment of gems. Has a 75% chance to raise the user's magical attack.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 55
+    },
+    "Aurora Flash": {
+      "Type": "Light",
+      "Desc": "The user sends out a hypnotizing ray of light. Has a 20% chance to confuse the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Chilling Chorus": {
+      "Type": "Ice",
+      "Desc": "The user sings a chilling chorus at the target, damaging all opposing Doodles.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 75
+    },
+    "Crackling Static": {
+      "Type": "Spark",
+      "Desc": "The user attacks by charging themselves up with static electricity, and then making contact with the target, doing damage and paralyzing the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 30
+    },
+    "Siren Song": {
+      "Type": "Water",
+      "Desc": "The user sings an old sailor-tune with malicious intent, doing damage and having a 10% chance to put the target to sleep.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Psycho Crush": {
+      "Type": "Mind",
+      "Desc": "The user crushes the target with psychokinetic force. This attack is super effective against Earth-types.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Hyper Voice": {
+      "Type": "Basic",
+      "Desc": "The user sends soundwaves at the opposing team.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Shadowy Eyes": {
+      "Type": "Spirit",
+      "Desc": "A ghastly glare to scare the target. Has a 30% chance to flinch.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 30
+    },
+    "Party!": {
+      "Type": "Basic",
+      "Desc": "The user convinces the opposing team to party with it. This creates an opening, lowering their defense and magical defense.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Recombobulate": {
+      "Type": "Mind",
+      "Desc": "The user recombobulates both it and a target. Boosts a random stat of the user and lowers a random stat of the target.",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 60
+    },
+    "Clumsy Swing": {
+      "Type": "Melee",
+      "Desc": "Swings clumsily. Lowers the evasion of the user.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Whisper": {
+      "Type": "Spirit",
+      "Desc": "Draws foe in with spooky whispers. Lowers the evasion of the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 20
+    },
+    "Vague Vortex": {
+      "Type": "Spirit",
+      "Desc": "The user summons a vortex of an unknown origin. Has a 20% chance to confuse.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Hyper Scream": {
+      "Type": "Basic",
+      "Desc": "The user screams at the top of its lungs, doing massive damage. Has a 15% chance to cause flinch.",
+      "Category": "Magical",
+      "Accuracy": 80,
+      "Uses": 5,
+      "Power": 110
+    },
+    "Mythic Blast": {
+      "Type": "Mythic",
+      "Desc": "An ancient attack from long ago.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 100
+    },
+    "Shell Crash": {
+      "Type": "Earth",
+      "Desc": "The user crashes it shell into the target. Has a 30% chance to lower the target's attack.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Hydro Burst": {
+      "Type": "Water",
+      "Desc": "The user launches its most powerful Water attack. Has a 20% chance to lower the target's magic defense.",
+      "Category": "Magical",
+      "Accuracy": 80,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Radiant Beam": {
+      "Type": "Light",
+      "Desc": "The user shines an extremely bright beam at the target. The target's accuracy also has a chance to lower.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Sulfur Plume": {
+      "Type": "Poison",
+      "Desc": "An eruption of toxic sulfur gas, decreasing the user's defense and magical defense after use. Has a 50% chance to poison the target.",
+      "Category": "Magical",
+      "Accuracy": 80,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Divine Light": {
+      "Type": "Light",
+      "Desc": "The user uses divine light to burn the target (20% chance). After using this attack, the user's magical attack lowers.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Abyss Breaker": {
+      "Type": "Light",
+      "Desc": "An extremely bright flash of light that illuminates the entire abyss. Has a 10% chance to boost the user's attack and magic attack.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 100
+    },
+    "Attack Mastery": {
+      "Type": "Basic",
+      "Desc": "The user uses their mastery of offense to boost their attack and magical attack.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Toughen": {
+      "Type": "Melee",
+      "Desc": "The user adapts a battle-ready stance and boosts their attack and defense.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Wild Growth": {
+      "Type": "Plant",
+      "Desc": "Summons plants to attack the target. May boost all of the user's stats (10% chance).",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 60
+    },
+    "The Flood": {
+      "Type": "Water",
+      "Desc": "The user creates a potentially apocalyptic flood, doing more damage with each stat buff they have.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 10
+    },
+    "Blessed Blade": {
+      "Type": "Light",
+      "Desc": "The user summons a sword blessed by Louis, doing more damage with each stat buff they have.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 20
+    },
+    "Zeppelin Zap": {
+      "Type": "Spark",
+      "Desc": "The user gathers electricity and zaps the target. May boost the user's magical attack. (30% chance)",
+      "Category": "Magical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Capsize": {
+      "Type": "Water",
+      "Desc": "The user rams into the target, intending to capsize them.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 60
+    },
+    "Sizzle": {
+      "Type": "Fire",
+      "Desc": "This attack has a 20% chance to burn. If the target is Food-type, this attack has a 100% chance to burn.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 60
+    },
+    "Forest Fire": {
+      "Type": "Fire",
+      "Desc": "This move does double damage to Plant types.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Snap Freeze": {
+      "Type": "Ice",
+      "Desc": "The user instantenously tries freezes the target. This attack is neutral damage on Water-types.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 80
+    },
+    "Rust": {
+      "Type": "Water",
+      "Desc": "Water is sprayed at the target. This attack is super-effective on Metal-types.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 60
+    },
+    "Chemical Cleave": {
+      "Type": "Poison",
+      "Desc": "The user cleaves the target with a poisoned weapon or claws. If it hits, the target's stats will be reset.",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 15,
+      "Power": 50
+    },
+    "Devour": {
+      "Type": "Food",
+      "Desc": "The user takes a mighty bite out of the target. If it hits, all the target's positive stat changes will be stolen by the user.",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": 75,
+      "Biting": true
+    },
+    "Somnambulism": {
+      "Type": "Basic",
+      "Desc": "This move only works while the user is sleeping. The user randomly selects another move it knows to use.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Food Poisoning": {
+      "Type": "Poison",
+      "Desc": "The user stabs the target, trying to change their molecular structure. This attack is super-effective on Food-types.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Chemical Breath": {
+      "Type": "Basic",
+      "Desc": "The target is hit with a blast of chemical breath. This move's type and effect changes depending on what Doodle is using it.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Shard Surge": {
+      "Type": "Crystal",
+      "Desc": "The user sends a wave of water, charged with crystals, at the target. This attack can be either Water or Crystal-type, whichever does more damage.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Laser": {
+      "Type": "Light",
+      "Desc": "A weak laser attacks the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Tainted Water": {
+      "Type": "Water",
+      "Desc": "Summons a wave of dirty water at the opposing team that can poison (20% chance). If it's raining, this attack always poisons.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Thunder Strike": {
+      "Type": "Spark",
+      "Desc": "Summons a lightning bolt to strike the target. Has a 10% chance to paralyze.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Thunderstorm": {
+      "Type": "Spark",
+      "Desc": "Summons a giant lightning bolt to strike the foe. Has a 40% chance to paralyze.",
+      "Category": "Magical",
+      "Accuracy": 70,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Quad Strike": {
+      "Type": "Spark",
+      "Desc": "Strikes the target with multiple lightning bolts. This attack hits 4 times.",
+      "Category": "Magical",
+      "Accuracy": 80,
+      "Uses": 10,
+      "Power": 25
+    },
+    "Continuous Sheen": {
+      "Type": "Light",
+      "Desc": "Shines a bright light at the target. The next time the user uses a Light-type attack, it becomes stronger.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 30
+    },
+    "Electrify": {
+      "Type": "Spark",
+      "Desc": "Zip zaps the target. The next time the user uses a Spark-type attack, it becomes stronger.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 30
+    },
+    "PylonShock": {
+      "Type": "Spark",
+      "Desc": "Shocks the target.",
+      "Category": "Magical",
+      "Accuracy": true,
+      "Uses": 25,
+      "Power": 40
+    },
+    "Shock": {
+      "Type": "Spark",
+      "Desc": "Shocks the target. Has a 10% chance to paralyze.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Crystal Dust": {
+      "Type": "Crystal",
+      "Desc": "Splatters crystal dust at the target. Has a 20% chance to lower the accuracy of the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 40
+    },
+    "Crystal Storm": {
+      "Type": "Crystal",
+      "Desc": "Summons a flurry of crystals at the target. This has 20% chance to lower the magical attack of the target.",
+      "Category": "Magical",
+      "Accuracy": 85,
+      "Uses": 5,
+      "Power": 100
+    },
+    "Mind Power": {
+      "Type": "Mind",
+      "Desc": "Attacks using weak telekinesis. Has a 10% chance to confuse.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Befuddlement": {
+      "Type": "Spirit",
+      "Desc": "This attack confuses the target.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Burning Orb": {
+      "Type": "Fire",
+      "Desc": "The user sends a small burning orb at the target with intention to cause a burn. If it hits, cause a burn.",
+      "Category": "Passive",
+      "Accuracy": 75,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Roll": {
+      "Type": "Basic",
+      "Desc": "The user rolls into the enemy, doing damage.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 55
+    },
+    "Gust": {
+      "Type": "Air",
+      "Desc": "Creates a gust of wind.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 40
+    },
+    "Peck": {
+      "Type": "Air",
+      "Desc": "Pecks the enemy with a beak.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 40
+    },
+    "FirewallFirebolt": {
+      "Type": "Fire",
+      "Desc": "Shoots a weak fire bolt at the enemy.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 40
+    },
+    "Firebolt": {
+      "Type": "Fire",
+      "Desc": "Shoots a weak fire bolt at the enemy. Has a 10% chance to burn.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 40
+    },
+    "Fireball": {
+      "Type": "Fire",
+      "Desc": "Shoots a fire ball at the enemy. Has a 10% chance to burn.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Worthwhile Sacrifice": {
+      "Type": "Dark",
+      "Desc": "The user sacrifices themselves to greatly lower the attack and magical attack of the target. ",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Blowup Blast": {
+      "Type": "Basic",
+      "Desc": "User sacrifices themselves to do a lot of damage to everyone. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 200
+    },
+    "Boom Boom": {
+      "Type": "Basic",
+      "Desc": "User sacrifices themselves to do a lot of damage to everyone. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 200
+    },
+    "Fatal Sting": {
+      "Type": "Insect",
+      "Desc": "User injects their stinger into the opponent. User faints on hit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 150
+    },
+    "Raging Bonfire": {
+      "Type": "Fire",
+      "Desc": "A rampaging bonfire attack. It hurts the user a little bit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 120
+    },
+    "Flame Rattle": {
+      "Type": "Fire",
+      "Desc": "The user shoots a flame from its rattle, doing damage. Does even more damage if the target is frozen or burned.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 50
+    },
+    "Soulfire": {
+      "Type": "Fire",
+      "Desc": "Burn the target's soul. If the target is cursed, do double damage.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Hex": {
+      "Type": "Spirit",
+      "Desc": "Casts a spell on the target that does more damage if the target has a status effect.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 60
+    },
+    "Hex Punch": {
+      "Type": "Spirit",
+      "Desc": "A spirit punch that does more damage if the target has a status effect.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 60
+    },
+    "Hexblade": {
+      "Type": "Spirit",
+      "Desc": "A strike that does more damage if the target has a status effect.",
+      "Category": "Physical",
+      "Accuracy": 95,
+      "Uses": 10,
+      "Power": 65
+    },
+    "Chaotic Bolt": {
+      "Type": "Dark",
+      "Desc": "The user gathers chaotic energy and launches at the target. This move's effect is determined by the target's status effect.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Transcendent Power": {
+      "Type": "Crystal",
+      "Desc": "The user unleashes its true potential, launching thousands of crystals at the target. This attack uses either the Attack or Magical Attack stat, depending on the user's gender, and then uses the opposite defensive stat.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Spectral Ire": {
+      "Type": "Spirit",
+      "Desc": "The users summons a torrent of ghostly flames around the target, having a high chance to burn. This move uses either the Attack or Magic Attack stat depending on whichever is higher.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Fatal Flaw": {
+      "Type": "Dark",
+      "Desc": "The user identifies the target's most fatal flaw, and attacks accordingly. This attack uses the target's defense or magical defense, whichever is lower.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 75
+    },
+    "Night Night": {
+      "Type": "Dark",
+      "Desc": "This attack does double damage if the target is asleep.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Intangible": {
+      "Type": "Spirit",
+      "Desc": "The user becomes intangible. It dodges every other attack. This move always goes last.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "The World": {
+      "Type": "Mythic",
+      "Desc": "The other side can't attack next turn. This move only works once per battle, and always goes last.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Reverse Singularity": {
+      "Type": "Mythic",
+      "Desc": "The user changes the laws of physics, causing slower Doodles to go first for 5 turns.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Choke": {
+      "Type": "Dark",
+      "Desc": "The user aims at the target's neck. This move does damage dependent on the target's current health.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": "Varies"
+    },
+    "Glancing Blow": {
+      "Type": "Basic",
+      "Desc": "The user does a non-lethal strike at the target. The target is left with at least 1 health.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 40,
+      "Power": 40
+    },
+    "Venomous Sting": {
+      "Type": "Poison",
+      "Desc": "Stings the target with a poisonous barb. Has a 30% chance to poison.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 40
+    },
+    "Toxic Bomb": {
+      "Type": "Poison",
+      "Desc": "The user sends a deadly poison orb at the opposing team. This attack does double damage on poisoned or diseased targets.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 55
+    },
+    "Infection": {
+      "Type": "Poison",
+      "Desc": "The user attempts to infect the opposing team with a deadly disease. If the target is poisoned, replace the Poison with Diseased.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 95
+    },
+    "Snowball": {
+      "Type": "Ice",
+      "Desc": "Hurls a snowball.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 50
+    },
+    "Heckle": {
+      "Type": "Food",
+      "Desc": "Hurls food at the target. Has a 20% chance to lower the defense of the target.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 20,
+      "Power": 50
+    },
+    "Spirit Orb": {
+      "Type": "Spirit",
+      "Desc": "Gathers spiritual energy to attack the target. Has a 20% chance to lower the magic defense of the target.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 50
+    },
+    "Careless Assault": {
+      "Type": "Basic",
+      "Desc": "The user, not caring about defense, charges into the target. This hurts the user a lot.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 120
+    },
+    "Pie Gag": {
+      "Type": "Food",
+      "Desc": "The user unexpectedly summons a pie, wanting to hit the target with it. This move enables the user to attack first.  If the target is not using a damaging move, the move will fail.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 80
+    },
+    "Light Hook": {
+      "Type": "Light",
+      "Desc": "This move enables the user to attack first.  If the target is not using a damaging move, the move will fail.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 80
+    },
+    "FTL Assault": {
+      "Type": "Basic",
+      "Desc": "The user barrages the target with strikes that are faster than light itself. This move always goes first.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 80
+    },
+    "Ravenous Rush": {
+      "Type": "Beast",
+      "Desc": "The user, prompted by hunger, rushes at the target. This move always goes first.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Quick Strike": {
+      "Type": "Basic",
+      "Desc": "The user attacks quickly. This move always goes first.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Jet Strike": {
+      "Type": "Air",
+      "Desc": "The user unexpectedly soars through the sky, causing damage. This move is certain to strike first.  ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Jolt": {
+      "Type": "Spark",
+      "Desc": "The user releases a fast bolt of electricity to strike the target. This move is certain to strike first.  ",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 40
+    },
+    "Rip Current": {
+      "Type": "Water",
+      "Desc": "The user unexpectedly rips the current, causing damage. This move is certain to strike first.  ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Quick Sting": {
+      "Type": "Insect",
+      "Desc": "The user haphazardly rushes toward the target with its stinger. This move is certain to strike first.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Fast Food": {
+      "Type": "Food",
+      "Desc": "Fast food. This move is certain to strike first. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Swift Hook": {
+      "Type": "Melee",
+      "Desc": "The user attacks with a swift jab. This move is certain to strike first. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Lightspeed Flurry": {
+      "Type": "Light",
+      "Desc": "The user jabs a bunch of times at lightspeed. This move is certain to strike first. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 75
+    },
+    "Quick Ice": {
+      "Type": "Ice",
+      "Desc": "The user shoots chunks of ice at the target. This move is certain to strike first. ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Lick": {
+      "Type": "Basic",
+      "Desc": "The user licks the target with its tongue, having a 20% chance to lower the target's attack.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 30,
+      "Power": 30
+    },
+    "Pursuit": {
+      "Type": "Dark",
+      "Desc": "An attack move that inflicts double damage if used on a foe that is switching out of battle or running away. This move is never super effective or not very effective.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "SkipTypeCalc": true,
+      "Power": 40
+    },
+    "Arctic Blitz": {
+      "Type": "Ice",
+      "Desc": "The user cloaks itself in freezing ice and charges at the target. This hurts the user a little bit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 100
+    },
+    "Life-Ender": {
+      "Type": "Melee",
+      "Desc": "A high-powered move that fails if it isn't used by Kowosu.",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": 150
+    },
+    "Unguarded Strike": {
+      "Type": "Melee",
+      "Desc": "The user foregoes defense to attack the opponent. This move lowers the defenses of the user.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 100
+    },
+    "Meteor Shower": {
+      "Type": "Mythic",
+      "Desc": "The user summons a shower of meteors from long ago onto the opponent, dealing massive damage and double damage to Beast-types. This move greatly lowers the defenses of the user.",
+      "Category": "Magical",
+      "Accuracy": 95,
+      "Uses": 5,
+      "Power": 130
+    },
+    "Chi Blast": {
+      "Type": "Melee",
+      "Desc": "The user charges up their chi into a ball and then shoots at the target.",
+      "Category": "Magical",
+      "Accuracy": 70,
+      "Uses": 15,
+      "Power": 120
+    },
+    "Stampede": {
+      "Type": "Earth",
+      "Desc": "The user rushes forward with the might of hundreds at the target, trying to crush them underneath their feet. It hurts the user a lot.",
+      "Category": "Physical",
+      "Accuracy": 80,
+      "Uses": 5,
+      "Power": 130
+    },
+    "Assail": {
+      "Type": "Basic",
+      "Desc": "The user assaults the target with a charging rush. It hurts the user a little bit.",
+      "Category": "Physical",
+      "Accuracy": 85,
+      "Uses": 15,
+      "Power": 90
+    },
+    "Reckless Charge": {
+      "Type": "Melee",
+      "Desc": "The user charges head-first into the target. It hurts the user a little bit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 80
+    },
+    "Binary Blitz": {
+      "Type": "Metal",
+      "Desc": "The user optimizes themselves using binary, and then blitzes the target. It hurts the user a little bit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Firecracker": {
+      "Type": "Fire",
+      "Desc": "The user turns its body into a literal firework. It hurts the user for the same amount of damage that it does.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 85
+    },
+    "Taunt": {
+      "Type": "Dark",
+      "Desc": "The target is provoked into only using attack moves for three turns.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Mutiny": {
+      "Type": "Dark",
+      "Desc": "The user convinces the target to mutiny its tamer with it. If it hits, both the user and the target become enraged (curing any other status effects), and the user greatly gains speed.",
+      "Category": "Passive",
+      "Accuracy": 75,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Curse": {
+      "Type": "Spirit",
+      "Desc": "The user inflicts a curse on the target.",
+      "Category": "Passive",
+      "Accuracy": 75,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Taser": {
+      "Type": "Spark",
+      "Desc": "The user shoots a low amperage bolt at the target. If it hits the target, it paralyzes them.",
+      "Category": "Passive",
+      "Accuracy": 80,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Murmur": {
+      "Type": "Spirit",
+      "Desc": "Inflicts a random status effect on the target.",
+      "Category": "Passive",
+      "Accuracy": 85,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Insult": {
+      "Type": "Dark",
+      "Desc": "The user insults the target, causing them to rage.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Agitate": {
+      "Type": "Mind",
+      "Desc": "The user agitates the target, causing rage.",
+      "Category": "Passive",
+      "Accuracy": 80,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Sleep Spores": {
+      "Type": "Plant",
+      "Desc": "The user scatters spores that induces sleep.",
+      "Category": "Passive",
+      "Accuracy": 75,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Paralysis Spores": {
+      "Type": "Plant",
+      "Desc": "The user scatters spores that paralyzes the target.",
+      "Category": "Passive",
+      "Accuracy": 75,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Rage Spores": {
+      "Type": "Plant",
+      "Desc": "The user scatters spores that causes the target to rage.",
+      "Category": "Passive",
+      "Accuracy": 70,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Poison Spores": {
+      "Type": "Poison",
+      "Desc": "The user scatters spores that causes poison.",
+      "Category": "Passive",
+      "Accuracy": 75,
+      "Uses": 35,
+      "Power": "nil"
+    },
+    "Calming Melody": {
+      "Type": "Basic",
+      "Desc": "The user whistles a calming melody, putting the target to sleep if it hits.",
+      "Category": "Passive",
+      "Accuracy": 60,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Harmony": {
+      "Type": "Mind",
+      "Desc": "The user attempts to sing a harmonic song to put the target to sleep.",
+      "Category": "Passive",
+      "Accuracy": 65,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Playtime's Over": {
+      "Type": "Mythic",
+      "Desc": "This attack does more damage the longer the user is in battle. After attacking, all stat changes are reset.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 30
+    },
+    "Focus": {
+      "Type": "Basic",
+      "Desc": "The user focuses, enabling it to hit its next move regardless of the target's evasiveness. Also enables Basic and Melee-type moves to hit Spirit types.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Hemlock Hit": {
+      "Type": "Plant",
+      "Desc": "The user attacks with poisonous plants. Has a 20% chance to poison.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Slash and Burn": {
+      "Type": "Plant",
+      "Desc": "The user uses a leaf as a weapon, sets it on fire, and then attacks. Has a 30% chance to burn.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Leaf Blade": {
+      "Type": "Plant",
+      "Desc": "The user uses a leaf as a weapon and attacks by slicing. High chance to crit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Savage Blow": {
+      "Type": "Beast",
+      "Desc": "The user attacks the target with no regards to etiquette. This lowers the defense of the user.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Crystal Cut": {
+      "Type": "Crystal",
+      "Desc": "The user gets a sharp crystal and cuts the target. High chance to crit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Frostgrip": {
+      "Type": "Ice",
+      "Desc": "Grips the foe with a chilling freeze and has a 10% chance of lowering the target's defense.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 55
+    },
+    "Cold Snap": {
+      "Type": "Ice",
+      "Desc": "A freezing slash that cuts through the foe and has a high critical hit ratio.  ",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Solar Flare": {
+      "Type": "Fire",
+      "Desc": "The user creases a monstrous solar flare, dealing damage to all opponents. The user can't attack next turn (though they can switch out).",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 130
+    },
+    "Subzero Blizzard": {
+      "Type": "Ice",
+      "Desc": "The user causes a devastating blizzard, dealing damage to all opponents. The user can't attack next turn (though they can switch out).",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 130
+    },
+    "Cone of Cold": {
+      "Type": "Ice",
+      "Desc": "The user attacks the target with a blast of cold air. Has a 10% chance to freeze. ",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Slash": {
+      "Type": "Basic",
+      "Desc": "A basic slash attack.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Icy Slash": {
+      "Type": "Ice",
+      "Desc": "Imbues claws with ice and then slashes in a criss cross pattern. 10% chance to freeze.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Iron Slash": {
+      "Type": "Metal",
+      "Desc": "The user slashes with its steel-hard claws in a criss cross pattern. 10% chance to cause vulnerable.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Fiery Slash": {
+      "Type": "Fire",
+      "Desc": "Imbues claws with fire and then slashes in a criss cross pattern. 10% chance to burn.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Venom Lacerate": {
+      "Type": "Poison",
+      "Desc": "Imbues claws or a weapon with poison and then lacerates in a criss cross pattern. 10% chance to poison.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Electro Slash": {
+      "Type": "Spark",
+      "Desc": "Imbues claws with lightning and then slashes in a criss cross pattern. 10% chance to paralyze.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Dark Slash": {
+      "Type": "Dark",
+      "Desc": "Imbues claws with darkness and then slashes in a criss cross pattern. 10%  chance to lower the target's defense.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Flashing Strike": {
+      "Type": "Light",
+      "Desc": "The user shines a light, and then strikes. This move never misses.",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Jewel Jab": {
+      "Type": "Crystal",
+      "Desc": "The user strikes the target at close range with a precious jewel. This move never misses.",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 15,
+      "Power": 60
+    },
+    "Ambush": {
+      "Type": "Dark",
+      "Desc": "The user ambushes the target. This move never misses.",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 15,
+      "Power": 60
+    },
+    "Shadow Lurk": {
+      "Type": "Spirit",
+      "Desc": "The user lurks in the shadows, and then ambushes the target. This move always goes first.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 40
+    },
+    "Antenna Beam": {
+      "Type": "Insect",
+      "Desc": "User shoots a beam from its antenna. This attack has a 10% chance to lower the magical attack of the opponent.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Web Ball": {
+      "Type": "Insect",
+      "Desc": "User shoots a web ball at the target. This attack has a 20% chance to lower the speed of the opponent.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 75
+    },
+    "Aerial": {
+      "Type": "Air",
+      "Desc": "The user whips up a tornado to attack all opposing Doodles. ",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Air Strike": {
+      "Type": "Air",
+      "Desc": "Tears and shreds the enemy with compressed air. This attack has a 20% chance to cause vulnerable.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 60
+    },
+    "Bone Club": {
+      "Type": "Melee",
+      "Desc": "The user attempts to crush down on the target. Has a 20% chance to mark the target.",
+      "Category": "Physical",
+      "Accuracy": 85,
+      "Uses": 10,
+      "Power": 95
+    },
+    "Crush": {
+      "Type": "Melee",
+      "Desc": "The user attempts to crush down on the target. Has a 20% chance to cause Vulnerable.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 60
+    },
+    "Nose Dive": {
+      "Type": "Air",
+      "Desc": "The user dive bombs the target. If it misses, the user is hurt instead.",
+      "Category": "Physical",
+      "Accuracy": 85,
+      "Uses": 10,
+      "Power": 120
+    },
+    "Pickpocket": {
+      "Type": "Dark",
+      "Desc": "The user steals the opponent's item.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 40
+    },
+    "Sleep n' Steal": {
+      "Type": "Mind",
+      "Desc": "The user tries to puts the enemy to sleep, and if it does, removes their held item. Only works if the target has a held item.",
+      "Category": "Passive",
+      "Accuracy": 60,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Incinerate": {
+      "Type": "Fire",
+      "Desc": "The user burns the target's held item, removing it.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 40
+    },
+    "Disarm": {
+      "Type": "Basic",
+      "Desc": "The user disarms the target, removing the target's held item.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 60
+    },
+    "Spirit Claws": {
+      "Type": "Spirit",
+      "Desc": "The user attacks using its spiritual energy. This move has a higher chance to critical hit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Wing Slash": {
+      "Type": "Air",
+      "Desc": "The user slashes using its wings. This move has a higher chance to critical hit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Fin Slash": {
+      "Type": "Water",
+      "Desc": "The user slashes using its fin. This move has a higher chance to critical hit.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Life Roots": {
+      "Type": "Plant",
+      "Desc": "The user plants its life-healing roots in the ground. At the  of each turn, it heals health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Preparation": {
+      "Type": "Basic",
+      "Desc": "The user prepares its next attack. The next time the user attacks, it does more damage.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Eagle Eye": {
+      "Type": "Air",
+      "Desc": "The user uses their eyes to observe the battle closely. The next attack they use this battle is a guaranteed critical hit.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Protect": {
+      "Type": "Basic",
+      "Desc": "The user protects itself from the next attack. Fails automatically if used in succession.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Royal Ice": {
+      "Type": "Ice",
+      "Desc": "The user protects itself for a turn with an ice shield. If anything makes contact with the ice shield, they get frozen.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Barb Barrier": {
+      "Type": "Plant",
+      "Desc": "The user protects itself for a turn with a barb barrier. If anything makes contact with the barb barrier, they take damage. Fails automatically if used in succession.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Scissor Guard": {
+      "Type": "Metal",
+      "Desc": "The user guards themselves with their scissors, changing their stance to a defensive one. The effect of this move changes depending on the user's trait. Fails automatically if used in succession.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Rest": {
+      "Type": "Mind",
+      "Desc": "The user goes to sleep, restoring all its health and curing any statuses.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Berserk": {
+      "Type": "Beast",
+      "Desc": "The user berserks, becoming enraged and greatly boosting its attack.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Icy Tackle": {
+      "Type": "Ice",
+      "Desc": "The user encases themselves in ice and rams the target.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 30,
+      "Power": 40
+    },
+    "Wrap": {
+      "Type": "Basic",
+      "Desc": "User wraps its body around the target, preventing them from escaping.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 30
+    },
+    "Louis Prayer": {
+      "Type": "Mythic",
+      "Desc": "The user prays to Louis. One turn after this move is used, the user's or its replacement's health is restored by up to half the user's max health.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Parasitic Seeds": {
+      "Type": "Plant",
+      "Desc": "The user sends parasitic seeds at the target. At the  of each turn, those seeds steals health from the target.",
+      "Category": "Passive",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Marking Bite": {
+      "Type": "Basic",
+      "Desc": "A biting attack that marks the target if it hits.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Biting": true,
+      "Power": 80
+    },
+    "Marking Shot": {
+      "Type": "Basic",
+      "Desc": "A projectile that marks the target if it hits.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 80
+    },
+    "Flash Freeze": {
+      "Type": "Ice",
+      "Desc": "The user freezes the air around the target, causing massive damage and freezing the opponent.",
+      "Category": "Magical",
+      "Accuracy": 50,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Center of Attention": {
+      "Type": "Basic",
+      "Desc": "The user becomes the center of attention, making them the prime target for all the enemy's attacks. Will automatically fail if used in succession.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Poison Punch": {
+      "Type": "Poison",
+      "Desc": "User imbues its fists with poison and takes a punch at the target. Has a 15% chance to poison the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Glaze Punch": {
+      "Type": "Food",
+      "Desc": "User imbues its fists with glaze and takes a punch at the target. Has a 15% chance to lower the target's evasion.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Icy Punch": {
+      "Type": "Ice",
+      "Desc": "User imbues its fists with ice and takes a punch at the target. Has a 10% chance to freeze the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Fiery Punch": {
+      "Type": "Fire",
+      "Desc": "User imbues its fists with fire and takes a punch at the target. Has a 15% chance to burn the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Electro Punch": {
+      "Type": "Spark",
+      "Desc": "User imbues its fists with electricity and takes a punch at the target. Has a 15% chance to paralyze the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 70
+    },
+    "Fiery Bite": {
+      "Type": "Fire",
+      "Desc": "User imbues its fangs with fire and takes a bite at the target. Has a 20% chance to burn the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Biting": true,
+      "Power": 65
+    },
+    "Icy Bite": {
+      "Type": "Ice",
+      "Desc": "User imbues its fangs with ice and takes a bite at the target. Has a 20% chance to freeze the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Biting": true,
+      "Power": 65
+    },
+    "Electro Bite": {
+      "Type": "Spark",
+      "Desc": "User imbues its fangs with electricity and takes a bite at the target. Has a 20% chance to paralyze the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Biting": true,
+      "Power": 65
+    },
+    "Boiling Bullet": {
+      "Type": "Water",
+      "Desc": "User punches so fast that it gives the appearance of a bullet. This move has a 25% chance to burn.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 65
+    },
+    "Boil Bomb": {
+      "Type": "Fire",
+      "Desc": "User shoots boiling hot water at the enemy. If the enemy is Water-type, has a 40% chance to burn.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Lava Toss": {
+      "Type": "Fire",
+      "Desc": "User tosses lava at the enemy. 30% chance to burn.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 70
+    },
+    "Heat Bash": {
+      "Type": "Fire",
+      "Desc": "User strikes the enemy with intense heat. 10% chance to burn.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 75
+    },
+    "Venom Bite": {
+      "Type": "Poison",
+      "Desc": "User imbues its fangs with venom and takes a bite at the target. Has a 10% chance to poison the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Biting": true,
+      "Power": 65
+    },
+    "Alloy Missiles": {
+      "Type": "Crystal",
+      "Desc": "The user sends 3 missiles made out of various gems and minerals at the target. Each hit has a 10% chance to lower the target's magical defense.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 30
+    },
+    "Mineral Cannon": {
+      "Type": "Metal",
+      "Desc": "The user gathers all minerals around it and releases them at the target. It may also lower the target's defense (10% chance).",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 85
+    },
+    "Snack Chomp": {
+      "Type": "Food",
+      "Desc": "User chomps on the target as if they were a snack.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Biting": true,
+      "Power": 60
+    },
+    "Iron Chomp": {
+      "Type": "Metal",
+      "Desc": "User chomps down on the target with a force strong enough to crush steel.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Biting": true,
+      "Power": 60
+    },
+    "Desperation": {
+      "Type": "???",
+      "Desc": "a basic attack",
+      "Category": "Physical",
+      "Accuracy": true,
+      "Uses": 100,
+      "Power": 40
+    },
+    "Drain Life": {
+      "Type": "Spirit",
+      "Desc": "Using spritual energy, drains the life of the target. Restores the user for half the damage done.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 40
+    },
+    "Shadowbolt": {
+      "Type": "Dark",
+      "Desc": "Shoots a weak shadow bolt at the enemy.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 25,
+      "Power": 50
+    },
+    "Dark Blast": {
+      "Type": "Dark",
+      "Desc": "Shoots a blast of darkness at a target. Has a 15% chance to lower the target's magic defense.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 80
+    },
+    "Siphon Soul": {
+      "Type": "Dark",
+      "Desc": "Steals a portion of the soul of the target. Restores the user for half the damage done.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 70
+    },
+    "Leaf Sap": {
+      "Type": "Plant",
+      "Desc": "Shoots a nutrient-sucking leaf at the target. Restores the user for half the damage done.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 40
+    },
+    "Plant Sap": {
+      "Type": "Plant",
+      "Desc": "Uses plants to sap the life of the target. Restores the user for half the damage done.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 65
+    },
+    "Expectorate": {
+      "Type": "Dark",
+      "Desc": "The user spits its corrosive tears at the target. This move has a 50% chance to poison.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Life Sap": {
+      "Type": "Plant",
+      "Desc": "Saps the life of the target. Restores the user for half the damage done.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 90
+    },
+    "Mind Drain": {
+      "Type": "Mind",
+      "Desc": "Drains the target's mind. Restores the user for half the damage done.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 15,
+      "Power": 65
+    },
+    "Glimmer Wing": {
+      "Type": "Light",
+      "Desc": "The user becomes pure light and then smashes into the foe. It heals for 1/2 of the damage inflicted.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Nutrient Drain": {
+      "Type": "Food",
+      "Desc": "Saps the nutrients from the target. Restores the user for half the damage done.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Branch Launch": {
+      "Type": "Plant",
+      "Desc": "The user launches tree branches at the target.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": 70
+    },
+    "Dispose": {
+      "Type": "Basic",
+      "Desc": "The user disposes of any hazards on their side of the field. This attack also boosts the accuracy of the user.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 50
+    },
+    "Pumpkin Spin": {
+      "Type": "Plant",
+      "Desc": "The user spins around in a pumpkin. This clears hazards on their side of the field.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 50
+    },
+    "Wave Shot": {
+      "Type": "Water",
+      "Desc": "The user sends a wave that damages the opposing team that cleanses hazards from both sides of the field.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 30
+    },
+    "Mortal Cleanse": {
+      "Type": "Light",
+      "Desc": "The user cleanses the field of any hazard and boosts their attack and speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Shifting Winds": {
+      "Type": "Air",
+      "Desc": "The user uses winds to cleanse hazards from both sides of the field, and boost their speed.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Vampiric Strike": {
+      "Type": "Dark",
+      "Desc": "The user strikes with vampiric energy. Restores the user for half the damage done.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Ferocious Onslaught": {
+      "Type": "Beast",
+      "Desc": "The user repeatedly barrages the target with beastly bites and/or scratches. This move hits 2-4 times",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 10,
+      "Power": 30
+    },
+    "Frostbite": {
+      "Type": "Ice",
+      "Desc": "The user gives Frostbite to the opposing team. If it hits, it causes damage at the  of each turn until they switch out.",
+      "Category": "Magical",
+      "Accuracy": 60,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Aquagel": {
+      "Type": "Water",
+      "Desc": "The user surrounds themselves in a thick jelly, making them immune to Fire-type moves and curing status at the  of each turn.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Magnet Rise": {
+      "Type": "Spark",
+      "Desc": "The user surrounds makes themselves rise using magnetic power, making them immune to Earth-type moves.",
+      "Category": "Passive",
+      "Accuracy": true,
+      "Uses": 10,
+      "Power": "nil"
+    },
+    "Flames of Gehenna": {
+      "Type": "Fire",
+      "Desc": "The user summons flames from Gehenna, heavily causing harm to the target. Causes damage to the target at the  of each turn until they switch out.",
+      "Category": "Magical",
+      "Accuracy": 50,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Tears of Sorrow": {
+      "Type": "Water",
+      "Desc": "The user sobs uncontrollably due to past tragedy, with each tear causing heavy harm to the target. Causes damage to the target at the  of each turn until they switch out.",
+      "Category": "Magical",
+      "Accuracy": 75,
+      "Uses": 5,
+      "Power": 120
+    },
+    "Boring Show": {
+      "Type": "Basic",
+      "Desc": "The user puts on a boring show, putting the target to sleep.",
+      "Category": "Passive",
+      "Accuracy": 60,
+      "Uses": 5,
+      "Power": "nil"
+    },
+    "Foreign Substance": {
+      "Type": "Poison",
+      "Desc": "The user lobs a substance from another universe at the target, making the target diseased.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Belch": {
+      "Type": "Poison",
+      "Desc": "The user belches in the direction of the target, making them poisoned.",
+      "Category": "Passive",
+      "Accuracy": 80,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Empty Calories": {
+      "Type": "Food",
+      "Desc": "The user feeds the target empty calories, making them diseased.",
+      "Category": "Passive",
+      "Accuracy": 80,
+      "Uses": 20,
+      "Power": "nil"
+    },
+    "Scram": {
+      "Desc": "The user runs away to their tamer to switch places with a party Doodle. This move always attacks last.",
+      "Type": "Basic",
+      "Uses": 10,
+      "Category": "Passive",
+      "Power": "nil",
+      "Accuracy": true
+    },
+    "Takeout": {
+      "Desc": "The user attacks the target, and then quickly returns back to its owner to switch places with a party Doodle.",
+      "Type": "Food",
+      "Uses": 15,
+      "Category": "Physical",
+      "Power": 70,
+      "Accuracy": 100
+    },
+    "Hit-n-Run": {
+      "Desc": "The user attacks the target, and then quickly returns back to its owner to switch places with a party Doodle.",
+      "Type": "Air",
+      "Uses": 15,
+      "Category": "Physical",
+      "Power": 70,
+      "Accuracy": 100
+    },
+    "Poison Gas": {
+      "Type": "Poison",
+      "Desc": "The user creates poison gas, trying to make the opposing team poisoned.",
+      "Category": "Passive",
+      "Accuracy": 70,
+      "Uses": 25,
+      "Power": "nil"
+    },
+    "Goo Blast": {
+      "Type": "Poison",
+      "Desc": "Launches a ball of unsanitary goo at the target. This has a 20% chance of poisoning.",
+      "Category": "Magical",
+      "Accuracy": 100,
+      "Uses": 10,
+      "Power": 80
+    },
+    "Poison Ivy": {
+      "Type": "Poison",
+      "Desc": "The user attempts to poison the target with a tackle. 30% chance to poison.",
+      "Category": "Physical",
+      "Accuracy": 90,
+      "Uses": 20,
+      "Power": 40
+    },
+    "Do Nothing": {
+      "Type": "Basic",
+      "Desc": "This move does nothing.",
+      "Category": "Passive",
+      "Accuracy": 100,
+      "Uses": 1,
+      "Power": "nil"
+    },
+    "Absolute Zero": {
+      "Type": "Ice",
+      "Desc": "The user quickly decreases the temperature around the target. If it hits the target, it freezes them.",
+      "Category": "Passive",
+      "Accuracy": 80,
+      "Uses": 15,
+      "Power": "nil"
+    },
+    "Testing Move": {
+      "Type": "Fire",
+      "Desc": "A move only used to test stuff.",
+      "Category": "Physical",
+      "Accuracy": 100,
+      "Uses": 5,
+      "Power": 1000000
+    }
+  }
+}
