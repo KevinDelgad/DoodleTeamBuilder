@@ -75,45 +75,71 @@ export default function Home() {
     ["crystal", "bg-crystal"],
     ["metal", "bg-metal"],
     ["spirit", "bg-spirit"],
-    ["ice", "#bg-ice"],
+    ["ice", "bg-ice"],
     ["dark", "bg-dark"],
     ["poison", "bg-poison"],
     ["mythic", "bg-mythic"],
   ];
 
-
-
   //Doodle Quicksearch type lister
-  const doodleTypeAt = (effective) => {
-    let effectiveTypes = []
-    const numProp = Object.keys(TypeChart["defense"]["fire"]).length
-    for (let i = 0; i < selectedDoodleInfo["Types"].length; i++) {
-      //Continue from here
-      var keys = Object.keys(TypeChart["defense"][selectedDoodleInfo["Types"][i].toLowerCase()]);
-      keys.forEach(key => {
-        var value = TypeChart["defense"][selectedDoodleInfo["Types"][i].toLowerCase()][key];
-        console.log(1-value)
-        if(value === effective){
-          effectiveTypes.push(key)
-        }
+  const doodleTypeAtSingle = (effective) => {
+    let effectiveTypes = [];
+    const keys = Object.keys(
+      TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()]
+    );
+    keys.forEach((key) => {
+      var value =
+        TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()][key];
+      if (value === effective) {
+        const capitalized = key.charAt(0).toUpperCase() + key.slice(1);
+        effectiveTypes.push(capitalized);
+      }
     });
-    }
-
-    const typeList = effectiveTypes.map((type) =>(
-      <li key={type} className="badge badge-neutral text-xl basis-1/5">
-          {type}
-      </li>
-    ));
-    
-    return(
-      <>
-        {typeList}
-      </>
-    )
-
+    return effectiveTypes;
   };
 
+  const doodleTypeAtMulti = (effective) => {
+    let effectiveTypes = [];
+    const keys = Object.keys(
+      TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()]
+    );
 
+    keys.forEach((key) =>{
+      var typeOneValue = TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()][key]
+      var typeTwoValue = TypeChart["defense"][selectedDoodleInfo["Types"][1].toLowerCase()][key]
+      if (typeOneValue * typeTwoValue === effective) {
+        const capitalized = key.charAt(0).toUpperCase() + key.slice(1);
+        effectiveTypes.push(capitalized);
+      }
+    
+    });
+
+    return effectiveTypes
+  };
+
+  const quickSearchTypeHelper = (effective) => {
+    let effectiveTypes = [];
+    selectedDoodleInfo["Types"].length === 1
+      ? (effectiveTypes = doodleTypeAtSingle(effective))
+      : (effectiveTypes = doodleTypeAtMulti(effective));
+
+    const typeList = effectiveTypes.map((type) => (
+      <li
+        key={type}
+        className={`text-black badge-lg badge badge-neutral text-xl basis-1/6 outline-4 ${
+          doodleTypes[
+            doodleTypes.findIndex(
+              (curtype) => curtype[0] === type.toLowerCase()
+            )
+          ][1]
+        }`}
+      >
+        {type}
+      </li>
+    ));
+
+    return <>{typeList}</>;
+  };
 
   //Doodle QuickSearch doodle info retriever
   const retrieveDoodleInfo = (doodleName) => {
@@ -286,7 +312,9 @@ export default function Home() {
                   <section className="" id="searchedDoodle">
                     {selectedDoodleInfo ? (
                       <>
-                        <h1 className="flex justify-center">{selectedDoodleInfo["Name"]}</h1>
+                        <h1 className="flex justify-center">
+                          {selectedDoodleInfo["Name"]}
+                        </h1>
                         <div className="flex justify-center">
                           <ul>{typeImgs}</ul>
                           <Image
@@ -296,32 +324,34 @@ export default function Home() {
                             alt="Selected Doodle Img"
                           />
                         </div>
-                        <div>
+                        <div className="flex items-center flex-col">
                           <h2>super,super effective from (4x)</h2>
-                          <ul></ul>
+                          <ul className="flex flex-wrap justify-center">
+                            {quickSearchTypeHelper(4)}
+                          </ul>
                         </div>
-                        <div>
+                        <div className="flex items-center flex-col">
                           <h2>super effective from (2x)</h2>
-                          <ul className="flex flex-wrap">
-                            {doodleTypeAt(-1)}
+                          <ul className="flex flex-wrap justify-center">
+                            {quickSearchTypeHelper(2)}
                           </ul>
                         </div>
-                        <div>
+                        <div className="flex items-center flex-col">
                           <h2>moderately effective from (1x)</h2>
-                          <ul className="flex flex-wrap">
-                            {doodleTypeAt(0)}
+                          <ul className="flex flex-wrap justify-center">
+                            {quickSearchTypeHelper(1)}
                           </ul>
                         </div>
-                        <div>
+                        <div className="flex items-center flex-col">
                           <h2>not so effective from (1/2x)</h2>
-                          <ul className="flex flex-wrap">
-                            {doodleTypeAt(1)}
+                          <ul className="flex flex-wrap justify-center">
+                            {quickSearchTypeHelper(0.5)}
                           </ul>
                         </div>
-                        <div>
+                        <div className="flex items-center flex-col">
                           <h2>no effect from (0x)</h2>
-                          <ul className="flex flex-wrap">
-                            {doodleTypeAt(1.5)}
+                          <ul className="flex flex-wrap justify-center">
+                            {quickSearchTypeHelper(0)}
                           </ul>
                         </div>
                       </>
