@@ -1043,8 +1043,8 @@
         "spe": 90
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['6']": 4
+        "Artifact": {
+          "6": 4
         }
       },
       "EvGain": {
@@ -1144,8 +1144,8 @@
       "Weight": 1.6,
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['3']": 4
+        "Helmet": {
+          "3": 4
         }
       },
       "Stats": {
@@ -1549,8 +1549,8 @@
         "spe": 65
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['1']": 4
+        "Artifact": {
+          "1": 4
         }
       },
       "Roulette": "Uncommon",
@@ -1607,8 +1607,8 @@
         "spe": 93
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['5']": 3
+        "Helmet": {
+          "5": 3
         }
       },
       "Roulette": "Uncommon",
@@ -1944,8 +1944,8 @@
         "spe": 40
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['11']": 3
+        "Helmet": {
+          "11": 3
         }
       },
       "Roulette": "Rare",
@@ -2004,8 +2004,8 @@
         "Level": { " Requirement ": 37, " Doodle ": "Tufflaze" }
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['13']": 4
+        "Helmet": {
+          "13": 4
         }
       },
       "EvGain": {
@@ -2444,8 +2444,8 @@
         "spe": 50
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['8']": 4
+        "Artifact": {
+          "8": 4
         }
       },
       "Roulette": "Common",
@@ -2719,8 +2719,8 @@
         "spe": 100
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['1']": 4
+        "Helmet": {
+          "1": 4
         }
       },
       "Evolve": {
@@ -2812,8 +2812,8 @@
       "GenderRate": 500,
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['19']": 4
+        "Helmet": {
+          "19": 4
         }
       },
       "Floating": true,
@@ -2879,8 +2879,8 @@
       "Weight": 173,
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['19']": 4
+        "Helmet": {
+          "19": 4
         }
       },
       "ExceptionHeight": 75,
@@ -2954,8 +2954,8 @@
         "spe": 30
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['7']": 3
+        "Artifact": {
+          "7": 3
         }
       },
       "Evolve": {
@@ -3125,8 +3125,8 @@
         "spe": 30
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['4']": 2
+        "Helmet": {
+          "4": 2
         }
       },
       "Evolve": {
@@ -3237,8 +3237,8 @@
         "spe": 50
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['3']": 4
+        "Artifact": {
+          "3": 4
         }
       },
       "Evolve": {
@@ -3626,8 +3626,8 @@
         "Level": { " Requirement ": 16, " Doodle ": "Glowcat" }
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['5']": 10
+        "Amulet": {
+          "5": 10
         }
       },
       "Roulette": "Common",
@@ -3795,17 +3795,17 @@
         "spe": 40
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['10']": 4
+        "Helmet": {
+          "10": 4
         }
       },
       "Roulette": "Uncommon",
 
       "Evolve": {
         "Item": {
-          "['Orb of Light']": "Maskomedy",
+          "Orb of Light": "Maskomedy",
 
-          "['Orb of Darkness']": "Theaterror"
+          "Orb of Darkness": "Theaterror"
         }
       },
       "EvGain": {
@@ -3970,8 +3970,8 @@
         "spe": 50
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['4']": 4
+        "Amulet": {
+          "4": 4
         }
       },
       "Roulette": "Common",
@@ -4240,8 +4240,8 @@
         "spe": 40
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['6']": 4
+        "Amulet": {
+          "6": 4
         }
       },
       "EvGain": {
@@ -4410,8 +4410,8 @@
         "spe": 90
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['17']": 4
+        "Artifact": {
+          "17": 4
         }
       },
       "Roulette": "Rare",
@@ -4455,8 +4455,8 @@
       "Weight": 28,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['17']": 4
+        "Artifact": {
+          "17": 4
         }
       },
       "Stats": {
@@ -4516,8 +4516,8 @@
       "Weight": 90,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['17']": 4
+        "Artifact": {
+          "17": 4
         }
       },
       "Stats": {
@@ -4921,8 +4921,8 @@
         "spe": 30
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['8']": 2
+        "Helmet": {
+          "8": 2
         }
       },
       "Evolve": {
@@ -5192,7 +5192,7 @@
       },
       "Evolve": {
         "Item": {
-          "['Candy Heart']": "Candeigon"
+          "Candy Heart": "Candeigon"
         }
       },
       "Roulette": "Rare",
@@ -5412,8 +5412,8 @@
         "Level": { " Requirement ": 24, " Doodle ": "Gemin" }
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['7']": 10
+        "Helmet": {
+          "7": 10
         }
       },
       "Roulette": "Common",
@@ -5468,8 +5468,8 @@
       },
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['7']": 6
+        "Helmet": {
+          "7": 6
         }
       },
       "Evolve": {
@@ -5693,8 +5693,8 @@
         "spe": 45
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['21']": 5
+        "Helmet": {
+          "21": 5
         }
       },
       "Evolve": {
@@ -5736,8 +5736,8 @@
       "GenderRate": 500,
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['21']": 5
+        "Helmet": {
+          "21": 5
         }
       },
       "Height": 61,
@@ -6498,11 +6498,11 @@
         "Level": { " Requirement ": 29, " Doodle ": "Vuliable" },
 
         "Item": {
-          "['Strange Solution']": "Endovul",
+          "Strange Solution": "Endovul",
 
-          "['Strange Substance']": "Exovul",
+          "Strange Substance": "Exovul",
 
-          "['Strange Catalyst']": "Noxvul"
+          "Strange Catalyst": "Noxvul"
         }
       },
       "Size": 0.85,
@@ -6755,8 +6755,8 @@
         "spe": 60
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['20']": 5
+        "Helmet": {
+          "20": 5
         }
       },
       "Roulette": "Uncommon",
@@ -6815,8 +6815,8 @@
       "Roulette": "Rare",
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['20']": 5
+        "Helmet": {
+          "20": 5
         }
       },
       "Evolve": {
@@ -7182,8 +7182,8 @@
         "spe": 60
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['17']": 6
+        "Helmet": {
+          "17": 6
         }
       },
       "Roulette": "Uncommon",
@@ -7227,8 +7227,8 @@
       "Weight": 306,
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['17']": 6
+        "Helmet": {
+          "17": 6
         }
       },
       "Stats": {
@@ -7345,8 +7345,8 @@
         "spe": 30
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['9']": 4
+        "Amulet": {
+          "9": 4
         }
       },
       "Evolve": {
@@ -7493,8 +7493,8 @@
       "Weight": 22,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['10']": 4
+        "Artifact": {
+          "10": 4
         }
       },
       "Stats": {
@@ -7656,8 +7656,8 @@
       "Weight": 12,
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['12']": 6
+        "Helmet": {
+          "12": 6
         }
       },
       "Stats": {
@@ -8101,8 +8101,8 @@
         "spe": 30
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['11']": 5
+        "Artifact": {
+          "11": 5
         }
       },
       "Roulette": "Common",
@@ -8159,8 +8159,8 @@
         "spe": 80
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['11']": 3
+        "Artifact": {
+          "11": 3
         }
       },
       "Roulette": "Uncommon",
@@ -8327,7 +8327,7 @@
         "Level": { " Requirement ": 30, " Doodle ": "Kibara" },
 
         "Item": {
-          "['Orb of Light']": "Kidere"
+          "Orb of Light": "Kidere"
         }
       },
       "Size": 0.825,
@@ -9140,7 +9140,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Azúpion']": {
+    "Azúpion": {
       "Num": 166,
 
       "Desc": "Azúpion typically live with their mothers until they evolve, carried on their back when traveling. Although they are naturally brightly colored, they glow under blacklight. They are equally as sour as they are venomous.",
@@ -9181,8 +9181,8 @@
         "spe": 60
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['14']": 4
+        "Helmet": {
+          "14": 4
         }
       },
       "Evolve": {
@@ -9198,7 +9198,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Skorpirulí']": {
+    "Skorpirulí": {
       "Num": 167,
 
       "Desc": "Skorpirulí are highly territorial and solitary Doodles that will hunt anything that moves, regardless of size. The venom in its stinger is potent enough to severely harm a human. Heed caution.",
@@ -9248,7 +9248,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Dewaffe']": {
+    "Dewaffe": {
       "Num": 168,
 
       "Desc": "The brightly colored orbs on its horns and tail are coated in a sticky, sweet-smelling nectar that is highly toxic.",
@@ -9289,8 +9289,8 @@
         "spe": 66
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['13']": 3
+        "Amulet": {
+          "13": 3
         }
       },
       "Evolve": {
@@ -9306,7 +9306,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Girasera']": {
+    "Girasera": {
       "Num": 169,
 
       "Desc": "Locations with Girasera nearby are often swarmed with Insect-types, who are attracted to the sweet scent of its nectar-coated orbs. It takes advantage of this to prey upon the unwitting Doodles that fall to its toxins.",
@@ -9397,15 +9397,15 @@
         "spe": 15
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['2']": 10
+        "Artifact": {
+          "2": 10
         }
       },
       "Evolve": {
         "Item": {
-          "['Orb of Light']": "Spirasol",
+          "Orb of Light": "Spirasol",
 
-          "['Orb of Darkness']": "Spiraryu"
+          "Orb of Darkness": "Spiraryu"
         }
       },
       "Roulette": "Rare",
@@ -9518,7 +9518,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Fledgeo']": {
+    "Fledgeo": {
       "Num": 173,
 
       "Desc": "A prideful Doodle, Fledgeo believes it can outrun anything. It's said that the rock-hard shell protecting its body is unbreakable, crumbling only when it is ready to evolve.",
@@ -9559,8 +9559,8 @@
         "spe": 70
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['16']": 5
+        "Amulet": {
+          "16": 5
         }
       },
       "Evolve": {
@@ -9576,7 +9576,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Roadterra']": {
+    "Roadterra": {
       "Num": 174,
 
       "Desc": "With its aerodynamic body and powerful legs, a Roadterra is capable of reaching incredible speeds when sprinting. They enjoy the thrill of running over cliffs, using their wings to soar and glide freely. They always seem to know where they're going despite their blindness.",
@@ -9667,8 +9667,8 @@
         "spe": 30
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['14']": 4
+        "Amulet": {
+          "14": 4
         }
       },
       "Evolve": {
@@ -9725,8 +9725,8 @@
         "spe": 15
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['14']": 4
+        "Amulet": {
+          "14": 4
         }
       },
       "Evolve": {
@@ -9823,8 +9823,8 @@
       "Weight": 18,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['16']": 5
+        "Artifact": {
+          "16": 5
         }
       },
       "Stats": {
@@ -9894,8 +9894,8 @@
         "spe": 25
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['16']": 4
+        "Artifact": {
+          "16": 4
         }
       },
       "Evolve": {
@@ -9962,7 +9962,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Grunkul']": {
+    "Grunkul": {
       "Num": 181,
 
       "Desc": "Grunkul are animated oil blobs brought to life by magic hundreds of years ago. They take a lot of care in the bones they carry, always looking for a more ferocious-looking one.",
@@ -10015,7 +10015,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Taryonix']": {
+    "Taryonix": {
       "Num": 182,
 
       "Desc": "Once a year, a Grunkul pack hold a competition to see who has the most horrific-looking bone. The winner becomes the leader of the pack, and also evolves into Taryonix.",
@@ -10106,8 +10106,8 @@
         "spe": 90
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['15']": 4
+        "Helmet": {
+          "15": 4
         }
       },
       "Roulette": "Rare",
@@ -10120,7 +10120,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Foyal']": {
+    "Foyal": {
       "Num": 184,
 
       "Desc": "Foyals are timid strands of metal that glide around watching others battle. If they are spotted, they immediately float away in fear. As they age, Foyals increase in length.",
@@ -10175,7 +10175,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Aluminja']": {
+    "Aluminja": {
       "Num": 185,
 
       "Desc": "In order to defend against others, Foyal begin to wrap around themselves, forming a body with two arms and legs out of their long paper like body. These doodles have the ability unwrap their bodies but choose not to.",
@@ -10228,7 +10228,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Minjoule']": {
+    "Minjoule": {
       "Num": 186,
 
       "Desc": "Minjoule can't move very well. To compensate for this, they are known to play near turbines and other windy areas.",
@@ -10283,7 +10283,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Riptorvent']": {
+    "Riptorvent": {
       "Num": 187,
 
       "Desc": "Riptorvent are ferocious creatures: they love getting hit and responding with a super-powered Thunder Strike.",
@@ -10376,8 +10376,8 @@
         "spe": 20
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['17']": 5
+        "Amulet": {
+          "17": 5
         }
       },
       "Roulette": "Uncommon",
@@ -10434,8 +10434,8 @@
         "spe": 42
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['17']": 4
+        "Amulet": {
+          "17": 4
         }
       },
       "Roulette": "Rare",
@@ -10492,8 +10492,8 @@
         "spe": 54
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['17']": 4
+        "Amulet": {
+          "17": 4
         }
       },
       "Roulette": "Epic",
@@ -10650,8 +10650,8 @@
         "spe": 5
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['16']": 4
+        "Helmet": {
+          "16": 4
         }
       },
       "Evolve": {
@@ -10708,8 +10708,8 @@
         "spe": 40
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['16']": 4
+        "Helmet": {
+          "16": 4
         }
       },
       "Evolve": {
@@ -10766,8 +10766,8 @@
         "spe": 65
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['16']": 4
+        "Helmet": {
+          "16": 4
         }
       },
       "Roulette": "Epic",
@@ -10821,8 +10821,8 @@
         "spe": 43
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['18']": 4
+        "Amulet": {
+          "18": 4
         }
       },
       "Floating": true,
@@ -10883,15 +10883,15 @@
       "Floating": true,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['18']": 4
+        "Amulet": {
+          "18": 4
         }
       },
       "Evolve": {
         "GenderFriendship": {
-          "['F']": { "Doodle": "Seamstress" },
+          "F": { "Doodle": "Seamstress" },
 
-          "['M']": { "Doodle": "Seamknight" }
+          "M": { "Doodle": "Seamknight" }
         }
       },
       "Roulette": "Rare",
@@ -10970,8 +10970,8 @@
         "spe": 105
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['18']": 4
+        "Amulet": {
+          "18": 4
         }
       },
       "Roulette": "Epic",
@@ -11050,8 +11050,8 @@
         "spe": 50
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['18']": 4
+        "Amulet": {
+          "18": 4
         }
       },
       "Roulette": "Epic",
@@ -11064,7 +11064,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Finwick']": {
+    "Finwick": {
       "Num": 200,
 
       "Desc": "Finwick are highly noted for their intelligence, often being smarter than their tamers. Some Finwicks have managed to even get a college degree!",
@@ -11116,7 +11116,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Jellupy']": {
+    "Jellupy": {
       "Num": 201,
 
       "Desc": "Jellupy was a strange experiment by a mad scientist to test his limits. As you can see, he was somewhat successful, however, the Doodle he created is in constant pain due to not having a skeleton.",
@@ -11166,7 +11166,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Weecub']": {
+    "Weecub": {
       "Num": 202,
 
       "Desc": "Weecub, known for their loveable personality, is the most popular pet on the island! Many parents give their children Weecub as gifts for holidays.",
@@ -11219,7 +11219,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Embheir']": {
+    "Embheir": {
       "Num": 203,
 
       "Desc": "Embheir are difficult to take care of as a pet, mostly due to their rebellious but playful personality. Many tamers who received a Weecub as a pet abandon it as soon as it evolves into an Embheir.",
@@ -11272,7 +11272,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Emperoflame']": {
+    "Emperoflame": {
       "Num": 204,
 
       "Desc": "Tamers who are able to deal with Embheir's rebellious personality are rewarded with a Emperoflame. Known for their majestic qualities, they serve as protectors for upper class families.",
@@ -11322,7 +11322,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Feesh']": {
+    "Feesh": {
       "Num": 205,
 
       "Desc": "For unknown reasons, this strange creature pretends to be a fish by lying on its stomach and flopping around.",
@@ -11375,7 +11375,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Schemeesh']": {
+    "Schemeesh": {
       "Num": 206,
 
       "Desc": "Schmeesh are very unpredictable and are an absolute menace to everyone. They frequently like to play pranks and cause confusion.",
@@ -11425,7 +11425,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Hippop']": {
+    "Hippop": {
       "Num": 207,
 
       "Desc": "Hippops are very easygoing and lazy. They don't bother trying to find food and instead have Bubbulls give them food. If they sense danger, they don't run away. Instead, they try to hide themselves with the foamy bubbles from their backs, but it doesn't work very well.",
@@ -11478,7 +11478,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Bubbull']": {
+    "Bubbull": {
       "Num": 208,
 
       "Desc": "Bubbull travel in herds and often take care of young Hippops. To compensate for Hippops being too lazy to get their own food, they often hoard food to help them easier. The jets on their backs help them escape danger while Hippops ride atop of their heads.",
@@ -11528,7 +11528,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Skoplet']": {
+    "Skoplet": {
       "Num": 209,
 
       "Desc": "The life of a Skoplet starts in arid climates, typically near oasis. It travels far distances to new lands in order to evolve. Despite its typing, it has a natural fear of water.",
@@ -11581,7 +11581,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Libelagua']": {
+    "Libelagua": {
       "Num": 210,
 
       "Desc": "A Libelagua can propel itself quickly using bursts of water fired from its legs. On occasion, for its own amusement, it will purposefully blast others with water in order to upset them.",
@@ -11633,7 +11633,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Prophant']": {
+    "Prophant": {
       "Num": 211,
 
       "Desc": "In times past, Prophant were used to predict the future for vast amounts of profit. Due to its aversion to doing so and the anxiety inflicted upon it as a result, it was deemed too cruel to use it for its ability.",
@@ -11686,7 +11686,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Elefortune']": {
+    "Elefortune": {
       "Num": 212,
 
       "Desc": "Its heightened control over itself and its emotions give Elefortune the strength needed to live without strife despite its ability to see into the future. It dedicates time trying to teach Prophant the same way, so that they may shed their own fears..",
@@ -11736,7 +11736,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Auron']": {
+    "Auron": {
       "Num": 213,
 
       "Desc": "It thrives on the fire that burns within it. A happy Auron's flame burns hotter, giving it the energy to frolic and play freely.",
@@ -11789,7 +11789,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Bronzoch']": {
+    "Bronzoch": {
       "Num": 214,
 
       "Desc": "A strong, healthy Bronzoch is capable of burning at an internal temperature well over a thousand degrees. Petulant by nature, it gives little warning before expelling an inferno of flame. It makes a unique cry, often equated to that of a trumpet.",
@@ -11839,7 +11839,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Allicute']": {
+    "Allicute": {
       "Num": 215,
 
       "Desc": "Allicute was created to function as batteries for generators. They are an easy pet to care for, not requiring food or water.",
@@ -11892,7 +11892,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Gaductor']": {
+    "Gaductor": {
       "Num": 216,
 
       "Desc": "Gaductor's electric shocks can exceed up to 200,000 volts. Despite this, it rarely uses its electric power to harm others.",
@@ -11945,7 +11945,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Montor']": {
+    "Montor": {
       "Num": 217,
 
       "Desc": "Montor was created by a master engineer. His people caused the extinction of a somewhat rare Doodle species, so to atone, he made a machine in the image of the extinct Doodle",
@@ -12151,7 +12151,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Vigimantè']": {
+    "Vigimantè": {
       "Num": 221,
 
       "Desc": "Vigimantè have donned a mask in order to save their neighborhood. They are masters of martial arts, with their punches being faster than the speed of sound! ",
@@ -13499,8 +13499,8 @@
         }
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['22']": 4
+        "Artifact": {
+          "22": 4
         }
       },
       "Roulette": "Uncommon",
@@ -13605,8 +13605,8 @@
         "spe": 20
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['5']": 1
+        "Artifact": {
+          "5": 1
         }
       },
       "Roulette": "Legendary",
@@ -13875,8 +13875,8 @@
         "spe": 58
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['14']": 1
+        "Artifact": {
+          "14": 1
         }
       },
       "Roulette": "Legendary",
@@ -13934,8 +13934,8 @@
         "spe": 85
       },
       "EquipDrops": {
-        "['Artifact']": {
-          "['20']": 1
+        "Artifact": {
+          "20": 1
         }
       },
       "Roulette": "Legendary",
@@ -13948,7 +13948,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Ostigon']": {
+    "Ostigon": {
       "Num": 270,
 
       "Desc": "A creature not of this world. Royalty in the past liked to flaunt their wealth by possessing multiple Ostigon.",
@@ -13998,7 +13998,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Owol']": {
+    "Owol": {
       "Num": 271,
 
       "Desc": "A creature not of this world. It misses its original universe and wants to go back badly. For now, it preys on the local Borbo populations.",
@@ -14143,7 +14143,7 @@
       },
       "Evolve": {
         "Item": {
-          "['Joyous Bauble']": "Jinglark"
+          "Joyous Bauble": "Jinglark"
         }
       },
       "Roulette": "Rare",
@@ -14237,8 +14237,8 @@
       "Weight": 19,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['7']": 12
+        "Amulet": {
+          "7": 12
         }
       },
       "Stats": {
@@ -14294,8 +14294,8 @@
       "Weight": 15,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['12']": 12
+        "Amulet": {
+          "12": 12
         }
       },
       "Stats": {
@@ -14351,8 +14351,8 @@
       "Weight": 21,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['15']": 12
+        "Amulet": {
+          "15": 12
         }
       },
       "Stats": {
@@ -14408,8 +14408,8 @@
       "Weight": 21,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['19']": 12
+        "Amulet": {
+          "19": 12
         }
       },
       "Stats": {
@@ -14487,7 +14487,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Exiled']": {
+    "Exiled": {
       "Num": 291,
 
       "Desc": "The origin of this doodle is widely disputed, ultimately boiling down to speculation and rumor. Its name has been lost to time, some believing it to be a punishment, shackled for crimes unknown.",
@@ -14728,8 +14728,8 @@
         "spe": 106
       },
       "EquipDrops": {
-        "['Helmet']": {
-          "['22']": 1
+        "Helmet": {
+          "22": 1
         }
       },
       "Roulette": "Legendary",
@@ -14742,7 +14742,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Artifixie-Mech']": {
+    "Artifixie-Mech": {
       "Num": 295.1,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:15577883460",
@@ -14891,8 +14891,8 @@
       "GenderRate": 500,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['22']": 4
+        "Amulet": {
+          "22": 4
         }
       },
       "Height": 24,
@@ -14945,8 +14945,8 @@
       "ForcedStars": 2,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['22']": 4
+        "Amulet": {
+          "22": 4
         }
       },
       "Abilities": ["Poisonous Skin"],
@@ -15006,8 +15006,8 @@
       "HiddenAbility": "Dimwitted",
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['18']": 4
+        "Artifact": {
+          "18": 4
         }
       },
       "GenderRate": 500,
@@ -15068,8 +15068,8 @@
       "GenderRate": 500,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['18']": 4
+        "Artifact": {
+          "18": 4
         }
       },
       "Height": 71,
@@ -15125,8 +15125,8 @@
       "GenderRate": 500,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['4']": 8
+        "Artifact": {
+          "4": 8
         }
       },
       "Height": 27,
@@ -15189,8 +15189,8 @@
       "Height": 86,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['4']": 8
+        "Artifact": {
+          "4": 8
         }
       },
       "Weight": 185,
@@ -15244,8 +15244,8 @@
       "Height": 12,
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['18']": 4
+        "Helmet": {
+          "18": 4
         }
       },
       "Weight": 19,
@@ -15302,8 +15302,8 @@
       "HiddenAbility": "Revival",
 
       "EquipDrops": {
-        "['Helmet']": {
-          "['18']": 4
+        "Helmet": {
+          "18": 4
         }
       },
       "GenderRate": 500,
@@ -15365,8 +15365,8 @@
       "Height": 32,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['19']": 4
+        "Artifact": {
+          "19": 4
         }
       },
       "Weight": 45,
@@ -15423,8 +15423,8 @@
       "GenderRate": 500,
 
       "EquipDrops": {
-        "['Artifact']": {
-          "['19']": 4
+        "Artifact": {
+          "19": 4
         }
       },
       "Height": 63,
@@ -15484,8 +15484,8 @@
       "Weight": 340,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['21']": 4
+        "Amulet": {
+          "21": 4
         }
       },
       "Stats": {
@@ -15538,8 +15538,8 @@
       "HiddenAbility": "Sand Surge",
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['21']": 4
+        "Amulet": {
+          "21": 4
         }
       },
       "GenderRate": 500,
@@ -16111,8 +16111,8 @@
         "spe": 25
       },
       "EquipDrops": {
-        "['Amulet']": {
-          "['20']": 1
+        "Amulet": {
+          "20": 1
         }
       },
       "Roulette": "Uncommon",
@@ -16168,8 +16168,8 @@
       "Weight": 41,
 
       "EquipDrops": {
-        "['Amulet']": {
-          "['20']": 1
+        "Amulet": {
+          "20": 1
         }
       },
       "Stats": {
@@ -16802,7 +16802,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Glacigash']": {
+    "Glacigash": {
       "Num": 335,
 
       "Desc": "Glacigash is a newfound evolutionary form for Trilagid. After the restoration process, it is only then when Trilagid is able to evolve. There is no evidence of Glacigash existing during the Doodle War..",
@@ -17201,7 +17201,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Mawthra-A']": {
+    "Mawthra-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:11697997168",
 
       "SFSprite": "http://www.roblox.com/asset/?id:11697997729",
@@ -17248,7 +17248,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Cryotera-A']": {
+    "Cryotera-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:11783727333",
 
       "SFSprite": "http://www.roblox.com/asset/?id:11783727413",
@@ -17294,7 +17294,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Thornet-A']": {
+    "Thornet-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:12001310472",
 
       "SFSprite": "http://www.roblox.com/asset/?id:12001310613",
@@ -17340,7 +17340,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Hattrix-A']": {
+    "Hattrix-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:12890035872",
 
       "SFSprite": "http://www.roblox.com/asset/?id:12890036035",
@@ -17384,7 +17384,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Groato-A']": {
+    "Groato-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:11759574900",
 
       "SFSprite": "http://www.roblox.com/asset/?id:11759575407",
@@ -17428,7 +17428,7 @@
 
       "ExpRate": "Fast"
     },
-    "['Mourveil-A']": {
+    "Mourveil-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:13212318836",
 
       "SFSprite": "http://www.roblox.com/asset/?id:13212319023",
@@ -17473,7 +17473,7 @@
       "ExpRate": "MedSlow"
     },
 
-    "['Partybug-A']": {
+    "Partybug-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:13278688151",
 
       "SFSprite": "http://www.roblox.com/asset/?id:13278688355",
@@ -17520,7 +17520,7 @@
       "ExpRate": "Fast"
     },
 
-    "['Archopos-A']": {
+    "Archopos-A": {
       "FrontSprite": "http://www.roblox.com/asset/?id:13282145187",
 
       "SFSprite": "http://www.roblox.com/asset/?id:13282145347",
@@ -17564,7 +17564,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Tulenna-A']": {
+    "Tulenna-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13270941442",
@@ -17608,7 +17608,7 @@
 
       "ExpRate": "Fast"
     },
-    "['Tufflaze-A']": {
+    "Tufflaze-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13309227284",
@@ -17652,7 +17652,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Maskomedy-A']": {
+    "Maskomedy-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13309226026",
@@ -17698,7 +17698,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Theaterror-A']": {
+    "Theaterror-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13309225493",
@@ -17744,7 +17744,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Voltenchant-A']": {
+    "Voltenchant-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13309227859",
@@ -17790,7 +17790,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Cerebopod-A']": {
+    "Cerebopod-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13309226589",
@@ -17838,7 +17838,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Grufflin-A']": {
+    "Grufflin-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13347184589",
@@ -17886,7 +17886,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Somberock-A']": {
+    "Somberock-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13347185267",
@@ -17932,7 +17932,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Cacmeow-A']": {
+    "Cacmeow-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:13833713081",
@@ -17978,7 +17978,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Bubbull-A']": {
+    "Bubbull-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14150213184",
@@ -18024,7 +18024,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Skadean-A']": {
+    "Skadean-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14232734411",
@@ -18070,7 +18070,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Malotrick-A']": {
+    "Malotrick-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14391311531",
@@ -18116,7 +18116,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Staligant-A']": {
+    "Staligant-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14569045103",
@@ -18164,7 +18164,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Spectatik-A']": {
+    "Spectatik-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14573028175",
@@ -18210,7 +18210,7 @@
 
       "ExpRate": "Fast"
     },
-    "['Mother Owol']": {
+    "Mother Owol": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14101965565",
@@ -18256,7 +18256,7 @@
 
       "ExpRate": "Slow"
     },
-    "['Hypnotl-A']": {
+    "Hypnotl-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14573000256",
@@ -18302,7 +18302,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Suomous-A']": {
+    "Suomous-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14855879248",
@@ -18348,7 +18348,7 @@
 
       "ExpRate": "Fast"
     },
-    "['Vigimantè-A']": {
+    "Vigimantè-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14855869586",
@@ -18394,7 +18394,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Bionotic-A']": {
+    "Bionotic-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14985964847",
@@ -18442,7 +18442,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Lumiline-A']": {
+    "Lumiline-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:14986683988",
@@ -18488,7 +18488,7 @@
 
       "ExpRate": "Fast"
     },
-    "['Nyanto-A']": {
+    "Nyanto-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:15064476433",
@@ -18536,7 +18536,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Daeferno-A']": {
+    "Daeferno-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:15148469633",
@@ -18586,7 +18586,7 @@
 
       "ExpRate": "MedSlow"
     },
-    "['Calamander-A']": {
+    "Calamander-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:15243734716",
@@ -18633,7 +18633,7 @@
 
       "ExpRate": "MedFast"
     },
-    "['Cragildae-A']": {
+    "Cragildae-A": {
       "Awakened": true,
 
       "FrontSprite": "http://www.roblox.com/asset/?id:15507524665",
