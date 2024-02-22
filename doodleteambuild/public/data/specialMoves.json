@@ -1,0 +1,32 @@
+{
+    "Forest Fire":{
+        "Type" : "Fire",
+        "Efvs": "Plant",
+        "Effect": 2
+    },
+    "Rust":{
+        "Type": "Water",
+        "Efvs": "Metal",
+        "Effect": 2
+    },
+    "Psycho Crush":{
+        "Type": "Mind",
+        "Efvs": "Earth",
+        "Effect": 2
+    },
+    "Snap Freeze": {
+        "Type" : "Ice",
+        "Efvs": "Water",
+        "Effect": 1
+    },
+    "Food Poisoning":{
+        "Type" : "Poison",
+        "Efvs": "Food",
+        "Effect": 2
+    },
+    "Meteor Shower":{
+        "Type": "Mythic", 
+        "Efvs": "Beast",
+        "Effect": 2
+    }
+}
