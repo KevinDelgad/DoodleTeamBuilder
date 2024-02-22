@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Doodles from "../../public/data/doodles.json";
 import TypeChart from "../../public/data/typechart.json";
+import SpecialMoves from "../../public/data/specialMoves.json";
 
 import magnifyGlass from "../../public/images/magnifying-glass.svg";
 import React, { useEffect } from "react";
@@ -98,23 +99,62 @@ export default function Home() {
     return effectiveTypes;
   };
 
+  const moveEffectiveCheck = () => {
+    if (selectedDoodleInfo["Types"].length > 1) {
+      let affectedTypes = [];
+      let checkType = [];
+      let typeToCheck = "";
+      let found = "";
+      for (const key in SpecialMoves) {
+        if (
+          SpecialMoves[key].Efvs.toLowerCase() ===
+            selectedDoodleInfo["Types"][0].toLowerCase() ||
+          SpecialMoves[key].Efvs.toLowerCase() ===
+            selectedDoodleInfo["Types"][1].toLowerCase()
+        ) {
+          affectedTypes.push(SpecialMoves[key].Efvs.toLowerCase());
+          checkType.push([key, SpecialMoves[key].Type.toLowerCase()]);
+        }
+      }
+
+      affectedTypes.includes(selectedDoodleInfo["Types"][0].toLowerCase())
+        ? (typeToCheck = selectedDoodleInfo["Types"][0].toLowerCase())
+        : affectedTypes.includes(selectedDoodleInfo["Types"][1].toLowerCase())
+        ? (typeToCheck = selectedDoodleInfo["Types"][1].toLowerCase())
+        : (typeToCheck = null);
+
+      for (const option in checkType) {
+        if (TypeChart["defense"][typeToCheck][checkType[option][1]] === 2) {
+          found = checkType[option][0];
+        }
+      }
+
+      return (
+        <>
+          <li className="text-black badge-lg badge badge-neutral text-xl basis-1/6 outline-4 flex flex-1">{found}</li>
+        </>
+      );
+    }
+  };
+
   const doodleTypeAtMulti = (effective) => {
     let effectiveTypes = [];
     const keys = Object.keys(
       TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()]
     );
 
-    keys.forEach((key) =>{
-      var typeOneValue = TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()][key]
-      var typeTwoValue = TypeChart["defense"][selectedDoodleInfo["Types"][1].toLowerCase()][key]
+    keys.forEach((key) => {
+      var typeOneValue =
+        TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()][key];
+      var typeTwoValue =
+        TypeChart["defense"][selectedDoodleInfo["Types"][1].toLowerCase()][key];
       if (typeOneValue * typeTwoValue === effective) {
         const capitalized = key.charAt(0).toUpperCase() + key.slice(1);
         effectiveTypes.push(capitalized);
       }
-    
     });
 
-    return effectiveTypes
+    return effectiveTypes;
   };
 
   const quickSearchTypeHelper = (effective) => {
@@ -165,7 +205,7 @@ export default function Home() {
     .slice(matchingDoodleIndex - 3, matchingDoodleIndex)
     .map((doodle) => (
       <li key={doodle} className="w-full text-2xl">
-        <button className="btn" onClick={() => retrieveDoodleInfo(doodle)}>
+        <button className="btn" onClick={() => {retrieveDoodleInfo(doodle); document.getElementById("quickSerachDrop").open = false;}}>
           {doodle}
         </button>
       </li>
@@ -258,16 +298,23 @@ export default function Home() {
                 QUICK LOOKUP
               </button>
               <dialog id="quickLookMod" className="modal">
-                <div className="w-2/5 h-3/5 bg-neutral-500 flex flex-col items-center p-5 text-textGray rounded-3xl">
-                  <label className="input input-bordered border-4 flex bg-neutral-500 w-1/2">
-                    <details className="dropdown">
+                <div className="w-2/6 h-4/5 bg-neutral-600 flex flex-col items-center p-5 text-textGray rounded-3xl">
+                  <div className="flex flex-row w-full">
+                    <button className="flex ml-3" onClick={() =>
+                    document.getElementById("quickLookMod").close()
+                  }>X</button>
+
+                  </div>
+                  <label className="input input-bordered border-4 flex bg-neutral-600 w-1/2">
+                    <details id="quickSerachDrop" className="dropdown">
                       <summary className="flex">
                         <input
                           type="text"
-                          className="bg-neutral-500 w-full text-2xl"
+                          className="bg-neutral-600 w-full text-2xl"
                           placeholder="Search Doodle..."
                           onChange={handleTextChange}
                           value={selectedDoodle}
+                          onClick={() => document.getElementById("quickSerachDrop").open = true}
                         />
 
                         <svg
@@ -309,7 +356,7 @@ export default function Home() {
                     </details>
                   </label>
 
-                  <section className="" id="searchedDoodle">
+                  <section className="flex flex-col flex-1" id="searchedDoodle">
                     {selectedDoodleInfo ? (
                       <>
                         <h1 className="flex justify-center">
@@ -324,35 +371,51 @@ export default function Home() {
                             alt="Selected Doodle Img"
                           />
                         </div>
-                        <div className="flex items-center flex-col">
-                          <h2>super,super effective from (4x)</h2>
-                          <ul className="flex flex-wrap justify-center">
-                            {quickSearchTypeHelper(4)}
-                          </ul>
-                        </div>
-                        <div className="flex items-center flex-col">
-                          <h2>super effective from (2x)</h2>
-                          <ul className="flex flex-wrap justify-center">
-                            {quickSearchTypeHelper(2)}
-                          </ul>
-                        </div>
-                        <div className="flex items-center flex-col">
-                          <h2>moderately effective from (1x)</h2>
-                          <ul className="flex flex-wrap justify-center">
-                            {quickSearchTypeHelper(1)}
-                          </ul>
-                        </div>
-                        <div className="flex items-center flex-col">
-                          <h2>not so effective from (1/2x)</h2>
-                          <ul className="flex flex-wrap justify-center">
-                            {quickSearchTypeHelper(0.5)}
-                          </ul>
-                        </div>
-                        <div className="flex items-center flex-col">
-                          <h2>no effect from (0x)</h2>
-                          <ul className="flex flex-wrap justify-center">
-                            {quickSearchTypeHelper(0)}
-                          </ul>
+                        <div className="flex flex-col flex-1 justify-evenly">
+                          <div className="flex items-center flex-col">
+                            <h2 className="text-red-600">
+                              super, super effective from (4x)
+                            </h2>
+                            <ul className="flex flex-wrap justify-center">
+                              {moveEffectiveCheck()}
+                              {quickSearchTypeHelper(4)}
+                            </ul>
+                          </div>
+                          <div className="flex items-center flex-col">
+                            <h2 className="text-rose-400">
+                              super effective from (2x)
+                            </h2>
+                            <ul className="flex flex-wrap justify-center">
+                              {quickSearchTypeHelper(2)}
+                            </ul>
+                          </div>
+                          <div className="flex items-center flex-col">
+                            <h2 className="text-white">
+                              moderately effective from (1x)
+                            </h2>
+                            <ul className="flex flex-wrap justify-center">
+                              {quickSearchTypeHelper(1)}
+                            </ul>
+                          </div>
+                          <div className="flex items-center flex-col">
+                            <h2 className="text-green-200">
+                              not so effective from (1/2x)
+                            </h2>
+                            <ul className="flex flex-wrap justify-center">
+                              {quickSearchTypeHelper(0.5)}
+                            </ul>
+                          </div>
+                          <div className="flex items-center flex-col">
+                            <h2 className="text-green-500">
+                              no effect from (0x)
+                            </h2>
+                            <ul className="flex flex-wrap justify-center">
+                              {quickSearchTypeHelper(0)}
+                            </ul>
+                          </div>
+                          <button onClick={() => moveEffectiveCheck()}>
+                            Test
+                          </button>
                         </div>
                       </>
                     ) : null}
