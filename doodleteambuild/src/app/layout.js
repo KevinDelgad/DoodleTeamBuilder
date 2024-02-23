@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${fredoka.className} h-full`}>{children}</body>
+      <body className={`${fredoka.className} sm:h-screen`}>{children}</body>
     </html>
   );
 }

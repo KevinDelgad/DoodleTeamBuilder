@@ -88,9 +88,12 @@ export default function Home() {
     const keys = Object.keys(
       TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()]
     );
+
     keys.forEach((key) => {
       var value =
         TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()][key];
+        
+
       if (value === effective) {
         const capitalized = key.charAt(0).toUpperCase() + key.slice(1);
         effectiveTypes.push(capitalized);
@@ -129,9 +132,9 @@ export default function Home() {
         }
       }
 
-      return (
+      return found === ""? null:(
         <>
-          <li className="text-black badge-lg badge badge-neutral text-xl basis-1/6 outline-4 flex flex-1">{found}</li>
+          <li className="text-black badge-lg badge badge-neutral text-xl basis-1/6 outline-4 flex flex-1">Move: {found}</li>
         </>
       );
     }
@@ -255,9 +258,9 @@ export default function Home() {
   };
 
   return (
-    <main className="flex h-screen flex-col items-center justify-between bg-neutral-500">
-      <header className="flex w-full justify-center items-center bg-neutral-700 h-28 shrink-0">
-        <h1 className={`text-white lg:text-5xl sm:text-xl`}>
+    <main className="flex h-full flex-col items-center justify-between bg-neutral-500">
+      <header className="flex w-full justify-center items-center bg-neutral-700 h-28">
+        <h1 className={`text-white lg:text-5xl sm:text-3xl text-2xl`}>
           Doodle World Teambuilder
         </h1>
       </header>
@@ -269,25 +272,25 @@ export default function Home() {
 
         <section className="flex basis-2/5 flex-col items-center">
           <section className="flex flex-col basis-2/3 justify-around">
-            <div className="flex grow flex-col bg-stone-600 border-4 border-black rounded-2xl">
+            <div className="flex basis-1/2 flex-col bg-stone-600 border-4 border-black rounded-xl m-1">
               <p className={` text-white text-3xl flex justify-center`}>
                 Team Defense
               </p>
               <div className="flex grow">
-                <ul className="flex flex-wrap">{traitList}</ul>
+                <ul className="flex flex-wrap p-5">{traitList}</ul>
               </div>
             </div>
-            <div className="flex grow flex-col bg-stone-600 border-4 border-black rounded-2xl">
+            <div className="flex basis-1/2 flex-col bg-stone-600 border-4 border-black rounded-xl m-1">
               <p className={` text-white text-3xl flex justify-center`}>
                 Team Coverage
               </p>
               <div className="flex grow">
-                <ul className="flex flex-wrap">{traitList}</ul>
+                <ul className="flex flex-wrap p-5">{traitList}</ul>
               </div>
             </div>
           </section>
-          <section className="flex-col justify-around flex shrink-0 basis-1/3">
-            <div className="flex flex-col">
+          <section className="flex-col flex-1 justify-around flex basis-1/3">
+            <div className="flex flex-1 flex-col justify-evenly">
               <button className="btn">VIEW TYPE CHART</button>
               <button
                 className="btn"
@@ -298,7 +301,7 @@ export default function Home() {
                 QUICK LOOKUP
               </button>
               <dialog id="quickLookMod" className="modal">
-                <div className="w-2/6 h-4/5 bg-neutral-600 flex flex-col items-center p-5 text-textGray rounded-3xl">
+                <div className="lg:w-2/6 h-4/5 sm:w-1/2 w-full bg-neutral-600 flex flex-col items-center p-5 text-textGray rounded-3xl">
                   <div className="flex flex-row w-full">
                     <button className="flex ml-3" onClick={() =>
                     document.getElementById("quickLookMod").close()
@@ -366,8 +369,8 @@ export default function Home() {
                           <ul>{typeImgs}</ul>
                           <Image
                             src={selectedDoodleInfo["DoodleImgPath"]}
-                            height={100}
-                            width={100}
+                            height={125}
+                            width={125}
                             alt="Selected Doodle Img"
                           />
                         </div>
@@ -413,9 +416,6 @@ export default function Home() {
                               {quickSearchTypeHelper(0)}
                             </ul>
                           </div>
-                          <button onClick={() => moveEffectiveCheck()}>
-                            Test
-                          </button>
                         </div>
                       </>
                     ) : null}
@@ -424,7 +424,7 @@ export default function Home() {
               </dialog>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-1 flex-col justify-evenly">
               <button className="btn">Export a team</button>
               <button className="btn">Import a team</button>
             </div>
