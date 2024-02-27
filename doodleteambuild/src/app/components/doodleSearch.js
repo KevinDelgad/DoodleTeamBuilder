@@ -1,15 +1,24 @@
 import downArrow from "../../../public/images/Arrow-down.svg";
 import React, { useEffect } from "react";
 import Doodles from "../../../public/data/doodles.json";
+import { useId } from 'react';
 
-
-function DoodleSearch({setSelectedDoodle, selectedDoodle, matchingDoodle, setSelectedDoodleInfo, hasPageBeenRendered, setMatchingDoodle}) {
+function DoodleSearch({
+  setSelectedDoodle,
+  selectedDoodle,
+  matchingDoodle,
+  setSelectedDoodleInfo,
+  hasPageBeenRendered,
+  setMatchingDoodle,
+}) {
   const [matchingDoodleIndex, setmatchingDoodleIndex] = React.useState(3);
   const [allDoodleName, setAllDoodleName] = React.useState([]);
+  const personalId = useId()
   const doodleImgPath = "/doodleImages/";
   const handleTextChange = (e) => {
     setSelectedDoodle(e.target.value);
   };
+
 
   useEffect(() => {
     setAllDoodleName(Object.keys(Doodles["DoodleData"]));
@@ -59,7 +68,8 @@ function DoodleSearch({setSelectedDoodle, selectedDoodle, matchingDoodle, setSel
           className="btn"
           onClick={() => {
             retrieveDoodleInfo(doodle);
-            document.getElementById("quickSerachDrop").open = false;
+            //Fix Here!
+            document.getElementById(personalId).open = false;
           }}
         >
           {doodle}
@@ -89,9 +99,10 @@ function DoodleSearch({setSelectedDoodle, selectedDoodle, matchingDoodle, setSel
     setmatchingDoodleIndex(matchingDoodleIndex - indexToSub);
   };
 
+
   return (
     <label className="input input-bordered border-4 flex bg-neutral-600 w-1/2">
-      <details id="quickSerachDrop" className="dropdown">
+      <details id={personalId} className="dropdown">
         <summary className="flex">
           <input
             type="text"
@@ -100,7 +111,7 @@ function DoodleSearch({setSelectedDoodle, selectedDoodle, matchingDoodle, setSel
             onChange={handleTextChange}
             value={selectedDoodle}
             onClick={() =>
-              (document.getElementById("quickSerachDrop").open = true)
+              (document.getElementById(personalId).open = true)
             }
           />
 
