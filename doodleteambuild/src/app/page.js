@@ -4,7 +4,9 @@ import Doodles from "../../public/data/doodles.json";
 import TypeChart from "../../public/data/typechart.json";
 import SpecialMoves from "../../public/data/specialMoves.json";
 
-import magnifyGlass from "../../public/images/magnifying-glass.svg";
+import DoodleSelection from "./components/doodleSelection";
+import DoodleSearch from "./components/doodleSearch";
+
 import React, { useEffect } from "react";
 
 export default function Home() {
@@ -92,7 +94,6 @@ export default function Home() {
     keys.forEach((key) => {
       var value =
         TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()][key];
-        
 
       if (value === effective) {
         const capitalized = key.charAt(0).toUpperCase() + key.slice(1);
@@ -132,9 +133,11 @@ export default function Home() {
         }
       }
 
-      return found === ""? null:(
+      return found === "" ? null : (
         <>
-          <li className="text-black badge-lg badge badge-neutral text-xl basis-1/6 outline-4 flex flex-1">Move: {found}</li>
+          <li className="text-black badge-lg badge badge-neutral text-xl basis-1/6 outline-4 flex flex-1">
+            Move: {found}
+          </li>
         </>
       );
     }
@@ -208,7 +211,13 @@ export default function Home() {
     .slice(matchingDoodleIndex - 3, matchingDoodleIndex)
     .map((doodle) => (
       <li key={doodle} className="w-full text-2xl">
-        <button className="btn" onClick={() => {retrieveDoodleInfo(doodle); document.getElementById("quickSerachDrop").open = false;}}>
+        <button
+          className="btn"
+          onClick={() => {
+            retrieveDoodleInfo(doodle);
+            document.getElementById("quickSerachDrop").open = false;
+          }}
+        >
           {doodle}
         </button>
       </li>
@@ -267,7 +276,33 @@ export default function Home() {
 
       <section className="flex w-full h-full justify-between">
         <section className="flex basis-3/5">
-          <p>placeholder</p>
+          <section className="flex-1 flex">
+          <div className="flex-col flex flex-1">
+              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
+              <p>placeholder</p>
+              </div>
+              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
+                <p>placeholder</p>
+              </div>
+              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
+                <p>placeholder</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="flex-1 flex">
+            <div className="flex-col flex flex-1">
+              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
+                <p>placeholder</p>
+              </div>
+              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
+                <p>placeholder</p>
+              </div>
+              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
+                <p>placeholder</p>
+              </div>
+            </div>
+          </section>
         </section>
 
         <section className="flex basis-2/5 flex-col items-center">
@@ -303,61 +338,17 @@ export default function Home() {
               <dialog id="quickLookMod" className="modal">
                 <div className="lg:w-2/6 h-4/5 sm:w-1/2 w-full bg-neutral-600 flex flex-col items-center p-5 text-textGray rounded-3xl">
                   <div className="flex flex-row w-full">
-                    <button className="flex ml-3" onClick={() =>
-                    document.getElementById("quickLookMod").close()
-                  }>X</button>
-
+                    <button
+                      className="flex ml-3"
+                      onClick={() =>
+                        document.getElementById("quickLookMod").close()
+                      }
+                    >
+                      X
+                    </button>
                   </div>
-                  <label className="input input-bordered border-4 flex bg-neutral-600 w-1/2">
-                    <details id="quickSerachDrop" className="dropdown">
-                      <summary className="flex">
-                        <input
-                          type="text"
-                          className="bg-neutral-600 w-full text-2xl"
-                          placeholder="Search Doodle..."
-                          onChange={handleTextChange}
-                          value={selectedDoodle}
-                          onClick={() => document.getElementById("quickSerachDrop").open = true}
-                        />
-
-                        <svg
-                          xmlns={magnifyGlass}
-                          viewBox="0 0 16 16"
-                          fill="currentColor"
-                          className="w-8 h-8 opacity-70"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </summary>
-                      <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 h-52">
-                        {doodleDrop}
-                        <div className="flex justify-between">
-                          <button
-                            className="btn"
-                            onClick={() => {
-                              updateMatchingDoodleIndexBackward();
-                            }}
-                          >
-                            {" "}
-                            {"<"}{" "}
-                          </button>
-                          <button
-                            className="btn"
-                            onClick={() => {
-                              updateMatchingDoodleIndexForward();
-                            }}
-                          >
-                            {" "}
-                            {">"}{" "}
-                          </button>
-                        </div>
-                      </ul>
-                    </details>
-                  </label>
+                  
+                  <DoodleSearch setSelectedDoodle={setSelectedDoodle} selectedDoodle={selectedDoodle} updateMatchingDoodleIndexBackward={updateMatchingDoodleIndexBackward} updateMatchingDoodleIndexForward={updateMatchingDoodleIndexForward} doodleDrop={doodleDrop}/>
 
                   <section className="flex flex-col flex-1" id="searchedDoodle">
                     {selectedDoodleInfo ? (
@@ -406,6 +397,14 @@ export default function Home() {
                             </h2>
                             <ul className="flex flex-wrap justify-center">
                               {quickSearchTypeHelper(0.5)}
+                            </ul>
+                          </div>
+                          <div className="flex items-center flex-col">
+                            <h2 className="text-green-300">
+                              not so, so effective from (1/4x)
+                            </h2>
+                            <ul className="flex flex-wrap justify-center">
+                              {quickSearchTypeHelper(0.25)}
                             </ul>
                           </div>
                           <div className="flex items-center flex-col">
