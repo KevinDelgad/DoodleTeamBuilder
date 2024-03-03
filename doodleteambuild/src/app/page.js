@@ -279,7 +279,7 @@ export default function Home() {
           <section className="flex-1 flex">
           <div className="flex-col flex flex-1">
               <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
-                <DoodleSelection Doodle="a"/>
+              <p>placeholder</p>
               </div>
               <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
                 <p>placeholder</p>
@@ -397,6 +397,14 @@ export default function Home() {
                             </h2>
                             <ul className="flex flex-wrap justify-center">
                               {quickSearchTypeHelper(0.5)}
+                            </ul>
+                          </div>
+                          <div className="flex items-center flex-col">
+                            <h2 className="text-green-300">
+                              not so, so effective from (1/4x)
+                            </h2>
+                            <ul className="flex flex-wrap justify-center">
+                              {quickSearchTypeHelper(0.25)}
                             </ul>
                           </div>
                           <div className="flex items-center flex-col">
