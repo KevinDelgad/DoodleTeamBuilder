@@ -1,7 +1,6 @@
 import DoodleSearch from "./doodleSearch";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import Doodles from "../../../public/data/doodles.json";
 import TypeChart from "../../../public/data/typechart.json";
 import SpecialMoves from "../../../public/data/specialMoves.json";
 
@@ -9,7 +8,7 @@ function DoodleQuickSearch() {
   const [selectedDoodle, setSelectedDoodle] = React.useState("");
   const [selectedDoodleInfo, setSelectedDoodleInfo] = React.useState();
   const [matchingDoodle, setMatchingDoodle] = React.useState([]);
-  const hasPageBeenRendered = React.useRef({ effect1: false, effect2: false });
+  const hasPageBeenRendered = React.useRef({ effect1: false, effect2: false, effect3: false });
   const doodleTypePath = "/typeImages/";
   const doodleTypes = [
     ["basic", "bg-basic"],
@@ -34,19 +33,13 @@ function DoodleQuickSearch() {
     ["mythic", "bg-mythic"],
   ];
 
-
-
   useEffect(() => {
     if (hasPageBeenRendered.current["effect1"]) {
-      updateMatchingDoodle();
+      setMatchingDoodle([]);
     }
     hasPageBeenRendered.current["effect1"] = true;
   }, [selectedDoodle]);
 
-  
-  const updateMatchingDoodle = () => {
-    setMatchingDoodle([]);
-  };
   const typeImgs =
     selectedDoodleInfo &&
     selectedDoodleInfo["Types"].map((type) => (
@@ -181,6 +174,7 @@ function DoodleQuickSearch() {
           setSelectedDoodleInfo={setSelectedDoodleInfo}
           hasPageBeenRendered={hasPageBeenRendered}
           setMatchingDoodle={setMatchingDoodle}
+          hasBorder={true}
         />
 
         <section className="flex flex-col flex-1" id="searchedDoodle">

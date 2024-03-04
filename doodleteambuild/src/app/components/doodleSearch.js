@@ -10,11 +10,13 @@ function DoodleSearch({
   setSelectedDoodleInfo,
   hasPageBeenRendered,
   setMatchingDoodle,
+  hasBorder
 }) {
   const [matchingDoodleIndex, setmatchingDoodleIndex] = React.useState(3);
   const [allDoodleName, setAllDoodleName] = React.useState([]);
   const personalId = useId()
   const doodleImgPath = "/doodleImages/";
+
   const handleTextChange = (e) => {
     setSelectedDoodle(e.target.value);
   };
@@ -25,8 +27,9 @@ function DoodleSearch({
     setMatchingDoodle(Object.keys(Doodles["DoodleData"]));
   }, []);
 
+  //Searchbar word matching
   useEffect(() => {
-    if (hasPageBeenRendered.current["effect2"] && matchingDoodle.length === 0) {
+    if (hasPageBeenRendered.current["effect2"]) {
       if (matchingDoodle.length === 0) {
         if (selectedDoodle === "") {
           setMatchingDoodle(allDoodleName);
@@ -57,8 +60,12 @@ function DoodleSearch({
     foundDoodleData["Name"] = doodleName;
     foundDoodleData["Types"] = Doodles["DoodleData"][doodleName]["Type"];
     foundDoodleData["DoodleImgPath"] = doodleImgPath + doodleName + ".webp";
+    //Update Text Box to reflect selected Doodle Name
+    setSelectedDoodle(doodleName)
+    //
     setSelectedDoodleInfo(foundDoodleData);
   };
+
   //Doodle QuickSearch list Creator
   const doodleDrop = matchingDoodle
     .slice(matchingDoodleIndex - 3, matchingDoodleIndex)
@@ -68,7 +75,6 @@ function DoodleSearch({
           className="btn"
           onClick={() => {
             retrieveDoodleInfo(doodle);
-            //Fix Here!
             document.getElementById(personalId).open = false;
           }}
         >
@@ -101,12 +107,12 @@ function DoodleSearch({
 
 
   return (
-    <label className="input input-bordered border-4 flex bg-neutral-600 w-1/2">
-      <details id={personalId} className="dropdown">
-        <summary className="flex">
+    <label className={`input ${hasBorder ? 'border-4 bg-neutral-600 input-bordered': 'bg-stone-600'} flex w-1/2`}>
+      <details id={personalId} className={`dropdown ${hasBorder ? "" : 'border-b-4 border-black'}`}>
+        <summary className={`flex`}>
           <input
             type="text"
-            className="bg-neutral-600 w-full text-2xl"
+            className={`${hasBorder ? 'bg-neutral-600' : 'bg-stone-600'} w-full text-2xl`}
             placeholder="Search Doodle..."
             onChange={handleTextChange}
             value={selectedDoodle}

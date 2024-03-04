@@ -50,29 +50,17 @@ export default function Home() {
         <section className="flex basis-3/5">
           <section className="flex-1 flex">
             <div className="flex-col flex flex-1">
-              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
-                <DoodleSelection Doodle="a" />
-              </div>
-              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
-                <p>placeholder</p>
-              </div>
-              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
-                <p>placeholder</p>
-              </div>
+              <DoodleSelection />
+              <DoodleSelection />
+              <DoodleSelection />
             </div>
           </section>
 
           <section className="flex-1 flex">
             <div className="flex-col flex flex-1">
-              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
-                <p>placeholder</p>
-              </div>
-              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
-                <p>placeholder</p>
-              </div>
-              <div className="bg-stone-600 flex basis-2/6 rounded-xl border-4 border-black m-2">
-                <p>placeholder</p>
-              </div>
+              <DoodleSelection />
+              <DoodleSelection />
+              <DoodleSelection />
             </div>
           </section>
         </section>
@@ -88,7 +76,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex basis-1/2 flex-col bg-stone-600 border-4 border-black rounded-xl m-1">
-              <p className={` text-white text-3xl flex justify-center`}>
+              <p className={`text-white text-3xl flex justify-center`}>
                 Team Coverage
               </p>
               <div className="flex grow">
