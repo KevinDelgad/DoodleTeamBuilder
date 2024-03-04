@@ -522,7 +522,7 @@
       "mind": 1,
       "melee": 1,
       "food": 0.5,
-      "light": 0.5,
+      "light": 0,
       "crystal": 1,
       "metal": 1,
       "spirit": 1,
@@ -571,7 +571,7 @@
       "metal": 1,
       "spirit": 1,
       "ice": 1,
-      "dark": 1,
+      "dark": 0.5,
       "poison": 1,
       "mythic": 1
     },
@@ -698,14 +698,14 @@
       "mind": 1,
       "melee": 1,
       "food": 1,
-      "light": 1,
+      "light": 0.5,
       "crystal": 1,
       "metal": 1,
       "spirit": 1,
       "ice": 1,
       "dark": 0.5,
       "poison": 1,
-      "mythic": 0.5
+      "mythic": 1
     },
     "light": {
       "basic": 1,
@@ -873,7 +873,7 @@
       "earth": 1,
       "mind": 1,
       "melee": 1,
-      "food": 2,
+      "food": 1,
       "light": 2,
       "crystal": 2,
       "metal": 1,
