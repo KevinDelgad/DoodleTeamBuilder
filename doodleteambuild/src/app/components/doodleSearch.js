@@ -1,7 +1,7 @@
 import downArrow from "../../../public/images/Arrow-down.svg";
 import React, { useEffect } from "react";
 import Doodles from "../../../public/data/doodles.json";
-import { useId } from 'react';
+import { useId } from "react";
 
 function DoodleSearch({
   setSelectedDoodle,
@@ -10,17 +10,16 @@ function DoodleSearch({
   setSelectedDoodleInfo,
   hasPageBeenRendered,
   setMatchingDoodle,
-  hasBorder
+  hasBorder,
 }) {
   const [matchingDoodleIndex, setmatchingDoodleIndex] = React.useState(3);
   const [allDoodleName, setAllDoodleName] = React.useState([]);
-  const personalId = useId()
+  const personalId = useId();
   const doodleImgPath = "/doodleImages/";
 
   const handleTextChange = (e) => {
     setSelectedDoodle(e.target.value);
   };
-
 
   useEffect(() => {
     setAllDoodleName(Object.keys(Doodles["DoodleData"]));
@@ -61,7 +60,7 @@ function DoodleSearch({
     foundDoodleData["Types"] = Doodles["DoodleData"][doodleName]["Type"];
     foundDoodleData["DoodleImgPath"] = doodleImgPath + doodleName + ".webp";
     //Update Text Box to reflect selected Doodle Name
-    setSelectedDoodle(doodleName)
+    setSelectedDoodle(doodleName);
     //
     setSelectedDoodleInfo(foundDoodleData);
   };
@@ -105,20 +104,26 @@ function DoodleSearch({
     setmatchingDoodleIndex(matchingDoodleIndex - indexToSub);
   };
 
-
   return (
-    <label className={`input ${hasBorder ? 'border-4 bg-neutral-600 input-bordered': 'bg-stone-600'} flex w-1/2`}>
-      <details id={personalId} className={`dropdown ${hasBorder ? "" : 'border-b-4 border-black'}`}>
+    <label
+      className={`input ${
+        hasBorder ? "border-4 bg-neutral-600 input-bordered" : "bg-stone-600"
+      } flex w-1/2`}
+    >
+      <details
+        id={personalId}
+        className={`dropdown ${hasBorder ? "" : "border-b-4 border-black"}`}
+      >
         <summary className={`flex`}>
           <input
             type="text"
-            className={`${hasBorder ? 'bg-neutral-600' : 'bg-stone-600'} w-full text-2xl`}
+            className={`${
+              hasBorder ? "bg-neutral-600" : "bg-stone-600"
+            } w-full text-2xl`}
             placeholder="Search Doodle..."
             onChange={handleTextChange}
             value={selectedDoodle}
-            onClick={() =>
-              (document.getElementById(personalId).open = true)
-            }
+            onClick={() => (document.getElementById(personalId).open = true)}
           />
 
           <svg
@@ -143,8 +148,7 @@ function DoodleSearch({
                 updateMatchingDoodleIndexBackward();
               }}
             >
-              {" "}
-              {"<"}{" "}
+              {"<"}
             </button>
             <button
               className="btn"
@@ -152,8 +156,7 @@ function DoodleSearch({
                 updateMatchingDoodleIndexForward();
               }}
             >
-              {" "}
-              {">"}{" "}
+              {">"}
             </button>
           </div>
         </ul>

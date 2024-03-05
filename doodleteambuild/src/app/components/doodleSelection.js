@@ -38,6 +38,19 @@ function DoodleSelection({ doodleInfo }) {
     ["mythic", "bg-mythic"],
   ];
 
+  const typeImgs =
+    selectedDoodleInfo &&
+    selectedDoodleInfo["Types"].map((type) => (
+      <li key={type}>
+        <Image
+          src={doodleTypePath + type.toLowerCase() + ".webp"}
+          width={50}
+          height={50}
+          alt="Type Img"
+        />
+      </li>
+    ));
+
   useEffect(() => {
     if (hasPageBeenRendered.current["effect1"]) {
       setMatchingDoodle([]);
@@ -47,7 +60,7 @@ function DoodleSelection({ doodleInfo }) {
 
   return (
     <div className="bg-stone-600 flex flex-col basis-2/6 rounded-xl border-4 border-black m-2">
-      <div>
+      <div className="flex">
         <DoodleSearch
           setSelectedDoodle={setSelectedDoodle}
           selectedDoodle={selectedDoodle}
@@ -56,6 +69,7 @@ function DoodleSelection({ doodleInfo }) {
           hasPageBeenRendered={hasPageBeenRendered}
           setMatchingDoodle={setMatchingDoodle}
         />
+        <ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
       </div>
       {selectedDoodleInfo ? (
         <>
@@ -71,7 +85,10 @@ function DoodleSelection({ doodleInfo }) {
 
             <div className="flex w-1/2">
               <div className="flex flex-col w-full px-5">
-                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]}/>
+                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
+                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
+                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
+                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
               </div>
             </div>
           </div>
