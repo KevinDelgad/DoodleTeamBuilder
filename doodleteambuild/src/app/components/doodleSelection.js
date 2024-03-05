@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import DoodleSearch from "./doodleSearch";
-
+import DoodleMoveSelect from "./doodleMoveSelection";
 function DoodleSelection({ doodleInfo }) {
   const doodleImgPath = "/doodleImages/";
   const doodleTypePath = "/typeImages/";
@@ -60,7 +60,7 @@ function DoodleSelection({ doodleInfo }) {
       {selectedDoodleInfo ? (
         <>
           <div className="flex">
-            <div>
+            <div className="w-1/2 flex justify-center">
               <Image
                 src={selectedDoodleInfo["DoodleImgPath"]}
                 height={160}
@@ -69,52 +69,9 @@ function DoodleSelection({ doodleInfo }) {
               />
             </div>
 
-            <div className="flex flex-1">
-              <div className="flex flex-col">
-                <details className="dropdown">
-                  <summary className="m-1 border-4">Move</summary>
-                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                  </ul>
-                </details>
-                <details className="dropdown">
-                  <summary className="m-1 border-4">Move</summary>
-                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                  </ul>
-                </details>
-                <details className="dropdown">
-                  <summary className="m-1 border-4">Move</summary>
-                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                  </ul>
-                </details>
-                <details className="dropdown">
-                  <summary className="m-1 border-4">Move</summary>
-                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                  </ul>
-                </details>
+            <div className="flex w-1/2">
+              <div className="flex flex-col w-full px-5">
+                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]}/>
               </div>
             </div>
           </div>
