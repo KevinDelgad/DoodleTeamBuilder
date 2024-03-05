@@ -8,7 +8,11 @@ function DoodleQuickSearch() {
   const [selectedDoodle, setSelectedDoodle] = React.useState("");
   const [selectedDoodleInfo, setSelectedDoodleInfo] = React.useState();
   const [matchingDoodle, setMatchingDoodle] = React.useState([]);
-  const hasPageBeenRendered = React.useRef({ effect1: false, effect2: false, effect3: false });
+  const hasPageBeenRendered = React.useRef({
+    effect1: false,
+    effect2: false,
+    effect3: false,
+  });
   const doodleTypePath = "/typeImages/";
   const doodleTypes = [
     ["basic", "bg-basic"],
@@ -223,13 +227,13 @@ function DoodleQuickSearch() {
                   </ul>
                 </div>
                 <div className="flex items-center flex-col">
-                            <h2 className="text-green-300">
-                              not so, so effective from (1/4x)
-                            </h2>
-                            <ul className="flex flex-wrap justify-center">
-                              {quickSearchTypeHelper(0.25)}
-                            </ul>
-                          </div>
+                  <h2 className="text-green-300">
+                    not so, so effective from (1/4x)
+                  </h2>
+                  <ul className="flex flex-wrap justify-center">
+                    {quickSearchTypeHelper(0.25)}
+                  </ul>
+                </div>
                 <div className="flex items-center flex-col">
                   <h2 className="text-green-500">no effect from (0x)</h2>
                   <ul className="flex flex-wrap justify-center">
