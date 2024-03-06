@@ -775,7 +775,7 @@
     },
     "spirit": {
       "basic": 0,
-      "fire": 0,
+      "fire": 1,
       "water": 1,
       "plant": 1,
       "spark": 1,
