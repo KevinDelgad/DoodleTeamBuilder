@@ -60,7 +60,7 @@ function DoodleSelection({ doodleInfo }) {
   }, [selectedDoodle]);
 
   return (
-    <div className="bg-stone-600 flex flex-col basis-2/6 rounded-xl border-4 border-black m-2 h-1/4">
+    <div className="bg-stone-600 flex flex-col basis-2/6 rounded-xl border-4 border-black m-2">
       <div className="flex">
         <DoodleSearch
           setSelectedDoodle={setSelectedDoodle}

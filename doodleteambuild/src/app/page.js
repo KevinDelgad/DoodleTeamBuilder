@@ -48,16 +48,16 @@ export default function Home() {
 
       <section className="flex w-full h-full justify-between">
         <section className="flex basis-3/5">
-          <section className="grow flex">
-            <div className="flex-col flex flex-1">
+          <section className="basis-full flex">
+            <div className="flex-col basis-full flex-none flex">
               <DoodleSelection />
               <DoodleSelection />
               <DoodleSelection />
             </div>
           </section>
 
-          <section className="grow flex">
-            <div className="flex-col flex flex-1">
+          <section className="basis-full flex">
+            <div className="flex-col basis-full flex">
               <DoodleSelection />
               <DoodleSelection />
               <DoodleSelection />
