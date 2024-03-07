@@ -70,7 +70,7 @@ function DoodleSearch({
   const doodleDrop = matchingDoodle.map((doodle) => (
     <li key={doodle} className="w-full text-2xl">
       <button
-        className="w-full hover:bg-sky-100"
+        className="w-full hover:bg-sky-100 text-black"
         onClick={() => {
           retrieveDoodleInfo(doodle);
           document.getElementById(personalId).open = false;
