@@ -1,4 +1,4 @@
-import DoodleSearch from "./doodleSearch";
+import DoodleSearch from "./doodleSearchBar";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import TypeChart from "../../../public/data/typechart.json";

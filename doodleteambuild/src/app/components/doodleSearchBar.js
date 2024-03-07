@@ -82,6 +82,8 @@ function DoodleSearch({
       </li>
     ));
 
+
+
   const updateMatchingDoodleIndexForward = () => {
     let indexToAdd = 0;
     for (let i = 0; i < 3; i++) {

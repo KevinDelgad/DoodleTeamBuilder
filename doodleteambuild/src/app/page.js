@@ -1,6 +1,6 @@
 "use client";
 
-import DoodleSelection from "./components/doodleSelection";
+import DoodleSelection from "./components/doodleTeamMember";
 import DoodleQuickSearch from "./components/doodleQuickSearch";
 import React, { useEffect } from "react";
 
