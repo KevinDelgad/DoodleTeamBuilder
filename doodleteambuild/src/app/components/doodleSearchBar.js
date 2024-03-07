@@ -24,7 +24,6 @@ function DoodleSearch({
   useEffect(() => {
     setAllDoodleName(Object.keys(Doodles["DoodleData"]));
     setMatchingDoodle(Object.keys(Doodles["DoodleData"]));
-
   }, []);
 
   //Searchbar word matching
@@ -59,7 +58,8 @@ function DoodleSearch({
     let foundDoodleData = {};
     foundDoodleData["Name"] = doodleName;
     foundDoodleData["Types"] = Doodles["DoodleData"][doodleName]["Types"];
-    foundDoodleData["DoodleImgPath"] = Doodles["DoodleData"][doodleName]["ImgPath"];
+    foundDoodleData["DoodleImgPath"] =
+      Doodles["DoodleData"][doodleName]["ImgPath"];
     //Update Text Box to reflect selected Doodle Name
     setSelectedDoodle(doodleName);
     //
@@ -67,45 +67,19 @@ function DoodleSearch({
   };
 
   //Doodle QuickSearch list Creator
-  const doodleDrop = matchingDoodle
-    .slice(matchingDoodleIndex - 3, matchingDoodleIndex)
-    .map((doodle) => (
-      <li key={doodle} className="w-full text-2xl">
-        <button
-          className="btn"
-          onClick={() => {
-            retrieveDoodleInfo(doodle);
-            document.getElementById(personalId).open = false;
-          }}
-        >
-          {doodle}
-        </button>
-      </li>
-    ));
-
-
-
-  const updateMatchingDoodleIndexForward = () => {
-    let indexToAdd = 0;
-    for (let i = 0; i < 3; i++) {
-      if (matchingDoodleIndex + i <= matchingDoodle.length) {
-        indexToAdd++;
-      }
-    }
-    setmatchingDoodleIndex(matchingDoodleIndex + indexToAdd);
-  };
-
-  const updateMatchingDoodleIndexBackward = () => {
-    let indexToSub = 3;
-    for (let i = 0; i < 3; i++) {
-      if (matchingDoodleIndex - i > 3) {
-        continue;
-      }
-      indexToSub--;
-    }
-
-    setmatchingDoodleIndex(matchingDoodleIndex - indexToSub);
-  };
+  const doodleDrop = matchingDoodle.map((doodle) => (
+    <li key={doodle} className="w-full text-2xl">
+      <button
+        className="w-full hover:bg-sky-100"
+        onClick={() => {
+          retrieveDoodleInfo(doodle);
+          document.getElementById(personalId).open = false;
+        }}
+      >
+        {doodle}
+      </button>
+    </li>
+  ));
 
   return (
     <label
@@ -142,26 +116,9 @@ function DoodleSearch({
             />
           </svg>
         </summary>
-        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 h-52">
+        <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto">
           {doodleDrop}
-          <div className="flex justify-between">
-            <button
-              className="btn"
-              onClick={() => {
-                updateMatchingDoodleIndexBackward();
-              }}
-            >
-              {"<"}
-            </button>
-            <button
-              className="btn"
-              onClick={() => {
-                updateMatchingDoodleIndexForward();
-              }}
-            >
-              {">"}
-            </button>
-          </div>
+          <div className="flex justify-between"></div>
         </ul>
       </details>
     </label>
