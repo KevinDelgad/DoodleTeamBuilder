@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import DoodleSearch from "./doodleSearch";
-import DoodleMoveSelect from "./doodleMoveSelection";
+import DoodleSearch from "./doodleSearchBar";
+import DoodleMoveSelect from "./moveSelectionBar";
+
 function DoodleSelection({ doodleInfo }) {
   const doodleImgPath = "/doodleImages/";
   const doodleTypePath = "/typeImages/";
@@ -69,6 +70,7 @@ function DoodleSelection({ doodleInfo }) {
           hasPageBeenRendered={hasPageBeenRendered}
           setMatchingDoodle={setMatchingDoodle}
         />
+
         <ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
       </div>
       {selectedDoodleInfo ? (
@@ -85,10 +87,22 @@ function DoodleSelection({ doodleInfo }) {
 
             <div className="flex w-1/2">
               <div className="flex flex-col w-full px-5">
-                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
-                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
-                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
-                <DoodleMoveSelect doodleName={selectedDoodleInfo["Name"]} />
+                <DoodleMoveSelect
+                  doodleName={selectedDoodleInfo["Name"]}
+                  hasPageBeenRendered={hasPageBeenRendered}
+                />
+                <DoodleMoveSelect
+                  doodleName={selectedDoodleInfo["Name"]}
+                  hasPageBeenRendered={hasPageBeenRendered}
+                />
+                <DoodleMoveSelect
+                  doodleName={selectedDoodleInfo["Name"]}
+                  hasPageBeenRendered={hasPageBeenRendered}
+                />
+                <DoodleMoveSelect
+                  doodleName={selectedDoodleInfo["Name"]}
+                  hasPageBeenRendered={hasPageBeenRendered}
+                />
               </div>
             </div>
           </div>
