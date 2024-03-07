@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import DoodleSearch from "./doodleSearchBar";
 import DoodleMoveSelect from "./moveSelectionBar";
+
 function DoodleSelection({ doodleInfo }) {
   const doodleImgPath = "/doodleImages/";
   const doodleTypePath = "/typeImages/";
@@ -59,7 +60,7 @@ function DoodleSelection({ doodleInfo }) {
   }, [selectedDoodle]);
 
   return (
-    <div className="bg-stone-600 flex flex-col basis-2/6 rounded-xl border-4 border-black m-2 shrink-0 h-1/3">
+    <div className="bg-stone-600 flex flex-col basis-2/6 rounded-xl border-4 border-black m-2 h-1/4">
       <div className="flex">
         <DoodleSearch
           setSelectedDoodle={setSelectedDoodle}

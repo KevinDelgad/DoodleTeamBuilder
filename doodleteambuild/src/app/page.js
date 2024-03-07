@@ -39,7 +39,7 @@ export default function Home() {
   ));
 
   return (
-    <main className="flex h-full flex-col items-center justify-between bg-neutral-500">
+    <main className="flex h-full flex-col items-center justify-between">
       <header className="flex w-full justify-center items-center bg-neutral-700 h-28">
         <h1 className={`text-white lg:text-5xl sm:text-3xl text-2xl`}>
           Doodle World Teambuilder
@@ -48,7 +48,7 @@ export default function Home() {
 
       <section className="flex w-full h-full justify-between">
         <section className="flex basis-3/5">
-          <section className="flex-1 flex">
+          <section className="grow flex">
             <div className="flex-col flex flex-1">
               <DoodleSelection />
               <DoodleSelection />
@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="flex-1 flex">
+          <section className="grow flex">
             <div className="flex-col flex flex-1">
               <DoodleSelection />
               <DoodleSelection />
