@@ -16,29 +16,6 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
   const [matchingMoves, setMatchingMoves] = useState([]);
 
 
-
-  const updateMoveIndexForward = () => {
-    let indexToAdd = 0;
-    for (let i = 0; i < 3; i++) {
-      if (matchingMoveIndex + i <= doodleSelectableMoves.length) {
-        indexToAdd++;
-      }
-    }
-    setMatchingMoveIndex(matchingMoveIndex + indexToAdd);
-  };
-
-  const updateMoveIndexBackward = () => {
-    let indexToSub = 3;
-    for (let i = 0; i < 3; i++) {
-      if (matchingMoveIndex - i > 3) {
-        continue;
-      }
-      indexToSub--;
-    }
-
-    setMatchingMoveIndex(matchingMoveIndex - indexToSub);
-  };
-
   const [selectedMove, setSelectedMove] = useState("Move");
 
   useEffect(() =>{
