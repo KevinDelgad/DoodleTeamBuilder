@@ -24,6 +24,7 @@ function DoodleSearch({
   useEffect(() => {
     setAllDoodleName(Object.keys(Doodles["DoodleData"]));
     setMatchingDoodle(Object.keys(Doodles["DoodleData"]));
+
   }, []);
 
   //Searchbar word matching
@@ -57,8 +58,8 @@ function DoodleSearch({
   const retrieveDoodleInfo = (doodleName) => {
     let foundDoodleData = {};
     foundDoodleData["Name"] = doodleName;
-    foundDoodleData["Types"] = Doodles["DoodleData"][doodleName]["Type"];
-    foundDoodleData["DoodleImgPath"] = doodleImgPath + doodleName + ".webp";
+    foundDoodleData["Types"] = Doodles["DoodleData"][doodleName]["Types"];
+    foundDoodleData["DoodleImgPath"] = Doodles["DoodleData"][doodleName]["ImgPath"];
     //Update Text Box to reflect selected Doodle Name
     setSelectedDoodle(doodleName);
     //
