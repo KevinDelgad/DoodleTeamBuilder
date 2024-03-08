@@ -4,39 +4,35 @@ function SearchBar({
   textToSet,
   idToOpen,
   hasPageBeenRendered,
-  matchingValue,
   selectedValue,
   allValue,
+  allDoodleValue,
   setMatchingValue,
-  setIndex,
   valueToWatch,
   hasBorder,
 }) {
   //Searchbar word matching
   useEffect(() => {
-    if (hasPageBeenRendered.current["effect2"]) {
-      if (matchingValue.length === 0) {
-        if (selectedValue === "") {
-          setMatchingValue(allValue);
-        } else {
-          let tempDoodleList = [];
-          for (let i = 0; i < allValue.length; i++) {
-            if (
-              allValue[i].substring(0, selectedValue.length).toLowerCase() ===
-              selectedValue.toLowerCase()
-            ) {
-              tempDoodleList.push(allValue[i]);
-            }
-          }
-          if (tempDoodleList.length > 0) {
-            setMatchingValue(tempDoodleList);
-          }
-          setIndex(4);
+    console.log("reloaded")
+    if (selectedValue === "") {
+      console.log("Value Reset")
+      console.log(allDoodleValue)
+      setMatchingValue(allDoodleValue);
+    } else {
+      let tempDoodleList = [];
+      for (let i = 0; i < allDoodleValue.length; i++) {
+        if (
+          allDoodleValue[i].substring(0, selectedValue.length).toLowerCase() ===
+          selectedValue.toLowerCase()
+        ) {
+          tempDoodleList.push(allDoodleValue[i]);
         }
       }
+      if (tempDoodleList.length > 0) {
+        setMatchingValue(tempDoodleList);
+      }
     }
-    hasPageBeenRendered.current["effect2"] = true;
-  }, [valueToWatch]);
+  }, [valueToWatch, allDoodleValue]);
 
   const handleTextChange = (e) => {
     textToSet(e.target.value);
