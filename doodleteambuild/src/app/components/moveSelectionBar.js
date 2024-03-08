@@ -8,6 +8,8 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
     doodleMoves[doodleName]
   );
 
+
+
   const [matchingMoveIndex, setMatchingMoveIndex] = useState(4);
 
   const [typedMove, setTypedMove] = useState("");
@@ -19,8 +21,10 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
   const [selectedMove, setSelectedMove] = useState("Move");
 
   useEffect(() =>{
-    console.log(doodleSelectableMoves)
-  }, [doodleSelectableMoves])
+    setDoodleSelectableMoves(doodleMoves[doodleName])
+    setSelectedMove("");
+    setTypedMove("");
+  }, [doodleName])
 
   const personalId = useId();
 
@@ -39,6 +43,8 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
         </button>
       </li>
     ));
+
+
   return (
     <details id={personalId} className="dropdown moveList">
       <summary
