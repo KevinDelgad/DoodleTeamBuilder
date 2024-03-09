@@ -4,7 +4,6 @@ import DoodleSearch from "./doodleSearchBar";
 import DoodleMoveSelect from "./moveSelectionBar";
 
 function DoodleSelection({ doodleInfo }) {
-  const doodleImgPath = "/doodleImages/";
   const doodleTypePath = "/typeImages/";
 
   const [selectedDoodle, setSelectedDoodle] = React.useState("");

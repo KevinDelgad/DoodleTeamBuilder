@@ -1,44 +1,106 @@
 import React, { useEffect, useState } from "react";
 import doodleMoves from "../../../public/data/doodleSpecificMoves.json";
+import allMovesData from "../../../public/data/allMoves.json";
 import { useId } from "react";
 import SearchBar from "./autoFillSearchBar";
+import Image from "next/image";
+import { stringify } from "postcss";
 function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
-  const [doodleAllMoves, setDoodleAllMoves] = useState(doodleMoves[doodleName]);
-  const [doodleSelectableMoves, setDoodleSelectableMoves] = useState(
+  //Get and List all DoodleMoves w/o Type
+  const getDoodleAllMoves = () => {
+    let allMoves = [];
+    for (var type in allMovesData) {
+      var obj = allMovesData[type];
+      for (var key in obj) {
+        var value = obj[key];
+        allMoves.push(value);
+      }
+    }
+    return allMoves;
+  };
+
+  const doodleAllMoves = getDoodleAllMoves();
+  const [allDoodleSpecificMoves, setAllDoodleSpecificMoves] = useState(
     doodleMoves[doodleName]
   );
-
-  const [matchingMoveIndex, setMatchingMoveIndex] = useState(4);
+  const [doodleSelectableMovesValid, setDoodleSelectableMovesValid] = useState(
+    []
+  );
+  const [doodleSelectableMovesAll, setDoodleSelectableMovesAll] = useState([]);
 
   const [typedMove, setTypedMove] = useState("");
 
-  //Why?? Fix Later
-  const [matchingMoves, setMatchingMoves] = useState([]);
-
-
   const [selectedMove, setSelectedMove] = useState("Move");
+  const doodleTypePath = "/typeImages/";
 
-  useEffect(() =>{
-    console.log(doodleSelectableMoves)
-  }, [doodleSelectableMoves])
+  //Get List of AllMoves with Type
+
+  useEffect(() => {
+    setAllDoodleSpecificMoves(doodleMoves[doodleName]);
+    setSelectedMove("");
+    setTypedMove("");
+  }, [doodleName]);
 
   const personalId = useId();
 
-  const populateMoveList = doodleSelectableMoves
-    .map((move) => (
-      <li key={move} className="w-full">
-        <button
-        className="w-full hover:bg-sky-100"
-          onClick={() => {
-            setSelectedMove(move);
-            setTypedMove(move);
-            document.getElementById(personalId).open = false;
-          }}
-        >
-          {move}
-        </button>
-      </li>
-    ));
+  const findMoveType = (moveName) => {
+    for (var type in allMovesData) {
+      var obj = allMovesData[type];
+      for (var key in obj) {
+        var value = obj[key];
+        if (value === moveName) {
+          return type.toLowerCase();
+        }
+      }
+    }
+  };
+
+  //Update Data formatting to allow for more optimized img retrival for move types
+
+  // Update Script to better work with new format
+
+  const populateMoveList = doodleSelectableMovesAll.map((move) => (
+    <li key={move} className="w-full">
+      <button
+        className="w-full hover:bg-sky-100 flex pl-8"
+        onClick={() => {
+          setSelectedMove(move);
+          setTypedMove(move);
+          document.getElementById(personalId).open = false;
+        }}
+      >
+        <Image
+          src={doodleTypePath + findMoveType(move) + ".webp"}
+          height={25}
+          width={25}
+          alt="Move Type"
+        />
+        {move}
+      </button>
+    </li>
+  ));
+
+  const populatePersonalMoveList = doodleSelectableMovesValid.map((move) => (
+    <li key={move} className="w-full">
+      <button
+        className="w-full hover:bg-sky-100 flex pl-8"
+        onClick={() => {
+          setSelectedMove(move);
+          setTypedMove(move);
+          document.getElementById(personalId).open = false;
+        }}
+      >
+        <Image
+          src={doodleTypePath + findMoveType(move) + ".webp"}
+          height={25}
+          width={25}
+          alt="Move Type"
+        />
+        {move}
+      </button>
+    </li>
+  ));
+
   return (
     <details id={personalId} className="dropdown moveList">
       <summary
@@ -50,18 +112,34 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
         <SearchBar
           textToSet={setTypedMove}
           idToOpen={personalId}
-          hasPageBeenRendered={hasPageBeenRendered}
-          matchingValue={matchingMoves}
           selectedValue={typedMove}
           allValue={doodleAllMoves}
-          setMatchingValue={setDoodleSelectableMoves}
-          setIndex={setMatchingMoveIndex}
+          allDoodleValueValid={allDoodleSpecificMoves}
+          setMatchingValue={setDoodleSelectableMovesValid}
           valueToWatch={typedMove}
           hasBorder={false}
+          setSecondaryMatchingValue={setDoodleSelectableMovesAll}
+          allDoodleValueAll={doodleAllMoves}
         />
       </summary>
       <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto">
-        {populateMoveList}
+        {populatePersonalMoveList.length > 0 ? (
+          <>
+            Valid Moves
+            {populatePersonalMoveList}
+          </>
+        ) : (
+          ""
+        )}
+
+        {populateMoveList.length > 0 ? (
+          <>
+            All Moves
+            {populateMoveList}
+          </>
+        ) : (
+          ""
+        )}
       </ul>
     </details>
   );

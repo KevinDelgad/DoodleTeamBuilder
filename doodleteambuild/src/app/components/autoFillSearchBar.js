@@ -3,40 +3,47 @@ import React, { useEffect, useState } from "react";
 function SearchBar({
   textToSet,
   idToOpen,
-  hasPageBeenRendered,
-  matchingValue,
   selectedValue,
   allValue,
+  allDoodleValueValid,
   setMatchingValue,
-  setIndex,
   valueToWatch,
   hasBorder,
+  setSecondaryMatchingValue,
+  allDoodleValueAll
 }) {
   //Searchbar word matching
   useEffect(() => {
-    if (hasPageBeenRendered.current["effect2"]) {
-      if (matchingValue.length === 0) {
-        if (selectedValue === "") {
-          setMatchingValue(allValue);
-        } else {
-          let tempDoodleList = [];
-          for (let i = 0; i < allValue.length; i++) {
-            if (
-              allValue[i].substring(0, selectedValue.length).toLowerCase() ===
-              selectedValue.toLowerCase()
-            ) {
-              tempDoodleList.push(allValue[i]);
-            }
-          }
-          if (tempDoodleList.length > 0) {
-            setMatchingValue(tempDoodleList);
-          }
-          setIndex(4);
+    if (selectedValue === "") {
+      setMatchingValue(allDoodleValueValid);
+      setSecondaryMatchingValue(allDoodleValueAll)
+    } else {
+      let tempDoodleListValid = [];
+      let tempDoodleListAll = [];
+      for (let i = 0; i < allDoodleValueValid.length; i++) {
+        if (
+          allDoodleValueValid[i].substring(0, selectedValue.length).toLowerCase() ===
+          selectedValue.toLowerCase()
+        ) {
+          tempDoodleListValid.push(allDoodleValueValid[i]);
         }
       }
+
+      
+      for (let i = 0; i < allDoodleValueAll.length; i++) {
+        if (
+          allDoodleValueAll[i].substring(0, selectedValue.length).toLowerCase() ===
+          selectedValue.toLowerCase()
+        ) {
+          tempDoodleListAll.push(allDoodleValueAll[i]);
+        }
+      }
+
+      setMatchingValue(tempDoodleListValid);
+      setSecondaryMatchingValue(tempDoodleListAll)
+
     }
-    hasPageBeenRendered.current["effect2"] = true;
-  }, [valueToWatch]);
+  }, [valueToWatch, allDoodleValueValid]);
 
   const handleTextChange = (e) => {
     textToSet(e.target.value);

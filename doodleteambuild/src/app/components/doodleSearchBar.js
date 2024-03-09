@@ -62,7 +62,6 @@ function DoodleSearch({
       Doodles["DoodleData"][doodleName]["ImgPath"];
     //Update Text Box to reflect selected Doodle Name
     setSelectedDoodle(doodleName);
-    //
     setSelectedDoodleInfo(foundDoodleData);
   };
 
