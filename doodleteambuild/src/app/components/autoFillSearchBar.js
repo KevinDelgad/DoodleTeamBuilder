@@ -14,7 +14,7 @@ function SearchBar({
 }) {
   //Searchbar word matching
   useEffect(() => {
-    const allMoves= allDoodleValueAll();
+    console.log(allDoodleValueAll)
     if (selectedValue === "") {
       setMatchingValue(allDoodleValueValid);
       setSecondaryMatchingValue(allDoodleValueAll)
@@ -31,16 +31,16 @@ function SearchBar({
       }
 
       
-      for (let i = 0; i < allMoves.length; i++) {
+      for (let i = 0; i < allDoodleValueAll.length; i++) {
         if (
-          allMoves[i].substring(0, selectedValue.length).toLowerCase() ===
+          allDoodleValueAll[i].substring(0, selectedValue.length).toLowerCase() ===
           selectedValue.toLowerCase()
         ) {
-          tempDoodleListAll.push(allMoves[i]);
+          tempDoodleListAll.push(allDoodleValueAll[i]);
         }
       }
 
-      console.log(allMoves.length)
+      console.log(allDoodleValueAll.length)
       setMatchingValue(tempDoodleListValid);
       setSecondaryMatchingValue(tempDoodleListAll)
 

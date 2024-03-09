@@ -8,7 +8,7 @@ import { stringify } from "postcss";
 function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
   
   //Get and List all DoodleMoves w/o Type
-  const doodleAllMoves = () => {
+  const getDoodleAllMoves = () => {
     let allMoves = [];
     for (var type in allMovesData) {
       var obj = allMovesData[type];
@@ -20,6 +20,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
     return allMoves
   };
 
+  const doodleAllMoves = getDoodleAllMoves()
   const [allDoodleSpecificMoves, setAllDoodleSpecificMoves] = useState(
     doodleMoves[doodleName]
   );
