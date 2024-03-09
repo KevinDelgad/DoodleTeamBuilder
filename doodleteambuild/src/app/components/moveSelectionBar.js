@@ -6,20 +6,9 @@ import SearchBar from "./autoFillSearchBar";
 import Image from "next/image";
 import { stringify } from "postcss";
 function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
-  const [doodleAllMoves, setDoodleAllMoves] = useState([]);
-  const [allDoodleSpecificMoves, setAllDoodleSpecificMoves] = useState(
-    doodleMoves[doodleName]
-  );
-  const [doodleSelectableMovesValid, setDoodleSelectableMovesValid] = useState([]);
-  const [doodleSelectableMovesAll, setDoodleSelectableMovesAll] = useState([]);
-
-  const [typedMove, setTypedMove] = useState("");
-
-
-  const [selectedMove, setSelectedMove] = useState("Move");
-  const doodleTypePath = "/typeImages/";
-
-  useEffect(() => {
+  
+  //Get and List all DoodleMoves w/o Type
+  const doodleAllMoves = () => {
     let allMoves = [];
     for (var type in allMovesData) {
       var obj = allMovesData[type];
@@ -28,8 +17,24 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
         allMoves.push(value);
       }
     }
-    setDoodleAllMoves(allMoves);
-  }, []);
+    return allMoves
+  };
+
+  const [allDoodleSpecificMoves, setAllDoodleSpecificMoves] = useState(
+    doodleMoves[doodleName]
+  );
+  const [doodleSelectableMovesValid, setDoodleSelectableMovesValid] = useState(
+    []
+  );
+  const [doodleSelectableMovesAll, setDoodleSelectableMovesAll] = useState([]);
+
+  const [typedMove, setTypedMove] = useState("");
+
+  const [selectedMove, setSelectedMove] = useState("Move");
+  const doodleTypePath = "/typeImages/";
+
+  //Get List of AllMoves with Type
+
 
   useEffect(() => {
     setAllDoodleSpecificMoves(doodleMoves[doodleName]);
@@ -109,14 +114,18 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
             Valid Moves
             {populatePersonalMoveList}
           </>
-        ): ""}
+        ) : (
+          ""
+        )}
 
         {populateMoveList.length > 0 ? (
           <>
             All Moves
             {populateMoveList}
           </>
-        ) : ""}
+        ) : (
+          ""
+        )}
       </ul>
     </details>
   );

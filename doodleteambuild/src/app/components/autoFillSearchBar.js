@@ -14,10 +14,8 @@ function SearchBar({
 }) {
   //Searchbar word matching
   useEffect(() => {
-    console.log("reloaded")
+    const allMoves= allDoodleValueAll();
     if (selectedValue === "") {
-      console.log("Value Reset")
-      console.log(allDoodleValueValid)
       setMatchingValue(allDoodleValueValid);
       setSecondaryMatchingValue(allDoodleValueAll)
     } else {
@@ -33,18 +31,19 @@ function SearchBar({
       }
 
       
-      for (let i = 0; i < allDoodleValueAll.length; i++) {
+      for (let i = 0; i < allMoves.length; i++) {
         if (
-          allDoodleValueAll[i].substring(0, selectedValue.length).toLowerCase() ===
+          allMoves[i].substring(0, selectedValue.length).toLowerCase() ===
           selectedValue.toLowerCase()
         ) {
-          tempDoodleListAll.push(allDoodleValueAll[i]);
+          tempDoodleListAll.push(allMoves[i]);
         }
       }
 
-
+      console.log(allMoves.length)
       setMatchingValue(tempDoodleListValid);
       setSecondaryMatchingValue(tempDoodleListAll)
+
     }
   }, [valueToWatch, allDoodleValueValid]);
 
