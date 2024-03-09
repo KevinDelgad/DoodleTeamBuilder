@@ -3,36 +3,50 @@ import React, { useEffect, useState } from "react";
 function SearchBar({
   textToSet,
   idToOpen,
-  hasPageBeenRendered,
   selectedValue,
   allValue,
-  allDoodleValue,
+  allDoodleValueValid,
   setMatchingValue,
   valueToWatch,
   hasBorder,
+  setSecondaryMatchingValue,
+  allDoodleValueAll
 }) {
   //Searchbar word matching
   useEffect(() => {
     console.log("reloaded")
     if (selectedValue === "") {
       console.log("Value Reset")
-      console.log(allDoodleValue)
-      setMatchingValue(allDoodleValue);
+      console.log(allDoodleValueValid)
+      setMatchingValue(allDoodleValueValid);
+      setSecondaryMatchingValue(allDoodleValueAll)
     } else {
-      let tempDoodleList = [];
-      for (let i = 0; i < allDoodleValue.length; i++) {
+      let tempDoodleListValid = [];
+      let tempDoodleListAll = [];
+      for (let i = 0; i < allDoodleValueValid.length; i++) {
         if (
-          allDoodleValue[i].substring(0, selectedValue.length).toLowerCase() ===
+          allDoodleValueValid[i].substring(0, selectedValue.length).toLowerCase() ===
           selectedValue.toLowerCase()
         ) {
-          tempDoodleList.push(allDoodleValue[i]);
+          tempDoodleListValid.push(allDoodleValueValid[i]);
         }
       }
-      if (tempDoodleList.length > 0) {
-        setMatchingValue(tempDoodleList);
+
+      
+      for (let i = 0; i < allDoodleValueAll.length; i++) {
+        if (
+          allDoodleValueAll[i].substring(0, selectedValue.length).toLowerCase() ===
+          selectedValue.toLowerCase()
+        ) {
+          tempDoodleListAll.push(allDoodleValueAll[i]);
+        }
       }
+
+
+      setMatchingValue(tempDoodleListValid);
+      setSecondaryMatchingValue(tempDoodleListAll)
     }
-  }, [valueToWatch, allDoodleValue]);
+  }, [valueToWatch, allDoodleValueValid]);
 
   const handleTextChange = (e) => {
     textToSet(e.target.value);

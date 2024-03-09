@@ -10,12 +10,11 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
   const [allDoodleSpecificMoves, setAllDoodleSpecificMoves] = useState(
     doodleMoves[doodleName]
   );
-  const [doodleSelectableMoves, setDoodleSelectableMoves] = useState([]);
+  const [doodleSelectableMovesValid, setDoodleSelectableMovesValid] = useState([]);
+  const [doodleSelectableMovesAll, setDoodleSelectableMovesAll] = useState([]);
 
   const [typedMove, setTypedMove] = useState("");
 
-  //Why?? Fix Later
-  const [matchingMoves, setMatchingMoves] = useState([]);
 
   const [selectedMove, setSelectedMove] = useState("Move");
   const doodleTypePath = "/typeImages/";
@@ -53,7 +52,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
     }
   };
 
-  const populateMoveList = doodleAllMoves.map((move) => (
+  const populateMoveList = doodleSelectableMovesAll.map((move) => (
     <li key={move} className="w-full">
       <button
         className="w-full hover:bg-sky-100 flex pl-8"
@@ -68,7 +67,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
     </li>
   ));
 
-  const populatePersonalMoveList = doodleSelectableMoves.map((move) => (
+  const populatePersonalMoveList = doodleSelectableMovesValid.map((move) => (
     <li key={move} className="w-full">
       <button
         className="w-full hover:bg-sky-100 flex pl-8"
@@ -94,20 +93,30 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
         <SearchBar
           textToSet={setTypedMove}
           idToOpen={personalId}
-          hasPageBeenRendered={hasPageBeenRendered}
           selectedValue={typedMove}
           allValue={doodleAllMoves}
-          allDoodleValue={allDoodleSpecificMoves}
-          setMatchingValue={setDoodleSelectableMoves}
+          allDoodleValueValid={allDoodleSpecificMoves}
+          setMatchingValue={setDoodleSelectableMovesValid}
           valueToWatch={typedMove}
           hasBorder={false}
+          setSecondaryMatchingValue={setDoodleSelectableMovesAll}
+          allDoodleValueAll={doodleAllMoves}
         />
       </summary>
       <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto">
-        Valid Moves
-        {populatePersonalMoveList}
-        All Moves
-        {populateMoveList}
+        {populatePersonalMoveList.length > 0 ? (
+          <>
+            Valid Moves
+            {populatePersonalMoveList}
+          </>
+        ): ""}
+
+        {populateMoveList.length > 0 ? (
+          <>
+            All Moves
+            {populateMoveList}
+          </>
+        ) : ""}
       </ul>
     </details>
   );
