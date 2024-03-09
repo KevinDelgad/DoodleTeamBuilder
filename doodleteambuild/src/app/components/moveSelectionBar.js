@@ -70,6 +70,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
         }}
       >
         <Image
+          className="h-fit"
           src={doodleTypePath + findMoveType(move) + ".webp"}
           height={25}
           width={25}
