@@ -6,7 +6,6 @@ import SearchBar from "./autoFillSearchBar";
 import Image from "next/image";
 import { stringify } from "postcss";
 function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
-  
   //Get and List all DoodleMoves w/o Type
   const getDoodleAllMoves = () => {
     let allMoves = [];
@@ -17,10 +16,10 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
         allMoves.push(value);
       }
     }
-    return allMoves
+    return allMoves;
   };
 
-  const doodleAllMoves = getDoodleAllMoves()
+  const doodleAllMoves = getDoodleAllMoves();
   const [allDoodleSpecificMoves, setAllDoodleSpecificMoves] = useState(
     doodleMoves[doodleName]
   );
@@ -36,7 +35,6 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
 
   //Get List of AllMoves with Type
 
-
   useEffect(() => {
     setAllDoodleSpecificMoves(doodleMoves[doodleName]);
     setSelectedMove("");
@@ -51,12 +49,15 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
       for (var key in obj) {
         var value = obj[key];
         if (value === moveName) {
-          console.log(type);
           return type.toLowerCase();
         }
       }
     }
   };
+
+  //Update Data formatting to allow for more optimized img retrival for move types
+
+  // Update Script to better work with new format
 
   const populateMoveList = doodleSelectableMovesAll.map((move) => (
     <li key={move} className="w-full">
@@ -68,6 +69,12 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
           document.getElementById(personalId).open = false;
         }}
       >
+        <Image
+          src={doodleTypePath + findMoveType(move) + ".webp"}
+          height={25}
+          width={25}
+          alt="Move Type"
+        />
         {move}
       </button>
     </li>
@@ -83,6 +90,12 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
           document.getElementById(personalId).open = false;
         }}
       >
+        <Image
+          src={doodleTypePath + findMoveType(move) + ".webp"}
+          height={25}
+          width={25}
+          alt="Move Type"
+        />
         {move}
       </button>
     </li>

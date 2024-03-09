@@ -14,7 +14,6 @@ function SearchBar({
 }) {
   //Searchbar word matching
   useEffect(() => {
-    console.log(allDoodleValueAll)
     if (selectedValue === "") {
       setMatchingValue(allDoodleValueValid);
       setSecondaryMatchingValue(allDoodleValueAll)
@@ -40,7 +39,6 @@ function SearchBar({
         }
       }
 
-      console.log(allDoodleValueAll.length)
       setMatchingValue(tempDoodleListValid);
       setSecondaryMatchingValue(tempDoodleListAll)
 
