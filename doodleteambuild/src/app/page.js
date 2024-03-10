@@ -2,7 +2,8 @@
 
 import DoodleSelection from "./components/doodleTeamMember";
 import DoodleQuickSearch from "./components/doodleQuickSearch";
-import React, { useEffect } from "react";
+import TeamBar from "./components/mobileDoodleTeamBar";
+import React, { useEffect, useState } from "react";
 
 export default function Home() {
   const doodleTypes = [
@@ -28,6 +29,16 @@ export default function Home() {
     ["mythic", "bg-mythic"],
   ];
 
+  const [doodleTeam, setDoodleTeam] = useState([
+    "Pupskey",
+    "-1",
+    "-1",
+    "-1",
+    "-1",
+    "-1",
+  ]);
+  const [focusedMember, setFocusedMember] = useState();
+
   // Trait list Creator
   const traitList = doodleTypes.map((doodle) => (
     <li
@@ -39,72 +50,16 @@ export default function Home() {
   ));
 
   return (
-    <main className="flex h-full flex-col items-center justify-between">
-      <header className="flex w-full justify-center items-center bg-neutral-700 h-28">
-        <h1 className={`text-white lg:text-5xl sm:text-3xl text-2xl`}>
+    <main className="flex h-full flex-col items-center">
+      <header className="flex w-full justify-center items-center bg-neutral-700 h-20">
+        <h1 className={`text-white lg:text-5xl text-3xl`}>
           Doodle World Teambuilder
         </h1>
       </header>
-
-      <section className="flex w-full h-full justify-between">
-        <section className="flex basis-3/5">
-          <section className="basis-full flex">
-            <div className="flex-col basis-full flex-none flex">
-              <DoodleSelection />
-              <DoodleSelection />
-              <DoodleSelection />
-            </div>
-          </section>
-
-          <section className="basis-full flex">
-            <div className="flex-col basis-full flex">
-              <DoodleSelection />
-              <DoodleSelection />
-              <DoodleSelection />
-            </div>
-          </section>
-        </section>
-
-        <section className="flex basis-2/5 flex-col items-center">
-          <section className="flex flex-col basis-2/3 justify-around">
-            <div className="flex basis-1/2 flex-col bg-stone-600 border-4 border-black rounded-xl m-1">
-              <p className={` text-white text-3xl flex justify-center`}>
-                Team Defense
-              </p>
-              <div className="flex grow">
-                <ul className="flex flex-wrap p-5">{traitList}</ul>
-              </div>
-            </div>
-            <div className="flex basis-1/2 flex-col bg-stone-600 border-4 border-black rounded-xl m-1">
-              <p className={`text-white text-3xl flex justify-center`}>
-                Team Coverage
-              </p>
-              <div className="flex grow">
-                <ul className="flex flex-wrap p-5">{traitList}</ul>
-              </div>
-            </div>
-          </section>
-          <section className="flex-col flex-1 justify-around flex basis-1/3">
-            <div className="flex flex-1 flex-col justify-evenly">
-              <button className="btn">VIEW TYPE CHART</button>
-              <button
-                className="btn"
-                onClick={() =>
-                  document.getElementById("quickLookMod").showModal()
-                }
-              >
-                QUICK LOOKUP
-              </button>
-              <DoodleQuickSearch />
-            </div>
-
-            <div className="flex flex-1 flex-col justify-evenly">
-              <button className="btn">Export a team</button>
-              <button className="btn">Import a team</button>
-            </div>
-          </section>
-        </section>
-      </section>
+      <div className="px-1.5 w-full h-full">
+        <TeamBar doodleTeam={doodleTeam} setFocusedMember={setFocusedMember} />
+        <DoodleSelection/>
+      </div>
     </main>
   );
 }

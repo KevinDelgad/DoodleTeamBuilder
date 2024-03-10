@@ -103,9 +103,9 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
   ));
 
   return (
-    <details id={personalId} className="dropdown moveList">
+    <details id={personalId} className=" moveList">
       <summary
-        className="m-1 border-4 flex flex-1 text-white px-3"
+        className="flex text-white"
         onClick={() => {
           //TODO: Add Ability to close other move options upon opening a new one
         }}

@@ -82,20 +82,20 @@ function DoodleSearch({
 
   return (
     <label
-      className={`input ${
+      className={`input p-0 ${
         hasBorder ? "border-4 bg-neutral-600 input-bordered" : "bg-stone-600"
-      } flex w-1/2`}
+      } flex w-full`}
     >
       <details
         id={personalId}
-        className={`dropdown ${hasBorder ? "" : "border-b-4 border-black"}`}
+        className={`dropdown ${hasBorder ? "" : "border-b-4 border-white w-full"}`}
       >
-        <summary className={`flex`}>
+        <summary className={`flex h-full items-end`}>
           <input
             type="text"
             className={`${
               hasBorder ? "bg-neutral-600" : "bg-stone-600"
-            } w-full text-2xl`}
+            } w-full text-center text-3xl text-white`}
             placeholder="Search Doodle..."
             onChange={handleTextChange}
             value={selectedDoodle}

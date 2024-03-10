@@ -58,8 +58,10 @@ function DoodleSelection({ doodleInfo }) {
     hasPageBeenRendered.current["effect1"] = true;
   }, [selectedDoodle]);
 
+  //<ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
+
   return (
-    <div className="bg-stone-600 flex flex-col basis-2/6 rounded-xl border-4 border-black m-2">
+    <div className="bg-stone-600 flex flex-col h-80 rounded-xl border-4 px-5">
       <div className="flex">
         <DoodleSearch
           setSelectedDoodle={setSelectedDoodle}
@@ -69,39 +71,49 @@ function DoodleSelection({ doodleInfo }) {
           hasPageBeenRendered={hasPageBeenRendered}
           setMatchingDoodle={setMatchingDoodle}
         />
-
-        <ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
       </div>
       {selectedDoodleInfo ? (
         <>
-          <div className="flex">
-            <div className="w-1/2 flex justify-center">
+          <div className="flex flex-1  mt-5">
+            <div className="w-2/5 flex flex-col items-center">
               <Image
+                className="h-fit"
                 src={selectedDoodleInfo["DoodleImgPath"]}
-                height={160}
-                width={160}
+                height={110}
+                width={110}
                 alt="Selected Doodle Img"
               />
+              <div className="w-full">
+                <ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
+              </div>
             </div>
 
-            <div className="flex w-1/2">
-              <div className="flex flex-col w-full px-5">
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
+            <div className="flex w-3/5">
+              <div className="flex flex-col w-full">
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={selectedDoodleInfo["Name"]}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                  />
+                </div>
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={selectedDoodleInfo["Name"]}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                  />
+                </div>
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={selectedDoodleInfo["Name"]}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                  />
+                </div>
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={selectedDoodleInfo["Name"]}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -54,7 +54,7 @@ function SearchBar({
       type="text"
       className={`${
         hasBorder ? "bg-neutral-600" : "bg-stone-600"
-      } w-full text-2xl`}
+      } w-full border-2`}
       placeholder="Search Doodle..."
       onChange={handleTextChange}
       value={selectedValue}
