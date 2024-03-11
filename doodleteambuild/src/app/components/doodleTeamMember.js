@@ -2,6 +2,8 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import DoodleSearch from "./doodleSearchBar";
 import DoodleMoveSelect from "./moveSelectionBar";
+import TraitBar from "./traitSelectionBar";
+import HeldItem from "./itemSelectionBar";
 
 function DoodleSelection({ doodleInfo }) {
   const doodleTypePath = "/typeImages/";
@@ -116,6 +118,10 @@ function DoodleSelection({ doodleInfo }) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex flex-1 mt-5 justify-evenly">
+            <HeldItem/>
+            <TraitBar/>           
           </div>
         </>
       ) : (
