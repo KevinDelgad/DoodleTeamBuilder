@@ -4,7 +4,6 @@ import allMovesData from "../../../public/data/allMoves.json";
 import { useId } from "react";
 import SearchBar from "./autoFillSearchBar";
 import Image from "next/image";
-import { stringify } from "postcss";
 function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
   //Get and List all DoodleMoves w/o Type
   const getDoodleAllMoves = () => {
@@ -114,16 +113,16 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
           textToSet={setTypedMove}
           idToOpen={personalId}
           selectedValue={typedMove}
-          allValue={doodleAllMoves}
-          allDoodleValueValid={allDoodleSpecificMoves}
+          primaryValue={allDoodleSpecificMoves}
           setMatchingValue={setDoodleSelectableMovesValid}
           valueToWatch={typedMove}
           hasBorder={false}
           setSecondaryMatchingValue={setDoodleSelectableMovesAll}
-          allDoodleValueAll={doodleAllMoves}
+          secondaryValue={doodleAllMoves}
+          placeholder={"Search Move"}
         />
       </summary>
-      <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto">
+      <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 fixed overflow-auto">
         {populatePersonalMoveList.length > 0 ? (
           <>
             Valid Moves
