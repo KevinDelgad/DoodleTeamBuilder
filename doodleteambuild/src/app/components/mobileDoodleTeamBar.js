@@ -6,7 +6,6 @@ import Doodles from "../../../public/data/doodles.json";
 function TeamBar({doodleTeam, setFocusedMember}) {
 
     const TeamPreviewMember = ({curDoodle,isEdge}) =>{
-        console.log(curDoodle)
         return(
             <button onClick={() => console.log("Clicked!")} className={`flex flex-1 justify-center items-center ${isEdge ? "" : "border-r-2"}`}>
             <Image
