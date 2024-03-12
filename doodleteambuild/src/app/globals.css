@@ -2,10 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .textOutline {
+    position: relative;
+    -webkit-text-stroke: 4px black;
+  }
+
+  .textOutline::after {
+    width: 100%;
+    content: attr(title);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: 0;
+     /* Applies the stroke effect */
+    /* Other styles for the stroke element (optional) */
   }
 }

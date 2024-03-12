@@ -4,7 +4,7 @@ import DoodleSelection from "./components/doodleTeamMember";
 import DoodleQuickSearch from "./components/doodleQuickSearch";
 import TeamBar from "./components/mobileDoodleTeamBar";
 import React, { useEffect, useState } from "react";
-
+import StatDisplay from "./components/statDisplay";
 export default function Home() {
   const doodleTypes = [
     ["basic", "bg-basic"],
@@ -51,14 +51,15 @@ export default function Home() {
 
   return (
     <main className="flex h-full flex-col items-center">
-      <header className="flex w-full justify-center items-center bg-neutral-700 h-20">
-        <h1 className={`text-white lg:text-5xl text-3xl`}>
+      <header className="flex w-full bg-neutral-700 justify-center">
+        <h1 className={`text-white lg:text-5xl text-3xl h-24 flex items-center`}>
           Doodle World Teambuilder
         </h1>
       </header>
       <div className="px-1.5 w-full h-full">
         <TeamBar doodleTeam={doodleTeam} setFocusedMember={setFocusedMember} />
         <DoodleSelection/>
+        <StatDisplay/>
       </div>
     </main>
   );

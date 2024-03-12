@@ -63,7 +63,7 @@ function DoodleSelection({ doodleInfo }) {
   //<ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
 
   return (
-    <div className="bg-stone-600 flex flex-col h-80 rounded-xl border-4 px-5">
+    <div className="bg-stone-600 flex flex-col h-80 my-3 rounded-xl border-4 px-5">
       <div className="flex">
         <DoodleSearch
           setSelectedDoodle={setSelectedDoodle}
