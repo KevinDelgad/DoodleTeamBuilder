@@ -11,6 +11,8 @@ function DoodleSearch({
   hasPageBeenRendered,
   setMatchingDoodle,
   hasBorder,
+  doodleTeam,
+  prevDoodle
 }) {
   const [matchingDoodleIndex, setmatchingDoodleIndex] = React.useState(3);
   const [allDoodleName, setAllDoodleName] = React.useState([]);
@@ -79,6 +81,14 @@ function DoodleSearch({
       </button>
     </li>
   ));
+  
+  useEffect(() => {
+    if(prevDoodle.doodle !== null){
+      setSelectedDoodle(prevDoodle.doodle)
+    }else{
+      setSelectedDoodle("")
+    }
+  }, [prevDoodle])
 
   return (
     <label
@@ -96,7 +106,7 @@ function DoodleSearch({
             className={`${
               hasBorder ? "bg-neutral-600" : "bg-stone-600"
             } w-full text-center text-3xl text-white`}
-            placeholder="Search Doodle..."
+            placeholder={"Search Doodle..."}
             onChange={handleTextChange}
             value={selectedDoodle}
             onClick={() => (document.getElementById(personalId).open = true)}

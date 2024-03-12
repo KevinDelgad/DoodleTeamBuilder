@@ -32,6 +32,7 @@ function TraitBar() {
         onClick={() => {
           //TODO: Add Ability to close other move options upon opening a new one
         }}
+        
       >
         <SearchBar
           textToSet={setTypedTrait}
@@ -47,7 +48,7 @@ function TraitBar() {
         />
       </summary>
 
-      <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 fixed overflow-auto">
+      <ul className="p-2 bg-base-100 rounded-box w-40 h-40 absolute z-10 overflow-auto">
         {populateTraitList.length > 0 ? (
           <>{populateTraitList}</>
         ) : (

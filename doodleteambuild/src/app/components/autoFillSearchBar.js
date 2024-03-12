@@ -58,7 +58,7 @@ function SearchBar({
       type="text"
       className={`${
         hasBorder ? "bg-neutral-600" : "bg-stone-600"
-      } w-full border-2`}
+      } w-full border-2 outline-0`}
       placeholder={placeholder}
       onChange={handleTextChange}
       value={selectedValue}

@@ -28,7 +28,7 @@ function HeldItem(){
     ));
 
     return(
-        <details id={personalId} className=" moveList mr-5">
+        <details id={personalId} className=" moveList ml-5">
         <summary
           className="flex text-white"
           onClick={() => {
@@ -49,7 +49,7 @@ function HeldItem(){
           />
         </summary>
 
-        <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 fixed overflow-auto">
+        <ul className="p-2 dropdown-content bg-base-100 rounded-box w-40 h-40 z-10 absolute overflow-auto">
           {populateItemList.length > 0 ? (
             <>
               {populateItemList}

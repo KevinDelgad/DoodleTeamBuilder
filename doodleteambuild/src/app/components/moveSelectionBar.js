@@ -4,7 +4,7 @@ import allMovesData from "../../../public/data/allMoves.json";
 import { useId } from "react";
 import SearchBar from "./autoFillSearchBar";
 import Image from "next/image";
-function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
+function DoodleMoveSelect({ doodleName, hasPageBeenRendered, doodleTeam, setDoodleTeam, teamMember, moveNumber }) {
   //Get and List all DoodleMoves w/o Type
   const getDoodleAllMoves = () => {
     let allMoves = [];
@@ -29,16 +29,22 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
 
   const [typedMove, setTypedMove] = useState("");
 
-  const [selectedMove, setSelectedMove] = useState("Move");
+  const [selectedMove, setSelectedMove] = useState("");
   const doodleTypePath = "/typeImages/";
 
   //Get List of AllMoves with Type
 
   useEffect(() => {
     setAllDoodleSpecificMoves(doodleMoves[doodleName]);
-    setSelectedMove("");
-    setTypedMove("");
-  }, [doodleName]);
+    if(doodleTeam[teamMember][moveNumber]){
+      console.log(doodleTeam[teamMember][moveNumber])
+      setSelectedMove(doodleTeam[teamMember][moveNumber]);
+      setTypedMove(doodleTeam[teamMember][moveNumber]);
+    }else{
+      setSelectedMove("");
+      setTypedMove("");
+    }
+  }, [doodleName, teamMember]);
 
   const personalId = useId();
 
@@ -53,6 +59,51 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
       }
     }
   };
+
+  function createNewObj(obj, changes, key, moveNumber) {
+    if (changes) {
+      const obj1 = {};
+      const obj2 = {};
+      let addToObj2 = false;
+
+      let updatedObj = {
+        [key]: {
+          doodle: obj[key].doodle,
+          type: obj[key].type,
+          moveOne: obj[key].moveOne,
+          moveTwo: obj[key].moveTwo,
+          moveThree: obj[key].moveThree,
+          moveFour: obj[key].moveFour,
+          heldItem: null,
+          trait: null,
+          imgPath: obj[key].imgPath
+        },
+      };
+
+      updatedObj[key][moveNumber] = changes
+      for (const prop in obj) {
+        if (prop === key) {
+          addToObj2 = true;
+          continue;
+        }
+
+        if (addToObj2) {
+          obj2[prop] = obj[prop];
+        } else {
+          obj1[prop] = obj[prop];
+        }
+      }
+
+      return { ...obj1, ...updatedObj, ...obj2 };
+    } else {
+      return doodleTeam;
+    }
+  }
+
+
+  useEffect(()=>{
+    setDoodleTeam(createNewObj(doodleTeam, selectedMove, teamMember, moveNumber))
+  }, [selectedMove])
 
   //Update Data formatting to allow for more optimized img retrival for move types
 
@@ -102,7 +153,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
   ));
 
   return (
-    <details id={personalId} className=" moveList">
+    <details id={personalId} className="moveList">
       <summary
         className="flex text-white"
         onClick={() => {
@@ -122,7 +173,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered }) {
           placeholder={"Search Move"}
         />
       </summary>
-      <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 fixed overflow-auto">
+      <ul className="p-2 bg-base-100 rounded-box w-48 h-40 overflow-auto absolute">
         {populatePersonalMoveList.length > 0 ? (
           <>
             Valid Moves
