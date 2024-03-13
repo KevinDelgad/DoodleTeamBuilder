@@ -127,6 +127,7 @@ export default function Home() {
         <TeamBar doodleTeam={doodleTeam} setFocusedMember={setFocusedMember} />
         <DoodleSelection teamMember={focusedMember} doodleTeam={doodleTeam} setDoodleTeam={setDoodleTeam} />
         <StatDisplay />
+        <DoodleQuickSearch/>
       </div>
     </main>
   );

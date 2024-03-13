@@ -4,7 +4,14 @@ import allMovesData from "../../../public/data/allMoves.json";
 import { useId } from "react";
 import SearchBar from "./autoFillSearchBar";
 import Image from "next/image";
-function DoodleMoveSelect({ doodleName, hasPageBeenRendered, doodleTeam, setDoodleTeam, teamMember, moveNumber }) {
+function DoodleMoveSelect({
+  doodleName,
+  hasPageBeenRendered,
+  doodleTeam,
+  setDoodleTeam,
+  teamMember,
+  moveNumber,
+}) {
   //Get and List all DoodleMoves w/o Type
   const getDoodleAllMoves = () => {
     let allMoves = [];
@@ -36,11 +43,11 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered, doodleTeam, setDood
 
   useEffect(() => {
     setAllDoodleSpecificMoves(doodleMoves[doodleName]);
-    if(doodleTeam[teamMember][moveNumber]){
-      console.log(doodleTeam[teamMember][moveNumber])
+    if (doodleTeam[teamMember][moveNumber]) {
+      console.log(doodleTeam[teamMember][moveNumber]);
       setSelectedMove(doodleTeam[teamMember][moveNumber]);
       setTypedMove(doodleTeam[teamMember][moveNumber]);
-    }else{
+    } else {
       setSelectedMove("");
       setTypedMove("");
     }
@@ -76,11 +83,11 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered, doodleTeam, setDood
           moveFour: obj[key].moveFour,
           heldItem: null,
           trait: null,
-          imgPath: obj[key].imgPath
+          imgPath: obj[key].imgPath,
         },
       };
 
-      updatedObj[key][moveNumber] = changes
+      updatedObj[key][moveNumber] = changes;
       for (const prop in obj) {
         if (prop === key) {
           addToObj2 = true;
@@ -100,10 +107,11 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered, doodleTeam, setDood
     }
   }
 
-
-  useEffect(()=>{
-    setDoodleTeam(createNewObj(doodleTeam, selectedMove, teamMember, moveNumber))
-  }, [selectedMove])
+  useEffect(() => {
+    setDoodleTeam(
+      createNewObj(doodleTeam, selectedMove, teamMember, moveNumber)
+    );
+  }, [selectedMove]);
 
   //Update Data formatting to allow for more optimized img retrival for move types
 
@@ -132,7 +140,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered, doodleTeam, setDood
   ));
 
   const populatePersonalMoveList = doodleSelectableMovesValid.map((move) => (
-    <li key={move} className="w-full">
+    <li key={move  + "personal"} className="w-full">
       <button
         className="w-full hover:bg-sky-100 flex pl-8"
         onClick={() => {
@@ -142,6 +150,7 @@ function DoodleMoveSelect({ doodleName, hasPageBeenRendered, doodleTeam, setDood
         }}
       >
         <Image
+          className="h-fit"
           src={doodleTypePath + findMoveType(move) + ".webp"}
           height={25}
           width={25}

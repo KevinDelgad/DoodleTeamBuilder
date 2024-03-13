@@ -15,6 +15,7 @@ function SearchBar({
   //Searchbar word matching
   useEffect(() => {
     if (valueToWatch === "") {
+      console.log(primaryValue)
       setMatchingValue(primaryValue);
       if(setSecondaryMatchingValue !== null){
         setSecondaryMatchingValue(secondaryValue)

@@ -83,10 +83,12 @@ function DoodleSearch({
   ));
   
   useEffect(() => {
-    if(prevDoodle.doodle !== null){
-      setSelectedDoodle(prevDoodle.doodle)
-    }else{
-      setSelectedDoodle("")
+    if(prevDoodle){
+        if(prevDoodle.doodle){
+          setSelectedDoodle(prevDoodle.doodle)
+        }else{
+          setSelectedDoodle("")
+        }
     }
   }, [prevDoodle])
 
