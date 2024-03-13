@@ -127,7 +127,7 @@ function DoodleSearch({
             />
           </svg>
         </summary>
-        <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto">
+        <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto bg-white">
           {doodleDrop}
           <div className="flex justify-between"></div>
         </ul>

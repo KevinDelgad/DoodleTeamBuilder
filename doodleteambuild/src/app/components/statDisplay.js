@@ -84,7 +84,7 @@ export default function StatDisplay() {
   ));
 
   return (
-    <div>
+    <div className="my-3">
       <div className="h-7 flex justify-evenly">
         <button
           className="bg-stone-600 w-1/3 rounded-t-md border-2 text-white"

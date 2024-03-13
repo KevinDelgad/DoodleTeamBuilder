@@ -25,4 +25,16 @@
      /* Applies the stroke effect */
     /* Other styles for the stroke element (optional) */
   }
+
+  details > summary {
+
+    list-style: none;
+ 
+  }
+ 
+  details > summary::-webkit-details-marker {
+ 
+    display: none;
+ 
+  }
 }
