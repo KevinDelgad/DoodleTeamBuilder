@@ -160,7 +160,8 @@ function DoodleQuickSearch() {
     return <>{typeList}</>;
   };
   return (
-    <div className="bg-stone-600 flex flex-col h-80 my-3 rounded-xl border-4 px-5 py-2">
+    <div className="bg-stone-600 flex flex-col h-80 md:w-0 w-full my-3 rounded-xl border-4 px-5 py-2">
+      <div className="md:hidden">
       <DoodleSearch
         setSelectedDoodle={setSelectedDoodle}
         selectedDoodle={selectedDoodle}
@@ -240,6 +241,94 @@ function DoodleQuickSearch() {
           </>
         ) : null}
       </section>
+
+      </div>
+      <dialog id="quickLookMod" className="modal">
+      <div className="lg:w-2/6 h-4/5 sm:w-1/2 w-full bg-neutral-600 flex flex-col items-center p-5 text-textGray rounded-3xl">
+        <div className="flex flex-row w-full">
+          <button
+            className="flex ml-3"
+            onClick={() => document.getElementById("quickLookMod").close()}
+          >
+            X
+          </button>
+        </div>
+
+        <DoodleSearch
+          setSelectedDoodle={setSelectedDoodle}
+          selectedDoodle={selectedDoodle}
+          matchingDoodle={matchingDoodle}
+          setSelectedDoodleInfo={setSelectedDoodleInfo}
+          hasPageBeenRendered={hasPageBeenRendered}
+          setMatchingDoodle={setMatchingDoodle}
+          hasBorder={true}
+        />
+
+        <section className="flex flex-col flex-1" id="searchedDoodle">
+          {selectedDoodleInfo ? (
+            <>
+              <h1 className="flex justify-center">
+                {selectedDoodleInfo["Name"]}
+              </h1>
+              <div className="flex justify-center">
+                <ul>{typeImgs}</ul>
+                <Image
+                  src={selectedDoodleInfo["DoodleImgPath"]}
+                  height={125}
+                  width={125}
+                  alt="Selected Doodle Img"
+                />
+              </div>
+              <div className="flex flex-col flex-1 justify-evenly">
+                <div className="flex items-center flex-col">
+                  <h2 className="text-red-600">
+                    super, super effective from (4x)
+                  </h2>
+                  <ul className="flex flex-wrap justify-center">
+                    {moveEffectiveCheck()}
+                    {quickSearchTypeHelper(4)}
+                  </ul>
+                </div>
+                <div className="flex items-center flex-col">
+                  <h2 className="text-rose-400">super effective from (2x)</h2>
+                  <ul className="flex flex-wrap justify-center">
+                    {quickSearchTypeHelper(2)}
+                  </ul>
+                </div>
+                <div className="flex items-center flex-col">
+                  <h2 className="text-white">moderately effective from (1x)</h2>
+                  <ul className="flex flex-wrap justify-center">
+                    {quickSearchTypeHelper(1)}
+                  </ul>
+                </div>
+                <div className="flex items-center flex-col">
+                  <h2 className="text-green-200">
+                    not so effective from (1/2x)
+                  </h2>
+                  <ul className="flex flex-wrap justify-center">
+                    {quickSearchTypeHelper(0.5)}
+                  </ul>
+                </div>
+                <div className="flex items-center flex-col">
+                  <h2 className="text-green-300">
+                    not so, so effective from (1/4x)
+                  </h2>
+                  <ul className="flex flex-wrap justify-center">
+                    {quickSearchTypeHelper(0.25)}
+                  </ul>
+                </div>
+                <div className="flex items-center flex-col">
+                  <h2 className="text-green-500">no effect from (0x)</h2>
+                  <ul className="flex flex-wrap justify-center">
+                    {quickSearchTypeHelper(0)}
+                  </ul>
+                </div>
+              </div>
+            </>
+          ) : null}
+        </section>
+      </div>
+    </dialog>
     </div>
   );
 }

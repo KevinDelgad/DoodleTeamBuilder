@@ -182,7 +182,7 @@ function DoodleMoveSelect({
           placeholder={"Search Move"}
         />
       </summary>
-      <ul className="p-2 bg-base-100 rounded-box w-48 h-40 overflow-auto absolute">
+      <ul className="p-2 bg-base-100 rounded-box w-48 h-40 z-10 overflow-auto absolute">
         {populatePersonalMoveList.length > 0 ? (
           <>
             Valid Moves

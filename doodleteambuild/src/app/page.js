@@ -31,70 +31,70 @@ export default function Home() {
 
   const [doodleTeam, setDoodleTeam] = useState({
     Member0: {
-      doodle:null,
-      type:null,
+      doodle: null,
+      type: null,
       moveOne: null,
       moveTwo: null,
       moveThree: null,
       moveFour: null,
       heldItem: null,
       trait: null,
-      imgPath: null
+      imgPath: null,
     },
     Member1: {
-      doodle:null,
-      type:null,
+      doodle: null,
+      type: null,
       moveOne: null,
       moveTwo: null,
       moveThree: null,
       moveFour: null,
       heldItem: null,
       trait: null,
-      imgPath: null
+      imgPath: null,
     },
     Member2: {
-      doodle:null,
-      type:null,
+      doodle: null,
+      type: null,
       moveOne: null,
       moveTwo: null,
       moveThree: null,
       moveFour: null,
       heldItem: null,
       trait: null,
-      imgPath: null
+      imgPath: null,
     },
     Member3: {
-      doodle:null,
-      type:null,
+      doodle: null,
+      type: null,
       moveOne: null,
       moveTwo: null,
       moveThree: null,
       moveFour: null,
       heldItem: null,
       trait: null,
-      imgPath: null
+      imgPath: null,
     },
     Member4: {
-      doodle:null,
-      type:null,
+      doodle: null,
+      type: null,
       moveOne: null,
       moveTwo: null,
       moveThree: null,
       moveFour: null,
       heldItem: null,
       trait: null,
-      imgPath: null
+      imgPath: null,
     },
     Member5: {
-      doodle:null,
-      type:null,
+      doodle: null,
+      type: null,
       moveOne: null,
       moveTwo: null,
       moveThree: null,
       moveFour: null,
       heldItem: null,
       trait: null,
-      imgPath: null
+      imgPath: null,
     },
   });
 
@@ -110,24 +110,105 @@ export default function Home() {
     </li>
   ));
 
-  useEffect(()=>{
-    console.log(doodleTeam)
-  }, [doodleTeam])
+  useEffect(() => {
+    console.log(doodleTeam);
+  }, [doodleTeam]);
 
   return (
     <main className="flex h-full flex-col items-center">
       <header className="flex w-full bg-neutral-700 justify-center">
         <h1
-          className={`text-white lg:text-5xl text-3xl h-24 flex items-center`}
+          className={`text-white md:text-4xl lg:text-5xl text-3xl h-24 flex items-center`}
         >
           Doodle World Teambuilder
         </h1>
       </header>
-      <div className="px-1.5 w-full h-full">
-        <TeamBar doodleTeam={doodleTeam} setFocusedMember={setFocusedMember} />
-        <DoodleSelection teamMember={focusedMember} doodleTeam={doodleTeam} setDoodleTeam={setDoodleTeam} />
-        <StatDisplay />
-        <DoodleQuickSearch/>
+      <div className="md:flex w-full h-full">
+        <div className="px-1.5 w-full flex flex-col flex-1 md:w-3/5 md:flex">
+          <div className="md:hidden">
+            <TeamBar
+              doodleTeam={doodleTeam}
+              setFocusedMember={setFocusedMember}
+            />
+          </div>
+          <div className="md:flex w-full h-full md:p-3">
+            <div className="flex flex-1">
+              <div className="w-full flex flex-col justify-between">
+                <div className="md:hidden">
+                  <DoodleSelection
+                    teamMember={focusedMember}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                  />
+                </div>
+                <div className="hidden md:inline">
+                  <DoodleSelection
+                    teamMember={"Member0"}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                  />
+                </div>
+                <div className="hidden md:inline">
+                  <DoodleSelection
+                    teamMember={"Member1"}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                  />
+                </div>
+                <div className="hidden md:inline">
+                  <DoodleSelection
+                    teamMember={"Member2"}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                  />
+                </div>
+              </div>
+              <div className="w-full hidden md:flex flex-col justify-between">
+                <div className="hidden md:inline">
+                  <DoodleSelection
+                    teamMember={"Member3"}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                  />
+                </div>
+                <div className="hidden md:inline">
+                  <DoodleSelection
+                    teamMember={"Member4"}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                  />
+                </div>
+                <div className="hidden md:inline">
+                  <DoodleSelection
+                    teamMember={"Member5"}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex md:flex-col md:w-2/5">
+          <div>
+            <StatDisplay />
+            <StatDisplay />
+          </div>
+
+          <div className="hidden md:flex flex-col justify-center items-center">
+            <button
+              className="w-1/2 bg-stone-600 text-white h-28 rounded-lg border-white border-2"
+              onClick={() =>
+                document.getElementById("quickLookMod").showModal()
+              }
+            >
+              Quick Lookup
+            </button>
+          </div>
+        </div>
+        <div className="flex md:w-0">
+          <DoodleQuickSearch />
+        </div>
       </div>
     </main>
   );

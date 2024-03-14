@@ -85,7 +85,7 @@ export default function StatDisplay() {
 
   return (
     <div className="my-3">
-      <div className="h-7 flex justify-evenly">
+      <div className="h-7 flex justify-evenly md:hidden">
         <button
           className="bg-stone-600 w-1/3 rounded-t-md border-2 text-white"
           onClick={() => console.log("Defense Click!")}
@@ -100,7 +100,7 @@ export default function StatDisplay() {
           Coverage
         </button>
       </div>
-      <div className="bg-stone-600 h-96 rounded-xl border-4 px-5">
+      <div className="bg-stone-600 h-96 md:w-full rounded-xl border-4 px-5">
         <ul className="flex h-full flex-wrap">{populateDefenseStats}</ul>
       </div>
     </div>

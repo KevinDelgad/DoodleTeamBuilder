@@ -96,7 +96,7 @@ function DoodleSearch({
     <label
       className={`input p-0 ${
         hasBorder ? "border-4 bg-neutral-600 input-bordered" : "bg-stone-600"
-      } flex w-full`}
+      } z-0 w-full`}
     >
       <details
         id={personalId}
