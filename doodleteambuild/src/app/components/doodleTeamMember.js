@@ -2,8 +2,15 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import DoodleSearch from "./doodleSearchBar";
 import DoodleMoveSelect from "./moveSelectionBar";
+import TraitBar from "./traitSelectionBar";
+import HeldItem from "./itemSelectionBar";
 
-function DoodleSelection({ doodleInfo }) {
+function DoodleSelection({
+  doodleInfo,
+  teamMember,
+  doodleTeam,
+  setDoodleTeam,
+}) {
   const doodleTypePath = "/typeImages/";
 
   const [selectedDoodle, setSelectedDoodle] = React.useState("");
@@ -13,6 +20,7 @@ function DoodleSelection({ doodleInfo }) {
     effect1: false,
     effect2: false,
     effect3: false,
+    effect4: false,
   });
 
   const doodleTypes = [
@@ -38,9 +46,46 @@ function DoodleSelection({ doodleInfo }) {
     ["mythic", "bg-mythic"],
   ];
 
+  function createNewObj(obj, changes, key) {
+    if (changes) {
+      const obj1 = {};
+      const obj2 = {};
+      let addToObj2 = false;
+      let updatedObj = {
+        [key]: {
+          doodle: changes["Name"],
+          type: changes["Types"],
+          moveOne: null,
+          moveTwo: null,
+          moveThree: null,
+          moveFour: null,
+          heldItem: null,
+          trait: null,
+          imgPath: changes["DoodleImgPath"],
+        },
+      };
+
+      for (const prop in obj) {
+        if (prop === key) {
+          addToObj2 = true;
+          continue;
+        }
+
+        if (addToObj2) {
+          obj2[prop] = obj[prop];
+        } else {
+          obj1[prop] = obj[prop];
+        }
+      }
+      return { ...obj1, ...updatedObj, ...obj2 };
+    } else {
+      return doodleTeam;
+    }
+  }
+
   const typeImgs =
-    selectedDoodleInfo &&
-    selectedDoodleInfo["Types"].map((type) => (
+    doodleTeam[teamMember].doodle &&
+    doodleTeam[teamMember].type.map((type) => (
       <li key={type}>
         <Image
           src={doodleTypePath + type.toLowerCase() + ".webp"}
@@ -52,14 +97,20 @@ function DoodleSelection({ doodleInfo }) {
     ));
 
   useEffect(() => {
+    setDoodleTeam(createNewObj(doodleTeam, selectedDoodleInfo, teamMember));
+  }, [selectedDoodleInfo]);
+
+  useEffect(() => {
     if (hasPageBeenRendered.current["effect1"]) {
       setMatchingDoodle([]);
     }
     hasPageBeenRendered.current["effect1"] = true;
   }, [selectedDoodle]);
 
+  //<ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
+
   return (
-    <div className="bg-stone-600 flex flex-col basis-2/6 rounded-xl border-4 border-black m-2">
+    <div className="bg-stone-600 flex flex-col h-80 rounded-xl border-4 px-5">
       <div className="flex">
         <DoodleSearch
           setSelectedDoodle={setSelectedDoodle}
@@ -68,42 +119,80 @@ function DoodleSelection({ doodleInfo }) {
           setSelectedDoodleInfo={setSelectedDoodleInfo}
           hasPageBeenRendered={hasPageBeenRendered}
           setMatchingDoodle={setMatchingDoodle}
+          prevDoodle={doodleTeam[teamMember]}
         />
-
-        <ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
+        {doodleTeam[teamMember].doodle ? (
+          <div className="hidden md:flex">
+            <ul className="flex flex-1 justify-evenly items-center">{typeImgs}</ul>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
-      {selectedDoodleInfo ? (
+      {doodleTeam[teamMember].doodle ? (
         <>
-          <div className="flex">
-            <div className="w-1/2 flex justify-center">
+          <div className="flex mt-5 md:mt-0">
+            <div className="w-2/5 flex flex-col items-center">
               <Image
-                src={selectedDoodleInfo["DoodleImgPath"]}
-                height={160}
-                width={160}
+                className="h-fit"
+                src={doodleTeam[teamMember].imgPath}
+                height={110}
+                width={110}
                 alt="Selected Doodle Img"
               />
-            </div>
-
-            <div className="flex w-1/2">
-              <div className="flex flex-col w-full px-5">
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
-                <DoodleMoveSelect
-                  doodleName={selectedDoodleInfo["Name"]}
-                  hasPageBeenRendered={hasPageBeenRendered}
-                />
+              <div className="w-full md:hidden">
+                <ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
               </div>
             </div>
+
+            <div className="flex w-3/5">
+              <div className="flex flex-col w-full">
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={doodleTeam[teamMember].doodle}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                    teamMember={teamMember}
+                    moveNumber={"moveOne"}
+                  />
+                </div>
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={doodleTeam[teamMember].doodle}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                    teamMember={teamMember}
+                    moveNumber={"moveTwo"}
+                  />
+                </div>
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={doodleTeam[teamMember].doodle}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                    teamMember={teamMember}
+                    moveNumber={"moveThree"}
+                  />
+                </div>
+                <div className="py-1">
+                  <DoodleMoveSelect
+                    doodleName={doodleTeam[teamMember].doodle}
+                    hasPageBeenRendered={hasPageBeenRendered}
+                    doodleTeam={doodleTeam}
+                    setDoodleTeam={setDoodleTeam}
+                    teamMember={teamMember}
+                    moveNumber={"moveFour"}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex md:h-full md:items-center mt-5 md:mt-0 justify-evenly">
+            <HeldItem />
+            <TraitBar />
           </div>
         </>
       ) : (

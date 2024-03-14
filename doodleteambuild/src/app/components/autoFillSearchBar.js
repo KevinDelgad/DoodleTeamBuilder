@@ -4,46 +4,50 @@ function SearchBar({
   textToSet,
   idToOpen,
   selectedValue,
-  allValue,
-  allDoodleValueValid,
+  primaryValue,
   setMatchingValue,
   valueToWatch,
   hasBorder,
   setSecondaryMatchingValue,
-  allDoodleValueAll
+  secondaryValue,
+  placeholder
 }) {
   //Searchbar word matching
   useEffect(() => {
-    if (selectedValue === "") {
-      setMatchingValue(allDoodleValueValid);
-      setSecondaryMatchingValue(allDoodleValueAll)
+    if (valueToWatch === "") {
+      setMatchingValue(primaryValue);
+      if(setSecondaryMatchingValue !== null){
+        setSecondaryMatchingValue(secondaryValue)
+      }
     } else {
       let tempDoodleListValid = [];
       let tempDoodleListAll = [];
-      for (let i = 0; i < allDoodleValueValid.length; i++) {
+      for (let i = 0; i < primaryValue.length; i++) {
         if (
-          allDoodleValueValid[i].substring(0, selectedValue.length).toLowerCase() ===
+          primaryValue[i].substring(0, selectedValue.length).toLowerCase() ===
           selectedValue.toLowerCase()
         ) {
-          tempDoodleListValid.push(allDoodleValueValid[i]);
+          tempDoodleListValid.push(primaryValue[i]);
         }
       }
 
-      
-      for (let i = 0; i < allDoodleValueAll.length; i++) {
-        if (
-          allDoodleValueAll[i].substring(0, selectedValue.length).toLowerCase() ===
-          selectedValue.toLowerCase()
-        ) {
-          tempDoodleListAll.push(allDoodleValueAll[i]);
+      if(secondaryValue !== null){
+        for (let i = 0; i < secondaryValue.length; i++) {
+          if (
+            secondaryValue[i].substring(0, selectedValue.length).toLowerCase() ===
+            selectedValue.toLowerCase()
+          ) {
+            tempDoodleListAll.push(secondaryValue[i]);
+          }
         }
       }
-
       setMatchingValue(tempDoodleListValid);
-      setSecondaryMatchingValue(tempDoodleListAll)
+      if(setSecondaryMatchingValue !== null){
+        setSecondaryMatchingValue(tempDoodleListAll)
+      }
 
     }
-  }, [valueToWatch, allDoodleValueValid]);
+  }, [valueToWatch, primaryValue]);
 
   const handleTextChange = (e) => {
     textToSet(e.target.value);
@@ -54,8 +58,8 @@ function SearchBar({
       type="text"
       className={`${
         hasBorder ? "bg-neutral-600" : "bg-stone-600"
-      } w-full text-2xl`}
-      placeholder="Search Doodle..."
+      } w-full border-2 outline-0`}
+      placeholder={placeholder}
       onChange={handleTextChange}
       value={selectedValue}
       onClick={() => (document.getElementById(idToOpen).open = true)}

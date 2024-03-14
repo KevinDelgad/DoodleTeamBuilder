@@ -11,6 +11,8 @@ function DoodleSearch({
   hasPageBeenRendered,
   setMatchingDoodle,
   hasBorder,
+  doodleTeam,
+  prevDoodle
 }) {
   const [matchingDoodleIndex, setmatchingDoodleIndex] = React.useState(3);
   const [allDoodleName, setAllDoodleName] = React.useState([]);
@@ -79,24 +81,34 @@ function DoodleSearch({
       </button>
     </li>
   ));
+  
+  useEffect(() => {
+    if(prevDoodle){
+        if(prevDoodle.doodle){
+          setSelectedDoodle(prevDoodle.doodle)
+        }else{
+          setSelectedDoodle("")
+        }
+    }
+  }, [prevDoodle])
 
   return (
     <label
-      className={`input ${
+      className={`input p-0 ${
         hasBorder ? "border-4 bg-neutral-600 input-bordered" : "bg-stone-600"
-      } flex w-1/2`}
+      } z-0 w-full`}
     >
       <details
         id={personalId}
-        className={`dropdown ${hasBorder ? "" : "border-b-4 border-black"}`}
+        className={`dropdown ${hasBorder ? "" : "border-b-4 border-white w-full"}`}
       >
-        <summary className={`flex`}>
+        <summary className={`flex h-full items-end`}>
           <input
             type="text"
             className={`${
               hasBorder ? "bg-neutral-600" : "bg-stone-600"
-            } w-full text-2xl`}
-            placeholder="Search Doodle..."
+            } w-full text-center text-3xl text-white`}
+            placeholder={"Search Doodle..."}
             onChange={handleTextChange}
             value={selectedDoodle}
             onClick={() => (document.getElementById(personalId).open = true)}
@@ -115,7 +127,7 @@ function DoodleSearch({
             />
           </svg>
         </summary>
-        <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto">
+        <ul className="p-2 dropdown-content bg-base-100 rounded-box w-52 h-40 z-10 overflow-auto bg-white">
           {doodleDrop}
           <div className="flex justify-between"></div>
         </ul>
