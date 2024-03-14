@@ -206,7 +206,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="flex md:w-0">
+        <div className="flex">
           <DoodleQuickSearch />
         </div>
       </div>
