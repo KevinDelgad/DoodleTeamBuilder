@@ -96,11 +96,11 @@ function DoodleSearch({
     <label
       className={`input p-0 ${
         hasBorder ? "border-4 bg-neutral-600 input-bordered" : "bg-stone-600"
-      } z-0 w-full`}
+      } w-full`}
     >
       <details
         id={personalId}
-        className={`dropdown ${hasBorder ? "" : "border-b-4 border-white w-full"}`}
+        className={`dropdown ${hasBorder ? "" : "border-b-4 border-white "} w-full`}
       >
         <summary className={`flex h-full items-end`}>
           <input
