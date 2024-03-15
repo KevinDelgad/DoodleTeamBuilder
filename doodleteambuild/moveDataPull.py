@@ -35,7 +35,7 @@ def scrapeDoodleMoves(doodleName):
         table = soup.find(class_='article-table sortable mw-collapsible mw-collapsed')
         links = table.find_all('a')
         for result in links:
-            if(result["title"] not in type_list):
+            if(result["title"] not in type_list and result['title'] not in allmoves):
                 allmoves.append(result["title"])
     except:
         return scrapeDoodleMoves(doodleName[0:-2])
