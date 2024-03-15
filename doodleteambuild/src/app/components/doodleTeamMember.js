@@ -110,7 +110,7 @@ function DoodleSelection({
   //<ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
 
   return (
-    <div className="bg-stone-600 flex flex-col h-80 rounded-xl border-4 px-5">
+    <div className="bg-stone-600 flex flex-col h-80 lg:h-full w-full rounded-xl border-4 px-5">
       <div className="flex">
         <DoodleSearch
           setSelectedDoodle={setSelectedDoodle}
@@ -122,7 +122,7 @@ function DoodleSelection({
           prevDoodle={doodleTeam[teamMember]}
         />
         {doodleTeam[teamMember].doodle ? (
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <ul className="flex flex-1 justify-evenly items-center">{typeImgs}</ul>
           </div>
         ) : (
@@ -131,7 +131,7 @@ function DoodleSelection({
       </div>
       {doodleTeam[teamMember].doodle ? (
         <>
-          <div className="flex mt-5 md:mt-0">
+          <div className="flex mt-5 lg:mt-0">
             <div className="w-2/5 flex flex-col items-center">
               <Image
                 className="h-fit"
@@ -140,7 +140,7 @@ function DoodleSelection({
                 width={110}
                 alt="Selected Doodle Img"
               />
-              <div className="w-full md:hidden">
+              <div className="w-full lg:hidden">
                 <ul className="flex flex-1 justify-evenly">{typeImgs}</ul>
               </div>
             </div>
@@ -190,7 +190,7 @@ function DoodleSelection({
               </div>
             </div>
           </div>
-          <div className="flex md:h-full md:items-center mt-5 md:mt-0 justify-evenly">
+          <div className="flex lg:h-full lg:items-center mt-5 lg:mt-0 justify-evenly">
             <HeldItem />
             <TraitBar />
           </div>
