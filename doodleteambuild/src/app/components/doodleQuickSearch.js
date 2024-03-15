@@ -161,8 +161,8 @@ function DoodleQuickSearch() {
   };
   return (
     <div className="w-full">
-      <div className="bg-stone-600 flex flex-col h-80 md:hidden md:h-0 md:my-0 w-full my-3 rounded-xl border-4 px-5 py-2">
-        <div className="md:hidden">
+      <div className="bg-stone-600 flex flex-col h-80 lg:hidden lg:h-0 lg:my-0 w-full my-3 rounded-xl border-4 px-5 py-2">
+        <div className="lg:hidden">
           <DoodleSearch
             setSelectedDoodle={setSelectedDoodle}
             selectedDoodle={selectedDoodle}
@@ -242,7 +242,7 @@ function DoodleQuickSearch() {
           </section>
         </div>
       </div>
-      <div className="hidden md:inline">
+      <div className="hidden lg:inline">
         <dialog id="quickLookMod" className="modal">
           <div className="lg:w-2/6 h-4/5 sm:w-1/2 w-full bg-neutral-600 flex flex-col items-center p-5 text-textGray rounded-3xl">
             <div className="flex flex-row w-full">
