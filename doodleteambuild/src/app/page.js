@@ -192,7 +192,9 @@ export default function Home() {
         <div className="flex md:flex-col md:w-2/5">
           <div>
             <StatDisplay />
-            <StatDisplay />
+            <div className="hidden md:inline">
+              <StatDisplay />
+            </div>
           </div>
 
           <div className="hidden md:flex flex-col justify-center items-center">
