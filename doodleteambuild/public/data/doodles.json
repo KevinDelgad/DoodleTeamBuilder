@@ -822,7 +822,7 @@
       "ImgPath": "/doodleImages/Zerzura.webp"
     },
     "Lacergen": {
-      "Types": ["Beast"],
+      "Types": ["Metal", "Basic"],
       "ImgPath": "/doodleImages/Lacergen.webp"
     },
     "Ostigon": {
@@ -1137,6 +1137,18 @@
       "Types": ["Ice", "Earth"],
       "ImgPath": "/doodleImages/Scarfox.webp"
     },
+    "Jewelit": { "Types": ["Air"], "ImgPath": "/doodleImages/Jewelit.webp" },
+    "Blubimp": {
+      "Types": ["Air", "Crystal"],
+      "ImgPath": "/doodleImages/Blubimp.webp"
+    },
+    "Aerystal": {
+      "Types": ["Air", "Crystal"],
+      "ImgPath": "/doodleImages/Aerystal.webp"
+    },
+    "Edibebi": { "Types": ["Insect", "Spark"], "ImgPath": "/doodleImages/Edibebi.webp" },
+    "Yubee": { "Types": ["Insect", "Spark"], "ImgPath": "/doodleImages/Yubee.webp" },
+    "Vermorph": { "Types": ["Insect", "Spark"], "ImgPath": "/doodleImages/Vermorph.webp" },
     "Mawthra-A": {
       "Types": ["Metal", "Poison"],
       "ImgPath": "/doodleImages/Mawthra-A.webp"

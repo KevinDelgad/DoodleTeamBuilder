@@ -118,6 +118,7 @@ function DoodleQuickSearch() {
 
   const doodleTypeAtMulti = (effective) => {
     let effectiveTypes = [];
+    console.log(selectedDoodleInfo["Types"][0])
     const keys = Object.keys(
       TypeChart["defense"][selectedDoodleInfo["Types"][0].toLowerCase()]
     );
